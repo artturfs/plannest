@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vZn - Login</title>
-    <link rel="stylesheet" href="login.css">
+    <title>vZn - Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
 </head>
 <body>
     <header class="menu1">
@@ -13,17 +13,17 @@
     
         <nav class="links" id="nav-links">
             <ul class="nav-itens">
+                
                 <li><a href="index.html" class="home">Home</a></li>
                 <li><a href="about.html">About us</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="pages.html">Pages</a></li>
                 <li><a href="constact.hml">Contact us</a></li>
                 
-                <li><button class="login-li"><a class="link-login-li" href="login.html">Login</a></button></li>
-                <li><button class="cadastro-li"><a class="link-cadastro-li" href="cadastro.html" style="color: white;">Cadastro</a></button></li>
+                <li><button class="login-li"><a class="link-login-li" href="login.html" >Login</a></button></li>
+                <li><button class="cadastro-li"><a class="link-cadastro-li" style="color: white;" href="cadastro.html">Cadastro</a></button></li>
             </ul>
         </nav>
-    
     
         <div class="btn">
             <button class="login-1" href="login.html"><a class="link-login" href="login.html">Login</a></button>
@@ -32,31 +32,34 @@
     </header>
 
     <section class="login">
+
         <div class="login-part1">
-            <h1 class="h1-login">NeXart</h1>
-            <p class="p-login">Dando voz aos talentos locais.</p>
-            <p class="p-texto">Descubra, apoie e compartilhe artistas emergentes da sua vizinhança. Música, arte e cultura para todos.</p>
-        </div>
-    
-        <div class="login-part2">
-            <p class="title">Acesse o NeXart</p>
-            <p class="p-texto2">Entre na comunidade e conecte-se com novos talentos.</p>
+            <p class="title">Crie sua conta no NeXart</p>
             <form id="login-form" class="form">
+                <p class="p-conteudo">Nome de usuário</p>
+                <input type="text" id="login-texto" class="input" placeholder="seuusuario" required>
                 <p class="p-conteudo">Endereço de e-mail</p>
                 <input type="email" id="login-email" class="input" placeholder="seuemail@email.com" required>
                 <p class="p-conteudo">Senha</p>
-                <input type="password" id="login-password" class="input" placeholder="Digite sua senha" required>
-                <p class="link-login"><a href="">Esqueceu sua senha?</a></p>
-                <button type="submit" class="form-btn">Entrar</button>
+                <input type="password" id="login-password" class="input" placeholder="Crie uma senha segura" required>
+                <p></p>
+                <button type="submit" class="form-btn">Cadastrar</button>
                 <p class="link-login">
-                    Ainda não tem uma conta? <a href="cadastro.html" class="sign-up-link">Cadastre-se</a>
+                    Já tem uma conta? <a href="signup.html" class="sign-up-link">Entre aqui</a>
                 </p>
             </form>
         </div>
+    
+        <div class="login-part2">
+            <h1 class="h1-login">NeXart</h1>
+            <p class="p-login">Dando palco para novos talentos.</p>
+            <p class="p-texto">Junte-se à comunidade e ajude a divulgar artistas emergentes da sua região. Música, arte e cultura conectando pessoas.</p>
+        </div>
+    
     </section>
+    
 
     <script src='menu-toggle.js'></script>
-    
 
 </body>
 </html>

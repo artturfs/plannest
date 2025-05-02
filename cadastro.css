@@ -3,6 +3,7 @@ body {
     background-color: var(--cor9--);
     margin: 0;
     box-sizing: border-box;
+    transition: all 0.3s;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -110,13 +111,14 @@ li a:hover {
 }
 
 .link-login {
-    color: black;
+    color: var(--cor6--);
     text-decoration: none;
     padding: 8px 32px;
 }
 
 .link-login:hover{
     color: white;
+    background-color: var(--cor4--);
 }
 
 .link-cadastro{
@@ -150,8 +152,7 @@ li a:hover {
     transition: 1s;
 }
 
-
-.login>.login-part1 {
+.login>.login-part2 {
     width: 40%;
     height: 100%;
     background: linear-gradient(to bottom left, var(--cor4--,), var(--cor6--), var(--cor5--), black);
@@ -166,7 +167,7 @@ li a:hover {
     padding: 0 20px;
 }
 
-.login > .login-part2 {
+.login > .login-part1 {
     width: 100%;
     height: 100%;
     display: flex;
@@ -281,7 +282,7 @@ a{
 }
 
 .link-login a{
-    color: var(--cor2--);
+    color: var(--cor6--);
 }
 
 .link-cadastro{
@@ -304,7 +305,7 @@ a{
     display: none;
 }
 
-@media (max-width: 769px) {
+  @media (max-width: 769px) {
     body {
         width: 100%;
         overflow-x: hidden;
@@ -344,8 +345,8 @@ a{
     .login {
         width: 70%;
         max-width: 100%;
-        margin: 40px auto;
-        padding: 30px 20px;
+        margin: 20px auto;
+        padding: 40px 20px;
         background-color: var(--cor8--);
         border-radius: 12px;
         box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
@@ -354,7 +355,7 @@ a{
         align-items: center;
     }
 
-    .login > .login-part1 {
+    .login > .login-part2 {
         display: none;
     }
 
@@ -410,11 +411,11 @@ a{
     .form .register-link {
         font-size: 13px;
         text-align: center;
-        margin-top: 10px;
+        margin-top:0px;
     }
 
     .logo {
-        margin: 10px auto;
+        margin: 0px auto;
     }
 
     .links.active {
@@ -463,6 +464,11 @@ a{
 
     .cadastro-li {
         background-color: var(--cor6--);
+        color: white;
+    }
+
+    .cadastro-lo li {
+        color: var(--cor8--);
     }
 
     .cadastro-li a,
@@ -471,6 +477,7 @@ a{
         text-align: center;
     }
 }
+
 
 @media (min-width: 1200px) {
     .login {
