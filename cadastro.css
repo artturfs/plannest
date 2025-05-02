@@ -411,8 +411,13 @@ a{
     }
 
     .logo {
-        margin: 0px auto;
         font-weight: 200;
+        margin: 10px auto;
+        right: 0%;
+        left: 0%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
     }
 
     .links.active {
