@@ -8,7 +8,7 @@ body {
 
 :root {
     --cor1--: #5889B1;
-    --cor2--: #597286;
+    --cor2--: #5d8fa9;
     --cor3--: #4999DB;
     --cor4--: #4C555C;
     --cor5--: #292E33;
@@ -42,12 +42,12 @@ body {
 
 
 span {
-    color: var(--cor7--);
+    color: var(--cor2--);
 }
 
 .logo {
-    font-size: x-large;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 1000;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     letter-spacing: 4px;
     margin: 0;
@@ -76,10 +76,6 @@ li a:hover {
     transition: all .3s;
     text-decoration: underline;
     box-shadow: 1px 1px 100px rgba(0, 0, 0, 0.062);
-}
-
-.link-login-li:hover{
-    transition: all 0.3s;
 }
 
 .btn .login-1 { 
@@ -116,27 +112,14 @@ li a:hover {
 }
 
 .link-login:hover{
-    color: white;
+    transition: all 0.3s;
+
 }
 
 .link-cadastro{
     color: var(--cor8--);
     text-decoration: none;
     padding: 6px 32px;
-}
-
-.link-cadastro:hover{
-    color: var(--cor8--);
-    background-color: var(--cor4--);
-    border-radius: 5px;
-    transition: all 0.3s;
-}
-
-.cadastro:hover,
-.login-1:hover {
-    transition: all .3s;
-    background-color: var(--cor4--);
-    color: white;
 }
   
 .login{
@@ -256,6 +239,7 @@ a{
 }
 
 .form-btn{
+    width: 100%;
     padding: 8px 60px;
     border: none;
     background-color: var(--cor6--);
@@ -267,9 +251,10 @@ a{
     transition: 1s;
 }
 
-.form-btn:hover{
+.form-btn:hover, .login-1:hover, .cadastro:hover{
     transform: scale(1.02);
     transition: all .5s;
+    opacity: 80%;
 }
 
 .link-login{
@@ -414,6 +399,7 @@ a{
     }
 
     .logo {
+        font-weight: 200;
         margin: 10px auto;
     }
 
@@ -497,6 +483,6 @@ a{
     }
 
     .logo {
-        font-size: 2rem;
+        font-size: 1rem;
     }
 }
