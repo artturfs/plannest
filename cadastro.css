@@ -368,7 +368,7 @@ a{
     .input {
         width: 100vh;
         padding: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 0px;
         font-size: 14px;
         border-radius: 5px;
         border: 1px solid #ccc;
@@ -379,7 +379,7 @@ a{
         font-size: 13px;
         text-align: right;
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 0px;
         color: #3b5b7e;
         text-decoration: none;
     }
@@ -396,7 +396,7 @@ a{
         color: var(--cor8--);
         border: none;
         border-radius: 5px;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
         box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
         cursor: pointer;
     }
@@ -453,7 +453,7 @@ a{
         border-radius: 5px;
         font-weight: 600;
         font-size: 15px;
-        margin-top: 10px;
+        margin-top: 0px;
         cursor: pointer;
         box-shadow: 1px 6px 10px rgba(0, 0, 0, 0.274);
     }
@@ -476,6 +476,14 @@ a{
     .cadastro-li a,
     .login-li a {
         width: 100%;
+        text-align: center;
+    }
+
+    .title{
+        width: 100%;
+        font-size: 29px;
+        font-weight: 800;
+        margin: 0 auto;
         text-align: center;
     }
 }

@@ -384,6 +384,19 @@ button  a {
     max-width: 700px;
 }
   
+/* */
+
+.slide3{
+    margin-top: 150px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor5--);
+    opacity: 0.3;
+}
+
 @media (max-width: 769px) {
     
         .slide1 .slides {
@@ -396,7 +409,7 @@ button  a {
     
         .slide1-part1 {
             order: 1;
-            width: 100%;
+            width: 120%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -422,7 +435,6 @@ button  a {
         .p-slide,
         .p-slide2 {
             font-size: 18px;
-            max-width: 90%;
         }
     
         .btn-slide {
@@ -546,6 +558,7 @@ button  a {
 
     /* CARDS */
     .cards{
+        margin-top: 50px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -559,6 +572,10 @@ button  a {
 
     .cards .cars:last-child{
         margin-bottom: 0;
+    }
+
+    .cards .card:first-child{
+        margin-top: -20px;
     }
 
     /* SLIDE 1*/

@@ -462,6 +462,26 @@ a{
         width: 100%;
         text-align: center;
     }
+
+    .title{
+        width: 100%;
+        font-size: 34px;
+        font-weight: 800;
+        margin: 0;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .p-texto2{
+        width: 100%;
+        font-size: 12px;
+        font-weight: 100;
+        margin: 0 40px;
+        letter-spacing: 2px;
+        text-align: center;
+
+    }
 }
 
 @media (min-width: 1200px) {
