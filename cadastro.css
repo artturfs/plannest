@@ -315,6 +315,8 @@ a{
     }
 
     .menu-toggle {
+        position: absolute  ;
+        left: 10px;
         display: block;
         font-size: x-large;
         font-weight: 700;
@@ -413,8 +415,6 @@ a{
     .logo {
         font-weight: 200;
         margin: 10px auto;
-        right: 0%;
-        left: 0%;
         text-align: center;
         justify-content: center;
         align-items: center;
