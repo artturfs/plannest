@@ -87,6 +87,11 @@ li a:hover {
 
 .link-login-li:hover{
     transition: all 0.3s;
+
+}
+
+.link-login-li{
+    color: var(--cor6--);
 }
 
 .btn .login-1 { 
@@ -193,11 +198,12 @@ a{
     background-color: #fff;
     box-shadow: 0 0px 5px rgba(0, 0, 0, 0.233);
     z-index: 1000;
-  } */
+} */
 
 /* FIM MENU */
 
 /* SLIDE 1 */
+
 .slide1 {
     width: 100%;
     height: 100vh;
@@ -274,8 +280,6 @@ a{
     margin: 0 auto;
     justify-content: center;
 }
-
-
 
 /* CARDS */
 
@@ -381,14 +385,65 @@ button  a {
 }
   
 @media (max-width: 769px) {
+    
+        .slide1 .slides {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+    
+        .slide1-part1 {
+            order: 1;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .slide1-part2 {
+            order: 2;
+            width: 100%;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+    
+        .slide1-part2 img {
+            max-width: 90%;
+            height: auto;
+        }
+    
+        .h1-slide {
+            font-size: 28px;
+        }
+    
+        .p-slide,
+        .p-slide2 {
+            font-size: 18px;
+            max-width: 90%;
+        }
+    
+        .btn-slide {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    
+        .link-btn-slide {
+            text-decoration: none;
+        }
+    
+    
+
     body {
         width: 100%;
         overflow-x: hidden;
         padding: 0;
         margin: 0;
-    } 
-    
-    /* MENU */
+    }
 
     .menu1 {
         justify-content: center;
@@ -424,8 +479,6 @@ button  a {
     .logo {
         font-weight: 200;
         margin: 10px auto;
-        right: 0%;
-        left: 0%;
         text-align: center;
         justify-content: center;
         align-items: center;
@@ -488,12 +541,16 @@ button  a {
     .login-li a {
         width: 100%;
         text-align: center;
-    } 
+    }
     /* FIM MENU */
 
     /* CARDS */
     .cards{
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        
     }
 
     .cards .card {
@@ -502,6 +559,43 @@ button  a {
 
     .cards .cars:last-child{
         margin-bottom: 0;
+    }
+
+    /* SLIDE 1*/
+
+    .slide1{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+    }
+
+    .h1-slide{
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .p-slide{
+        font-size: 20px;
+    }
+
+    .slide1-part2 img{
+        width: 100%;
+        height: 100%;
+        display: block;
+
+    }
+
+    .h1-slide2{
+        font-size: 30px;
+        margin-bottom: 0;
+        font-weight: 700;
+    }
+
+    .p-slide2{
+        font-size: 18px;
+        font-weight: 300;
+        margin-top: 0;
+        max-width: 80%;
     }
 }
 
