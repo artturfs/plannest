@@ -1,6 +1,6 @@
 body {
     padding: 0;
-    background: linear-gradient(to top, #5ca3a57e, #5ca3a560, var(--cor9--));
+    background: linear-gradient(to top, #5ca3a534, #5ca3a560, var(--cor9--));
     margin: 0;
     box-sizing: border-box;
     transition: all 0.3s;
@@ -37,6 +37,7 @@ body {
     cursor: pointer;
     margin-top: 25px;
     color: var(--cor6--);
+    z-index: 1000;
 }
 
 .menu1 {
@@ -45,6 +46,7 @@ body {
     align-items: center;
     padding: 10px;
     background-color: var(--cor9--);
+    z-index: 1000;
 }
 
 
@@ -185,6 +187,8 @@ a{
         overflow-x: hidden;
         padding: 0;
         margin: 0;
+        background: linear-gradient(to top, #5ca3a523, #5ca3a51f, var(--cor9--));
+
     }
 
     .menu1 {
@@ -200,6 +204,7 @@ a{
         font-weight: 700;
         z-index: 500;
         margin: 0;
+
     }
 
     .home {

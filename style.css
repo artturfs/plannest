@@ -407,7 +407,7 @@ button  a {
 
         .slide1{
             max-height: 60vh;
-            background: linear-gradient(to top, #5ca3a52c, var(--cor9--), var(--cor9--));
+            background: linear-gradient(to top, #5ca3a510, var(--cor9--), var(--cor9--));
             margin: -30px auto -40px auto;
             justify-content: center;
             display: flex;
