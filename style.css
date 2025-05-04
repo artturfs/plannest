@@ -12,15 +12,15 @@ body {
 }
 
 :root {
-    --cor1--: #5889B1;
-    --cor2--: #5d8fa9;
-    --cor3--: #4999DB;
-    --cor4--: #4C555C;
-    --cor5--: #292E33;
-    --cor6--: #202B33;
+    --cor1--: #FEC868;
+    --cor2--: #473;
+    --cor3--: #FDA769;
+    --cor4--: #473C33;
+    --cor5--: #ABC270;
+    --cor6--: #3b342c;
     --cor7--: #85c8ff;
     --cor8--: white;
-    --cor9--: #eee;
+    --cor9--: #f7f7f7;
 }
 
 .home{
@@ -210,7 +210,7 @@ a{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.075), var(--cor9--), var(--cor9--), var(--cor9--));
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.062), var(--cor9--), var(--cor9--), var(--cor9--));
 }
 
 .slides{
@@ -299,7 +299,7 @@ a{
     border-radius: 8px;
     max-height: 256px;
     margin-left: 32px;
-    box-shadow: 20px 20px 50px -30px var(--cor6--);
+    box-shadow: 20px 20px 50px -30px var(--cor5--);
     transition: all 0.3s;
     cursor: pointer;
     max-width: 300px;   
@@ -349,7 +349,7 @@ a{
 }
 
 .cards .card.agenda button, .atividades button, .material button{
-    background: linear-gradient(to right, var(--cor4--), var(--cor5--), var(--cor6--));
+    background: linear-gradient(to right top, var(--cor2--), var(--cor5--), var(--cor2--));
 
 } 
 
