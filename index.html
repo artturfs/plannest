@@ -100,28 +100,15 @@
     </section>
 
     <section class="slide3">
-        
+        <div class="slide3-part1">
+
+        </div>
+
+        <div class="slide3-part3">
+
+        </div>
     </section>
 
     <script src="menu-toggle.js"></script>
-    <script>
-        const header = document.querySelector('.menu1');
-        const slide2 = document.querySelector('.slide3');
-
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                header.classList.add('fixed');
-                header.style.transition = '1s';
-            } else {
-                header.classList.remove('fixed');
-            }
-            });
-        }, {
-            threshold: 0.1
-        });
-
-        observer.observe(slide2);
-    </script>
 </body>
 </html>
