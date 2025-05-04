@@ -565,6 +565,10 @@ a{
     margin-bottom: 15px;
 }
 
+textarea::placeholder {
+    color: white;
+}
+
 .agenda-form button {
     padding: 12px;
     background-color: var(--cor2--);
