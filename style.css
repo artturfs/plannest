@@ -418,7 +418,7 @@ button  a {
         }
     
         .slide1-part1 {
-            width: 100%;
+            width: 200%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -433,8 +433,18 @@ button  a {
         }
         
         .slide1-part2 img {
-            max-width: 90%;
-            height: auto;
+            position: relative;
+            right: -90px;
+            top: 30px;
+            scale: 2.2;
+        }
+
+        .p2-slide{
+            font-size: 15px;
+            line-height: 20px;
+            max-width: 100%;
+            width: 100%;
+            margin: 10px auto;
         }
     
         .slide1 .h1-slide {
