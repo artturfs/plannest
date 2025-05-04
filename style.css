@@ -12,15 +12,15 @@ body {
 }
 
 :root {
-    --cor1--: #FEC868;
-    --cor2--: #473;
-    --cor3--: #FDA769;
-    --cor4--: #473C33;
-    --cor5--: #ABC270;
-    --cor6--: #3b342c;
+    --cor1--: #539690;
+    --cor2--: #5ca3a5;
+    --cor3--: #467397;
+    --cor4--: #4C555C;
+    --cor5--: #292E33;
+    --cor6--: #202B33;
     --cor7--: #85c8ff;
     --cor8--: white;
-    --cor9--: #f7f7f7;
+    --cor9--: rgb(247, 247, 247);
 }
 
 .home{
@@ -52,14 +52,7 @@ span {
     color: var(--cor2--);
 }
 
-.logo {
-    font-size: 20px;
-    font-weight: 1000;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    letter-spacing: 4px;
-    margin: 0;
-    color: var(--cor6--);
-}
+
 
 .nav-itens {
     list-style: none;
@@ -210,7 +203,7 @@ a{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.062), var(--cor9--), var(--cor9--), var(--cor9--));
+    background: linear-gradient(to top, #5ca3a52c, var(--cor9--), var(--cor9--));
 }
 
 .slides{
@@ -299,7 +292,7 @@ a{
     border-radius: 8px;
     max-height: 256px;
     margin-left: 32px;
-    box-shadow: 20px 20px 50px -30px var(--cor5--);
+    box-shadow: 20px 20px 50px -30px var(--cor6--);
     transition: all 0.3s;
     cursor: pointer;
     max-width: 300px;   
@@ -308,7 +301,6 @@ a{
 .card :hover {
     transform: scale(1.02);
     transition: all 0.3s;
-    opacity: 80%;
 }
 
 .cards .card h3 {
@@ -349,9 +341,14 @@ a{
 }
 
 .cards .card.agenda button, .atividades button, .material button{
-    background: linear-gradient(to right top, var(--cor2--), var(--cor5--), var(--cor2--));
+    background: linear-gradient(to right, var(--cor4--), var(--cor5--), var(--cor6--));
 
 } 
+
+.cards .card.agenda button:hover, .atividades button:hover, .material button:hover{
+    background: linear-gradient(to right, var(--cor2--), var(--cor2--), var(--cor1--));
+}
+
 
 button  a {
     color: var(--cor8--);
@@ -406,37 +403,25 @@ button  a {
             text-align: center;
             padding: 20px;
             margin: 0;
-            max-width: 100%;
         }
 
         .slide1{
-            max-height: 70vh;
-            max-width: 100%;
-            width: 100%;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.075), var(--cor9--), var(--cor9--), var(--cor9--));
+            max-height: 60vh;
+            background: linear-gradient(to top, #5ca3a52c, var(--cor9--), var(--cor9--));
             margin: -30px auto -40px auto;
+            justify-content: center;
+            display: flex;
         }
     
         .slide1-part1 {
-            width: 200%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            text-align: start;
+            text-align: justify;
         }
     
         .slide1-part2 {
-            margin: 0 auto;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-        
-        .slide1-part2 img {
-            position: relative;
-            right: -90px;
-            top: 30px;
-            scale: 2.2;
+            display: none;
         }
 
         .p2-slide{
@@ -448,10 +433,10 @@ button  a {
         }
     
         .slide1 .h1-slide {
-            font-size: 28px;
-            line-height: 27px;
+            font-size: 30px;
+            line-height: 34px;
             max-width: 100%;
-            width: 100%;
+            width: 300%;
             margin: 10px auto;
         }
     

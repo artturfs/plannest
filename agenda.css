@@ -1,0 +1,577 @@
+body {
+    padding: 0;
+    background: linear-gradient(to top, #5ca3a57e, #5ca3a560, var(--cor9--));
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+*{
+    transition: all 0.3s;
+}
+
+:root {
+    --cor1--: #539690;
+    --cor2--: #5ca3a5;
+    --cor3--: #4999DB;
+    --cor4--: #4C555C;
+    --cor5--: #292E33;
+    --cor6--: #202B33;
+    --cor7--: #85c8ff;
+    --cor8--: white;
+    --cor9--: rgb(247, 247, 247);
+}
+
+.home{
+    margin-left: -40px;
+}
+
+/* MENU */
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 25px;
+    color: var(--cor6--);
+}
+
+.menu1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--cor9--);
+}
+
+
+span {
+    color: var(--cor2--);
+}
+
+
+
+.nav-itens {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+li a {
+    color: var(--cor6--);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 5px 10px 5px 10px;
+
+}
+
+li a:hover {
+    transition: all .3s;
+    text-decoration: underline;
+    box-shadow: 1px 1px 100px rgba(0, 0, 0, 0.062);
+}
+
+.link-login-li:hover{
+    transition: all 0.3s;
+
+}
+
+.link-login-li{
+    color: var(--cor6--);
+}
+
+.btn .login-1 { 
+    padding: 6px 0px;
+    border: none;
+    background-color: var(--cor8--);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 10px;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.082);
+}
+
+.btn .cadastro {
+    padding: 6px 0px;
+    border: none;
+    background-color: var(--cor6--);
+    color: var(--cor6--);
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: 1s;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.082);
+}
+
+.link-login {
+    color: var(--cor6--);
+    text-decoration: none;
+    padding: 8px 32px;
+}
+
+.link-cadastro{
+    color: var(--cor8--);
+    text-decoration: none;
+    padding: 6px 32px;
+}
+
+.link-cadastro:hover{
+    color: var(--cor8--);
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.cadastro:hover{
+    transition: all .3s;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+.link-login{
+    font-weight: 600;
+    color: var(--cor6--);
+    text-decoration: none;
+    padding: 5px 10px;
+
+}
+
+.link-login a{
+    color: var(--cor6--);
+}
+
+.link-cadastro{
+    font-weight: 600;
+    color: var(--cor8--);
+    text-decoration: none;
+    padding: 5px 10px;
+
+}
+
+.link-cadastro a{
+    color: var(--cor8--);
+}
+
+.cadastro-li{
+    display: none;
+}
+
+.login-li{
+    display: none;
+}
+
+.login-1:hover, .cadastro:hover{
+    transform: scale(1.02);
+    transition: all .5s;
+    opacity: 80%;
+}
+
+@media (max-width: 768px){
+    body {
+        width: 100%;
+        overflow-x: hidden;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu1 {
+        justify-content: center;
+        position: relative;
+    }
+
+    .menu-toggle {
+        position: absolute  ;
+        left: 10px;
+        display: block;
+        font-size: x-large;
+        font-weight: 700;
+        z-index: 500;
+        margin: 0;
+    }
+
+    .home {
+        display: block;
+        margin-left: 0px;
+    }
+
+    .links {
+        display: none;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: var(--cor9--);
+        padding: 40px 0px 100% 0;
+        justify-content: start;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+        font-weight: 200;
+        margin: 10px auto;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .links.active {
+        display: block;
+    }
+
+    .nav-itens {
+        margin-top: 20px;
+        margin-left: -30px;
+        list-style: none;
+        text-align: start;
+        display: flex;
+        padding-right: 30px;
+        flex-direction: column;
+        gap: 10px;
+        background-color: var(--cor9--);
+    }
+
+    .cadastro {
+        display: none;
+    }
+
+    .login-1 {
+        display: none;
+    }
+
+    .login-li,
+    .cadastro-li {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: 15px;
+        margin-top: 10px;
+        cursor: pointer;
+        box-shadow: 1px 6px 10px rgba(0, 0, 0, 0.274);
+    }
+
+    .login-li {
+        background-color: var(--cor8--);
+        color: var(--cor6--);
+        border: none;
+    }
+
+    .cadastro-li {
+        background-color: var(--cor6--);
+        color: white;
+    }
+
+    .cadastro-lo li {
+        color: var(--cor8--);
+    }
+
+    .cadastro-li a,
+    .login-li a {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+    .calendar-section{
+        margin: -60px auto;
+        align-items: center;
+        scale: 0.8;
+        margin-left: -30px;
+        margin-bottom: -50px;
+    }
+
+    .calendar-header {
+        font-size: 1.2rem;
+        
+    }
+
+    #agenda-dia {
+        padding: 15px;
+        
+        scale: 0.8;
+    }
+
+    .agenda-form textarea {
+        font-size: 0.9rem;
+    }
+
+    .calendar-days {
+        gap: 5px;
+        font-size: .9rem;
+        margin: 0 auto;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    .calendar-days-content {
+        gap: 2px; /* Reduz o espaçamento em dispositivos menores */
+    }
+
+    .day-number {
+        font-size: 1rem; /* Tamanho reduzido */
+        padding: 10px;
+    }
+
+    .tab-content{
+        position: relative;
+        top: -50px;
+        left: -15px;
+    }
+}
+
+/* Estilos globais */
+.span {
+    color: white;
+}
+
+/* Seção do calendário */
+.calendar-container {
+    width: 100%;
+    max-width: 900px;
+    background-color: var(--cor2--);
+    border-radius: 10px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 20px 20px 50px -30px var(--cor2--);
+    margin: 60px auto;
+}
+
+.calendar-header {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#month-select,
+#year-input {
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: var(--cor2--);
+    border: 1px solid var(--cor9--);
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+#month-select:focus,
+#year-input:focus {
+    outline: none;
+    border-color: white;
+    background-color: var(--cor2--);
+}
+
+#update-calendar {
+    padding: 8px 16px;
+    background-color: var(--cor2--);
+    border: 1px solid var(--cor9--);
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#update-calendar:hover {
+    background-color: var(--cor8--);
+}
+
+/* Estilos para os dias do calendário */
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+.day {
+    background-color: var(--cor2--);
+    padding: 10px;
+    border-radius: 5px;
+    border-bottom: .3px solid var(--cor4--);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-days-content {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 5px; /* Ajuste menor para espaçamento em telas menores */
+    font-size: 3vw; /* Tamanho de fonte adaptável */
+}
+
+.day-number {
+    font-size: 1.5rem; /* Responsivo em relação ao `font-size` de `.calendar-days-content` */
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: background-color 0.3s;
+    color: white;
+    margin: 14px auto;
+}
+
+.day-number:hover {
+    background-color: var(--cor1--);
+}
+
+/* Estilos para o modal de tarefas */
+#day-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--cor2--);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    color: white;
+}
+
+#day-modal-content {
+    background-color: var(--cor2--);
+    padding: 30px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+#day-modal-content h3 {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+#task-input {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: var(--cor2--);
+    color: white;
+    border: 1px solid var(--cor2--);
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: none;
+    transition: all 0.3s ease;
+}
+
+#task-input:focus {
+    outline: none;
+    border-color: white;
+}
+
+#save-task {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--cor2--);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+#save-task:hover {
+    background-color: var(--cor2--);
+}
+
+#close-modal {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--cor1--);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+#close-modal:hover {
+    background-color: white;
+}
+
+/* Estilos para a agenda do dia */
+#agenda-dia {
+    background-color: var(--cor2--);
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 10px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+}
+
+#agenda-dia h3 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+#agenda-dia #dia-selecionado {
+    font-weight: bold;
+}
+
+.agenda-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.agenda-form textarea {
+    padding: 15px;
+    background-color: var(--cor2--);
+    color: white;
+    border: 1px solid var(--cor9--);
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: none;
+    margin-bottom: 15px;
+}
+
+.agenda-form button {
+    padding: 12px;
+    background-color: var(--cor2--);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.agenda-form button:hover {
+    background-color: var(--cor6--);
+}

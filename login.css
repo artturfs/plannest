@@ -7,15 +7,15 @@ body {
 }
 
 :root {
-    --cor1--: #5889B1;
-    --cor2--: #5d8fa9;
+    --cor1--: #5d8fa9;
+    --cor2--: #5ca3a5;
     --cor3--: #4999DB;
     --cor4--: #4C555C;
     --cor5--: #292E33;
     --cor6--: #202B33;
     --cor7--: #85c8ff;
     --cor8--: white;
-    --cor9--: #eee;
+    --cor9--: rgb(247, 247, 247);
 }
 
 .home{

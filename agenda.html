@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo On-line</title>
+    <link rel="stylesheet" href="agenda.css">
+    <link rel="shortcut icon" href="estudo.png" type="image/x-icon">
+</head>
+<body>
+    <header class="menu1">
+        <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+            <img height="30px"  src="imagens/Imagem_do_WhatsApp_de_2025-05-04_à_s__15.51.37_fcfe0c6f-removebg-preview.png" >
+
+        <nav class="links" id="nav-links">
+            <ul class="nav-itens">
+                <li><a href="index.html" class="home"><span>Início</span></a></li>
+                <li><a href="#paginas">Paginas</a></li>
+                <li><a href="services.html">Sugestões</a></li>
+                <li><a href="feedbeck.html">Avaliar</a></li>
+                <li><a href="contato.hml">Contact us</a></li>
+                
+                <li><button class="login-li"><a class="link-login-li" href="login.html">Login</a></button></li>
+                <li><button class="cadastro-li"><a class="link-cadastro-li" href="cadastro.html" style="color: white;">Cadastro</a></button></li>
+            </ul>
+        </nav>
+
+        <div class="btn">
+            <button class="login-1" href="login.html"><a class="link-login" href="login.html">Login</a></button>
+            <button class="cadastro"><a href="cadastro.html" class="link-cadastro">Cadastro</a></button>
+        </div>
+    </header>
+
+        <section class="calendar-section">
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <span class="span">Novembro 2024</span>
+                    <select id="month-select">
+                        <option value="0">Janeiro</option>
+                        <option value="1">Fevereiro</option>
+                        <option value="2">Março</option>
+                        <option value="3">Abril</option>
+                        <option value="4">Maio</option>
+                        <option value="5">Junho</option>
+                        <option value="6">Julho</option>
+                        <option value="7">Agosto</option>
+                        <option value="8">Setembro</option>
+                        <option value="9">Outubro</option>
+                        <option value="10">Novembro</option>
+                        <option value="11">Dezembro</option>
+                    </select>
+                    <input type="number" id="year-input" value="2024" min="1900" max="2100" />
+                </div>  
+                <div class="calendar">
+                    <div class="calendar-days">
+                        <div class="day">Dom</div>
+                        <div class="day">Seg</div>
+                        <div class="day">Ter</div>
+                        <div class="day">Qua</div>
+                        <div class="day">Qui</div>
+                        <div class="day">Sex</div>
+                        <div class="day">Sáb</div>
+                    </div>
+                    <div class="calendar-days-content">
+                        <!-- Dias serão gerados dinamicamente pelo JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="agenda-dia" class="tab-content">
+            <h3>Agenda do dia <span id="dia-selecionado"></span></h3>
+            <form class="agenda-form">
+                <textarea id="agenda-textarea" placeholder="Digite os afazeres..." rows="5"></textarea>
+                <button type="submit">Salvar Agenda</button>
+            </form>
+        </div>    
+
+    <script src="agenda.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() { 
+            const menuToggle = document.querySelector(".menu-toggle");
+            const navLinks = document.getElementById("nav-links");
+    
+            menuToggle.addEventListener("click", function() {
+                navLinks.classList.toggle("active");
+            });
+        });
+    </script>
+</body>
+</html>
