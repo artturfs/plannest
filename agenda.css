@@ -582,5 +582,5 @@ textarea::placeholder {
 }
 
 .agenda-form button:hover {
-    background-color: var(--cor6--);
+    background-color: var(--cor1--);
 }
