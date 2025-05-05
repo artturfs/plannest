@@ -239,7 +239,7 @@ a{
     background-color: var(--cor1--);
 }
   
-.icon {
+.icon-coracao {
     background-color: white;
     color: var(--cor2--);
     border-radius: 50%;
@@ -248,7 +248,7 @@ a{
     font-weight: bold;
 }
   
-.hero-img img {
+.hero-img .img {
     max-width: 400px;
     width: 100%;
     z-index: 1;
@@ -263,7 +263,6 @@ a{
     transform: scale(0.7);
 }
   
-
 /* FIM SLIDE 1 */
 /* SLIDE 2 */
 
@@ -515,7 +514,7 @@ footer {
         flex-direction: column;
         text-align: center;
         padding: 40px 5%;
-        
+        background: linear-gradient(to top, #5ca3a536, var(--cor9--));
       }
     
       .hero-text {
