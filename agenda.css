@@ -105,7 +105,7 @@ li a:hover {
 .btn .cadastro {
     padding: 6px 0px;
     border: none;
-    background-color: var(--cor6--);
+    background-color: var(--cor2--);
     color: var(--cor6--);
     border-radius: 5px;
     padding: 10px;
@@ -387,7 +387,7 @@ footer {
     }
 
     .cadastro-li {
-        background-color: var(--cor6--);
+        background-color: var(--cor2--);
         color: white;
     }
 
@@ -541,7 +541,7 @@ footer {
 }
 
 .day-number {
-    font-size: 1.5rem; /* Responsivo em relação ao `font-size` de `.calendar-days-content` */
+    font-size: 1.5rem; /* Responsivo em relação ao font-size de .calendar-days-content */
     padding: 15px;
     border-radius: 5px;
     cursor: pointer;

@@ -94,7 +94,7 @@ li a:hover {
 .btn .cadastro {
     padding: 6px 0px;
     border: none;
-    background-color: var(--cor6--);
+    background-color: var(--cor2--);
     color: var(--cor6--);
     border-radius: 5px;
     padding: 10px;
@@ -137,7 +137,7 @@ li a:hover {
 .login>.login-part1 {
     width: 40%;
     height: 100%;
-    background: linear-gradient(to bottom left, var(--cor4--,), var(--cor6--), var(--cor5--), black);
+    background: linear-gradient(to bottom left, var(--cor2--,), var(--cor1--), var(--cor2--), var(--cor1--));
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.781);
     color: var(--cor8--);
     border-radius: 10px 0px 0px 10px;
@@ -242,7 +242,7 @@ a{
     width: 100%;
     padding: 8px 60px;
     border: none;
-    background-color: var(--cor6--);
+    background: linear-gradient(to bottom left, var(--cor2--,), var(--cor1--), var(--cor2--), var(--cor1--));
     color: var(--cor8--);
     border-radius: 5px;
     font-size: 15px;
@@ -380,7 +380,7 @@ a{
         width: 100%;
         padding: 12px;
         font-size: 16px;
-        background-color: var(--cor6--);
+        background-color: var(--cor2--);
         color: var(--cor8--);
         border: none;
         border-radius: 5px;
@@ -454,7 +454,7 @@ a{
     }
 
     .cadastro-li {
-        background-color: var(--cor6--);
+        background-color: var(--cor2--);
     }
 
     .cadastro-li a,

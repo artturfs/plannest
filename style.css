@@ -1,6 +1,6 @@
 body {
     padding: 0;
-    background-color: var(--cor9--);
+    background-color: var(--cor8--);
     margin: 0;
     box-sizing: border-box;
     transition: all 0.3s;
@@ -103,7 +103,7 @@ li a:hover {
 .btn .cadastro {
     padding: 6px 0px;
     border: none;
-    background-color: var(--cor6--);
+    background-color: var(--cor2--);
     color: var(--cor6--);
     border-radius: 5px;
     padding: 10px;
@@ -179,89 +179,90 @@ a{
     opacity: 80%;
 }
 
-/* .menu1.fixed {
-    position: fixed;
-    top: 20px;
-    left: 0;
-    right: 0;
-    transition: all 1s;
-    width: 95%;
-    margin: 0 auto;
-    border-radius: 20px;
-    background-color: #fff;
-    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.233);
-    z-index: 1000;
-} */
-
 /* FIM MENU */
 
 /* SLIDE 1 */
-
-.slide1 {
-    width: 100%;
-    height: 91vh;
+.hero {
+    position: relative;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background: linear-gradient(to top, #5ca3a52c, var(--cor9--), var(--cor9--));
+    justify-content: center;
+    align-items: center;    
+    padding: 90px 10%;
+    overflow: hidden;
+    background: linear-gradient(to top, #5ca3a548, var(--cor9--));
+    z-index: -1; /* Ensures it stays under the menu */
 }
-
-.slides{
-    max-width: 80%;
-    width: 100%;
-    height: 91vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  
+.hero-text {
+    max-width: 600px;
+    z-index: 1;
 }
-
-.h1-slide{
-    font-size: 3rem;
+  
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+  
+.cor-de-texto {
     color: var(--cor6--);
-    font-weight: 1000;
-    letter-spacing: 2px;
-    margin: 0;
-    line-height: 50px;
-    margin: 20px auto;
 }
-
-.p-slide{
-    font-size: 1.5rem;
-    color: var(--cor6--);
-    font-weight: 300;
-    margin: 0 auto;
-}
-
-.btn-slide{
-    margin-top: 30px;
-    display: flex;
-    gap: 20px;
-    border: none;
-    padding: 20px 40px;
-    background-color: var(--cor6--);
+  
+.texto-destaque {
+    background-color: var(--cor1--);
+    color: white;
+    padding: 4px 14px;
     border-radius: 5px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.062);
-    transition: all 0.3s;
-    cursor: pointer;
-    font-size: 1.2rem;
-    font-weight: 600;
+    display: inline-block;
+    transform: rotate(-3deg);
 }
-
-.btn-slide:hover{
-    transform: scale(1.02);
-    transition: all 0.3s;
-    opacity: 80%;
+  
+.p-slide1 {
+    font-size: 16px;
+    color: var(--cor2--);
+    margin-bottom: 30px;
 }
-
-.link-btn-slide{
+  
+.subscribe-btn {
+    display: inline-block;
+    background-color: var(--cor2--);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
     text-decoration: none;
-    font-weight: 400;
-    color: var(--cor8--);
+    transition: background 0.3s;
+}
+  
+.subscribe-btn:hover {
+    background-color: var(--cor1--);
+}
+  
+.icon {
+    background-color: white;
+    color: var(--cor2--);
+    border-radius: 50%;
+    padding: 4px 8px;
+    margin-right: 8px;
+    font-weight: bold;
+}
+  
+.hero-img img {
+    max-width: 400px;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    mix-blend-mode: multiply;
 }
 
-.slide1-part2{
-    margin: 80px 0 0 0;
+.hex2 {
+    bottom: 40px;
+    left: 80px;
+    border-color: var(--cor2--);
+    transform: scale(0.7);
 }
+  
 
 /* FIM SLIDE 1 */
 /* SLIDE 2 */
@@ -510,69 +511,57 @@ footer {
 
 
 @media (max-width: 769px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+        
+      }
     
-        .slide1 .slides {
-            display: flex;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-            margin: 0;
-        }
-
-        .slide1{
-            max-height: 60vh;
-            background: linear-gradient(to top, #5ca3a510, var(--cor9--), var(--cor9--));
-            margin: -30px auto -40px auto;
-            justify-content: center;
-            display: flex;
-        }
+      .hero-text {
+        max-width: 100%;
+      }
     
-        .slide1-part1 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: start;
-        }
+      .hero h1 {
+        font-size: 32px;
+      }
     
-        .slide1-part2 {
-            display: none;
-        }
-
-        .p2-slide{
-            font-size: 15px;
-            line-height: 20px;
-            max-width: 100%;
-            width: 100%;
-            margin: 10px auto;
-        }
+      .hero-img {
+        margin-top: 30px;
+      }
     
-        .slide1 .h1-slide {
-            font-size: 30px;
-            line-height: 34px;
-            max-width: 100%;
-            width: 300%;
-            margin: 10px auto;
-        }
+      .hero-img img {
+        max-width: 300px;
+      }
     
-        .slide1 .p-slide{
-            font-size: 15px;
-            max-width: 100%;
-
-        }
+      .subscribe-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
     
-        .btn-slide {
-            margin: 15px 0;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            justify-content: start;
-        }
+      .icon {
+        padding: 4px 6px;
+        margin-right: 6px;
+      }
     
-        .link-btn-slide {
-            text-decoration: none;
-        }
+      .hex1 {
+        top: 10px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+      }
     
+      .hex2 {
+        bottom: 20px;
+        left: 20px;
+        width: 40px;
+        height: 40px;
+      }
     
+      .stripe {
+        width: 80px;
+        height: 50px;
+      }
 
     body {
         width: 100%;
@@ -665,18 +654,22 @@ footer {
     }
 
     .cadastro-li {
-        background-color: var(--cor6--);
+        background-color: var(--cor2--);
         color: white;
+        border: none;
+
     }
 
     .cadastro-lo li {
         color: var(--cor8--);
+
     }
 
     .cadastro-li a,
     .login-li a {
         width: 100%;
         text-align: center;
+        border: none;
     }
     /* FIM MENU */
 
