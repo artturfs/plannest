@@ -843,7 +843,7 @@ footer {
     .slide3{
         width: 100%;
         margin: 0;
-        height: 70vh;
+        height: 50vh;
     }
 
     .ondas{
@@ -857,7 +857,7 @@ footer {
 
     .h1-slide3{
         font-size: 2.8rem;
-        line-height:0px;
+        line-height:40px;
     }
 
     .slide3-part2{
