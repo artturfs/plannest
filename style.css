@@ -889,12 +889,6 @@ footer {
         margin: 20px 0 0 0;
     }
 
-    .box-slide3{
-        background-size: contain;
-        background-position: 0%;
-        background-repeat: no-repeat;    
-    }
-
     .box-slide3:hover{
         scale: none;
     }
