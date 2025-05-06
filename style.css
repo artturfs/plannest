@@ -844,10 +844,11 @@ footer {
         width: 100%;
         margin: 0;
         height: 50vh;
+        margin-top: 1340px;
     }
 
     .ondas{
-        margin-top: 1260px;
+        display: none;
     }
 
     .slide3-part1, .slide3-part2{
@@ -856,8 +857,13 @@ footer {
     }
 
     .h1-slide3{
-        font-size: 2.8rem;
+        font-size: 2.7rem;
         line-height:40px;
+    }
+
+    .p-slide3{
+        font-weight: 300;
+        margin: 10px 0;
     }
 
     .slide3-part2{
@@ -871,12 +877,22 @@ footer {
         margin: 0% -200px;
     }
 
+    .btn-slide3{
+        background-color: var(--cor9--);
+    }
+
     .slide3 img {
         height: 260px;
         margin-top: 20px;
         position: relative;
         left: 30px;
         margin: 20px 0 0 0;
+    }
+
+    .box-slide3{
+        background-size: contain;
+        background-position: 0%;
+        background-repeat: no-repeat;    
     }
 
     .box-slide3:hover{
