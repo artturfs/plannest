@@ -1016,6 +1016,7 @@ footer {
         margin: 0 auto; /* Centralizes the card */
         justify-content: center;
         position: relative;
+        scale: 0.8;
         left: -20px;
     }
 
@@ -1028,6 +1029,8 @@ footer {
 
     .card-button{
         border-radius: 12px;
+        padding: 5px;
+        border-radius: 100%;
     }
 
 }
