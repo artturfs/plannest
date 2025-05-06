@@ -15,13 +15,15 @@ body {
 :root {
     --cor1--: #539690;
     --cor2--: #5ca3a5;
-    --cor3--: #467397;
+    --cor3--: #4999DB;
     --cor4--: #4C555C;
     --cor5--: #292E33;
     --cor6--: #202B33;
     --cor7--: #85c8ff;
     --cor8--: white;
     --cor9--: rgb(247, 247, 247);
+        --cor10--: #5ca3a527;
+    --cor11--: #292e3369;
 }
 
 .home{
@@ -73,10 +75,11 @@ li a {
 
 }
 
-li a:hover {
+.nav-itens a:hover{
     transition: all .3s;
     text-decoration: underline;
-    box-shadow: 1px 1px 100px rgba(0, 0, 0, 0.062);
+    
+    
 }
 
 .link-login-li:hover{
@@ -265,15 +268,6 @@ a{
 }
   
 /* FIM SLIDE 1 */
-/* SLIDE 2 */
-
-.slide2{
-    width: 100%;
-    height: 100vh;
-    align-items: center;
-    margin: 0 auto;
-    justify-content: center;
-}
 
 /* CARDS */
 
@@ -388,7 +382,8 @@ button  a {
 /* slide 3 */
 
 .ondas{
-    margin: -4px;
+    margin-top: -140px;
+    margin-bottom: -4px;
     padding: 0;
 }
 
@@ -483,28 +478,126 @@ button  a {
 
 /* fim slide 3*/
 
-/* slide 4 */
+/* */
 
-.slide4{
-    width: 100%;
+.container{
+    background-color: var(--cor9--);
+
+
+}
+
+.card-list .card-item{
+    list-style: none;
+}
+
+.card-wrapper {
+    max-width: auto;
+    margin: 0 60px 35px;
+    padding: 20px 50px;
+    overflow: hidden;
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--cor2--);
 }
 
-.slide4-part1{
-    height: 60vh;
-    width: 100%;
+.card-wrapper:first-child{
+    margin-left: -0px;
+}
+
+.card-list .card-item .card-link:hover{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-list .card-item .card-link {
+    width: 350px;
+    display: block;
     background-color: var(--cor8--);
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    margin: 0 auto; /* Centralizes the card */
+    justify-content: center;
 }
 
-.slide4-part2{
-    width: 100%;
-    height: 40vh;
+.card-list .card-link .card-image{
+    height: 100px;
+    border-radius: 12px;
+    padding: 15px;
     background-color: var(--cor9--);
 }
 
-/* fim slide 4 */
+.card-list .card-link .badge{
+    color: var(--cor2--);
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    background-color: var(--cor10--);
+    margin: 16px 0 18px;
+    font-weight: 500;
+    width: fit-content;
+    border-radius: 50px;
+}
+
+.card-image-wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.image-inform{
+    flex-direction: column;
+}
+
+.image-tittle{
+    padding: 5px;
+    border-radius: 12px;
+    margin: 0 0 0 10px;
+}
+
+.image-text{
+    margin: 0 0 10px 10px;
+    padding: 5px;
+    border-radius: 12px;
+    color: var(--cor11--);
+    
+}
+
+.card-button{
+    background: transparent;
+    color: var(--cor2--);
+    border: 4px solid var(--cor2--);
+    font-size: 1.4rem;
+    border-radius: 100%;
+    rotate: -20deg;
+}
+
+.card-link:hover .card-button{
+    background-color: var(--cor2--);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.082);
+    transform: scale(1.02);
+    transition: all 0.3s;
+}
+
+.symbol{
+    margin: 0 0 0 10px;
+    border: 3px solid var(--cor2--);
+    color: var(--cor2--);
+    padding: 2px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.card-tittle{
+    color: var(--cor6--);
+    font-size: 1.2rem;
+    margin: 0 0 20px 0;
+}
+
+/* */
 
 .logo-footer {
     filter: brightness(0) invert(1) contrast(1.2) saturate(1.5);
@@ -844,7 +937,7 @@ footer {
         width: 100%;
         margin: 0;
         height: 50vh;
-        margin-top: 1340px;
+        margin-top: 0px;
     }
 
     .ondas{
@@ -892,6 +985,43 @@ footer {
     .box-slide3:hover{
         scale: none;
     }
+
+    /* */
+
+    .card-wrapper {
+        margin: 0 auto 35px; /* Centralizes the card wrapper */
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    
+    .card-wrapper:first-child {
+        margin-left: auto; /* Ensures the first card wrapper is also centered */
+    }
+
+    .card-list .card-item .card-link {
+        display: block;
+        background-color: var(--cor8--);
+        padding: 18px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+        margin: 0 auto; /* Centralizes the card */
+        justify-content: center;
+        position: relative;
+        left: -20px;
+    }
+
+    .card-list .card-link .card-image {
+        height: 100px;
+        border-radius: 12px;
+        padding: 15px;
+        background-color: var(--cor9--);
+    }
+
 }
 
 @media (min-width: 1200px) {
