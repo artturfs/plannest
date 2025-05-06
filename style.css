@@ -597,6 +597,10 @@ button  a {
     margin: 0 0 20px 0;
 }
 
+.swiper-button-next, .swiper-button-prev {
+    filter: brightness(0) invert(0.5) sepia(1) hue-rotate(145deg) saturate(2) brightness(1.2) drop-shadow(0 0 0 #5ca3a5);
+}
+
 /* */
 
 .logo-footer {
@@ -1020,6 +1024,10 @@ footer {
         border-radius: 12px;
         padding: 15px;
         background-color: var(--cor9--);
+    }
+
+    .card-button{
+        border-radius: 12px;
     }
 
 }
