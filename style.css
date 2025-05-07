@@ -282,7 +282,7 @@ a{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: var(--cor8--);
+    background-color: var(--cor9--);
     padding: 1rem 1.5rem;
     border-radius: 8px;
     max-height: 256px;
@@ -365,7 +365,8 @@ button  a {
     letter-spacing: 2px;
     margin: 0;
     line-height: 50px;
-    margin: 20px auto;
+    text-align: center;
+    margin-bottom: 20px;
 
 }
 
@@ -599,6 +600,20 @@ button  a {
 
 .swiper-button-next, .swiper-button-prev {
     filter: brightness(0) invert(0.5) sepia(1) hue-rotate(145deg) saturate(2) brightness(1.2) drop-shadow(0 0 0 #5ca3a5);
+}
+
+.slide4{
+    background-color: var(--cor9--);
+}
+
+.slide4 .h1-slide2{
+    position: relative;
+    top: 30px;
+    margin-bottom: 30px;
+}
+
+.slide4 .p-slide2{
+    text-align: center;
 }
 
 /* */
@@ -877,21 +892,46 @@ footer {
     /* FIM MENU */
 
     /* CARDS */
+    .slide2-part2 {
+        overflow-y: auto;
+        max-height: 100vh;
+        padding-right: 15px; /* Adds space for scrollbar without overlapping content */
+        scrollbar-width: thin; /* For Firefox */
+        scrollbar-color: var(--cor11--) var(--cor9--); /* Custom scrollbar colors */
+    }
+
+    .slide2-part2::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .slide2-part2::-webkit-scrollbar-thumb {
+        background-color: var(--cor8--); 
+        border-radius: 4px;
+    }
+
+    .slide2-part2::-webkit-scrollbar-track {
+        background-color: var(--cor9--); /* Scrollbar track color */
+    }
+
     .cards{
-        margin-top: 50px;
+        margin-top: 10px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 0;
-        
+        scale: 0.9;
     }
 
     .cards .card {
-        margin: 20px 0 32px 0
+        margin: 20px 0 20px 0
+    }
+
+    #cards2{
+        margin-top: -20px;
     }
 
     .cards .cars:last-child{
-        margin-bottom: 0;
+        margin-bottom: 0px;
     }
 
     .cards .card:first-child{
