@@ -148,7 +148,6 @@ a{
     color: var(--cor6--);
     text-decoration: none;
     padding: 5px 10px;
-
 }
 
 .link-login a{
@@ -261,7 +260,7 @@ footer {
 }
   
   .footer-links h4 {
-    color: var(--cor8x--);
+    color: var(--cor8--);
     margin-bottom: 10px;
   }
   
@@ -403,77 +402,77 @@ footer {
 
 }
 
-
 @media (max-width: 768px) {
-    .calendar-section{
-        margin: -60px auto;
+    .container {
+        display: flex;
+        margin: 20px 0;
+        justify-content: center;
         align-items: center;
-        scale: 0.8;
-        margin-left: -30px;
-        margin-bottom: -50px;
+        flex-direction: column;
     }
 
+    .calendar-container {
+        background-color: transparent;
+        height: 100%;
+        max-height: 600px;
+        max-width: 470px; /* Define um limite máximo para o tamanho */
+        margin: 0 auto; /* Centraliza horizontalmente */
+        scale: 0.8; /* Reduz o tamanho do calendário */
+        padding: 15px; /* Ajusta o espaçamento interno */
+    }
     .calendar-header {
         font-size: 1.2rem;
-        
     }
 
     #agenda-dia {
-        padding: 15px;
-        
-        scale: 0.8;
-    }
-
-    .agenda-form textarea {
-        font-size: 0.9rem;
-    }
-
-    .calendar-days {
-        gap: 5px;
-        font-size: .9rem;
-        margin: 0 auto;
+        background-color: var(--cor2--);
+        color: white;
+        scale: 1; /* Reduz o tamanho da agenda */
+        padding: 30px;
+        max-width: 470px; /* Define um limite máximo de largura */
+        height: auto; /* Ajusta a altura automaticamente */
+        border-radius: 70px 70px 0 0 ; /* Adiciona bordas arredondadas */
+        box-shadow: 0px -9px 10px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra para destaque */
+        position: relative; /* Garante que o posicionamento funcione corretamente */
+        z-index: 10; /* Coloca a agenda acima do calendário */
+        overflow: hidden; /* Garante que o conteúdo não vaze */
         align-items: center;
-        text-align: center;
-        justify-content: center;
-        display: flex;
+        height: 100%;
+        max-height: 400px;
     }
 
-    .calendar-days-content {
-        gap: 2px; /* Reduz o espaçamento em dispositivos menores */
-    }
-
-    .day-number {
-        font-size: 1rem; /* Tamanho reduzido */
-        padding: 10px;
-    }
-
-    .tab-content{
-        position: relative;
-        top: -50px;
-        left: -15px;
+    #agenda-dia textarea {
+        max-width: 470px;
+        width: 90%;
+        margin: 10px auto;
     }
 }
 
 /* Estilos globais */
 .span {
-    color: white;
+    color: var(--cor8--);
 }
 
 /* Seção do calendário */
-.calendar-container {
-    width: 100%;
-    max-width: 900px;
-    background-color: var(--cor2--);
-    border-radius: 10px;
-    padding: 20px;
+.container{
+    display: flex;
+    justify-content: space-evenly;    
     align-items: center;
     justify-content: center;
-    box-shadow: 20px 20px 50px -30px var(--cor2--);
-    margin: 60px auto;
+    margin: 0;
+}
+
+.calendar-container {
+    width: 130vh;
+    height: 100vh;
+    background-color: var(--cor9--);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0;
 }
 
 .calendar-header {
-    color: white;
+    color: var(--cor2--);
     text-align: center;
     font-size: 1.5rem;
     margin-bottom: 20px;
@@ -486,9 +485,9 @@ footer {
 #year-input {
     padding: 8px 12px;
     border-radius: 5px;
-    background-color: var(--cor2--);
-    border: 1px solid var(--cor9--);
-    color: white;
+    background-color: var(--cor9--);
+    border: 1px solid var(--cor8--);
+    color: var(--cor6--);
     font-size: 1rem;
     transition: all 0.3s ease;
 }
@@ -497,12 +496,12 @@ footer {
 #year-input:focus {
     outline: none;
     border-color: white;
-    background-color: var(--cor2--);
+    background-color: var(--cor8--);
 }
 
 #update-calendar {
     padding: 8px 16px;
-    background-color: var(--cor2--);
+    background-color: var(--cor8--);
     border: 1px solid var(--cor9--);
     color: white;
     cursor: pointer;
@@ -522,7 +521,7 @@ footer {
     gap: 10px;
     font-weight: bold;
     text-align: center;
-    color: white;
+    color: var(--cor9--);
 }
 
 .day {
@@ -542,17 +541,17 @@ footer {
 
 .day-number {
     font-size: 1.5rem; /* Responsivo em relação ao font-size de .calendar-days-content */
-    padding: 15px;
+    padding: 20px;
     border-radius: 5px;
     cursor: pointer;
-    margin: 10px 0;
     transition: background-color 0.3s;
-    color: white;
+    color: var(--cor2--);
     margin: 14px auto;
 }
 
 .day-number:hover {
     background-color: var(--cor1--);
+    color: var(--cor8--);
 }
 
 /* Estilos para o modal de tarefas */
@@ -608,7 +607,7 @@ footer {
 #save-task {
     width: 100%;
     padding: 12px;
-    background-color: var(--cor2--);
+    background-color: var(--cor8--);
     color: white;
     border: none;
     border-radius: 8px;
@@ -641,13 +640,11 @@ footer {
 #agenda-dia {
     background-color: var(--cor2--);
     color: white;
-    border-radius: 10px;
     padding: 20px;
     margin-top: 10px;
-    max-width: 600px;
     width: 100%;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    margin: 0 auto;
+    margin: 0;
+    height: 100vh;
     outline: none;
 }
 
@@ -668,7 +665,6 @@ footer {
 }
 
 .agenda-form textarea {
-    padding: 15px;
     background-color: var(--cor2--);
     color: white;
     border: 1px solid var(--cor9--);
@@ -676,19 +672,19 @@ footer {
     font-size: 1rem;
     resize: none;
     outline: none;
-
     margin-bottom: 15px;
 }
 
 textarea::placeholder {
     color: white;
+    text-align: start;
 }
 
 .agenda-form button {
     padding: 12px;
-    background-color: var(--cor2--);
+    background-color: var(--cor8--);
     border: none;
-    color: white;
+    color: var(--cor2--);
     font-size: 1rem;
     cursor: pointer;
     border-radius: 8px;
@@ -697,5 +693,6 @@ textarea::placeholder {
 }
 
 .agenda-form button:hover {
-    background-color: var(--cor1--);
+    background-color: var(--cor2--);
+    color: var(--cor9--);
 }

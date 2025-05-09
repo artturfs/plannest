@@ -18,7 +18,7 @@
                 <li><a href="index.html#paginas"><span>Paginas</span></a></li>
                 <li><a href="services.html">Sugestões</a></li>
                 <li><a href="feedbeck.html">Avaliar</a></li>
-                <li><a href="contato.hml">Fale conosco</a></li>
+                <li><a href="contato.hml">Contact us</a></li>
                 
                 <li><button class="login-li"><a class="link-login-li" href="login.html">Login</a></button></li>
                 <li><button class="cadastro-li"><a class="link-cadastro-li" href="cadastro.html" style="color: white;">Cadastro</a></button></li>
@@ -30,53 +30,52 @@
             <button class="cadastro"><a href="cadastro.html" class="link-cadastro">Cadastro</a></button>
         </div>
     </header>
-
+      <div class="container">
         <section class="calendar-section">
-            <div class="calendar-container">
-                <div class="calendar-header">
-                    <span class="span month-name">Maio 2025</span>
-                    <select id="month-select">
-                        <option value="0">Janeiro</option>
-                        <option value="1">Fevereiro</option>
-                        <option value="2">Março</option>
-                        <option value="3">Abril</option>
-                        <option value="4">Maio</option>
-                        <option value="5">Junho</option>
-                        <option value="6">Julho</option>
-                        <option value="7">Agosto</option>
-                        <option value="8">Setembro</option>
-                        <option value="9">Outubro</option>
-                        <option value="10">Novembro</option>
-                        <option value="11">Dezembro</option>
-                    </select>
-                    <input type="number" id="year-input" value="2025" min="1900" max="2100" />
-                </div>  
-                <div class="calendar">
-                    <div class="calendar-days">
-                        <div class="day">Dom</div>
-                        <div class="day">Seg</div>
-                        <div class="day">Ter</div>
-                        <div class="day">Qua</div>
-                        <div class="day">Qui</div>
-                        <div class="day">Sex</div>
-                        <div class="day">Sáb</div>
-                    </div>
-                    <div class="calendar-days-content">
-                        <!-- Dias serão gerados dinamicamente pelo JavaScript -->
-                    </div>
-                </div>
-            </div>
-        </section>
+              <div class="calendar-container">
+                  <div class="calendar-header">
+                      <span class="month-name">Maio 2025</span>
+                      <select id="month-select">
+                          <option value="0">Janeiro</option>
+                          <option value="1">Fevereiro</option>
+                          <option value="2">Março</option>
+                          <option value="3">Abril</option>
+                          <option value="4">Maio</option>
+                          <option value="5">Junho</option>
+                          <option value="6">Julho</option>
+                          <option value="7">Agosto</option>
+                          <option value="8">Setembro</option>
+                          <option value="9">Outubro</option>
+                          <option value="10">Novembro</option>
+                          <option value="11">Dezembro</option>
+                      </select>
+                      <input type="number" id="year-input" value="2025" min="1900" max="2100" />
+                  </div>  
+                  <div class="calendar">
+                      <div class="calendar-days">
+                          <div class="day">Dom</div>
+                          <div class="day">Seg</div>
+                          <div class="day">Ter</div>
+                          <div class="day">Qua</div>
+                          <div class="day">Qui</div>
+                          <div class="day">Sex</div>
+                          <div class="day">Sáb</div>
+                      </div>
+                      <div class="calendar-days-content">
+                          <!-- Dias serão gerados dinamicamente pelo JavaScript -->
+                      </div>
+                  </div>
+              </div>
+          </section>
 
-        <div id="agenda-dia" class="tab-content">
-            <h3>Agenda do dia <span class="span" id="dia-selecionado"></span></h3>
-            <form class="agenda-form">
-                <textarea id="agenda-textarea" placeholder="Digite os afazeres..." rows="5"></textarea>
-                <button type="submit">Salvar Agenda</button>
-            </form>
-        </div>    
-
-        <br><br><br><br>
+          <div id="agenda-dia" class="tab-content">
+              <h3>Agenda do dia <span class="span" id="dia-selecionado"></span></h3>
+              <form class="agenda-form">
+                  <textarea id="agenda-textarea" placeholder="Digite os afazeres..." rows="5"></textarea>
+                  <button type="submit">Salvar Agenda</button>
+              </form>
+          </div>     
+        </div>
 
         <footer>
             <section class="newsletter">
