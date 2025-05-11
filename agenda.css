@@ -405,10 +405,14 @@ footer {
 @media (max-width: 768px) {
     .container {
         display: flex;
-        margin: 20px 0;
+        margin: 0px 0;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+    }
+
+    .calendar-section{
+        margin-top: -60px;
     }
 
     .calendar-container {
@@ -416,7 +420,7 @@ footer {
         height: 100%;
         max-height: 600px;
         max-width: 470px; /* Define um limite máximo para o tamanho */
-        margin: 0 auto; /* Centraliza horizontalmente */
+        margin: -20px auto; /* Centraliza horizontalmente */
         scale: 0.8; /* Reduz o tamanho do calendário */
         padding: 15px; /* Ajusta o espaçamento interno */
     }
@@ -433,9 +437,9 @@ footer {
         height: auto; /* Ajusta a altura automaticamente */
         border-radius: 70px 70px 0 0 ; /* Adiciona bordas arredondadas */
         box-shadow: 0px -9px 10px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra para destaque */
-        position: relative; /* Garante que o posicionamento funcione corretamente */
-        z-index: 10; /* Coloca a agenda acima do calendário */
-        overflow: hidden; /* Garante que o conteúdo não vaze */
+        position: relative;
+        z-index: 10;
+        overflow: hidden;
         align-items: center;
         height: 100%;
         max-height: 400px;
@@ -443,6 +447,11 @@ footer {
 
     #agenda-dia textarea {
         max-width: 470px;
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .agenda-form button {
         width: 90%;
         margin: 10px auto;
     }
@@ -487,7 +496,7 @@ footer {
     border-radius: 5px;
     background-color: var(--cor9--);
     border: 1px solid var(--cor8--);
-    color: var(--cor6--);
+    color: var(--cor2--);
     font-size: 1rem;
     transition: all 0.3s ease;
 }
@@ -693,6 +702,5 @@ textarea::placeholder {
 }
 
 .agenda-form button:hover {
-    background-color: var(--cor2--);
-    color: var(--cor9--);
+    opacity: 0.8;
 }
