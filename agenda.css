@@ -306,12 +306,11 @@ footer {
 
 @media (max-width: 768px){
     body {
-        width: 100%;
-        overflow-x: hidden;
+        width: 100% !important;
+        overflow-x: hidden !important;
         padding: 0;
         margin: 0;
         background: linear-gradient(to top, #5ca3a523, #5ca3a51f, var(--cor9--));
-
     }
 
     .menu1 {
@@ -413,9 +412,6 @@ footer {
         text-align: center;
     }
 
-}
-
-@media (max-width: 768px) {
     .container {
         display: flex;
         margin: 0px 0;
@@ -603,7 +599,7 @@ footer {
 
 #day-modal-content h3 {
     margin-bottom: 20px;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-align: center;
 }
 
