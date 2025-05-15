@@ -352,43 +352,30 @@ button  a {
 /* FIM CARDS */
 
 .slide2-part1{
-    margin-top: 100px;
+    margin-top: 40px;
     display: block;
     width: 100%;
     text-align: center;
 }
 
 .h1-slide2{
-    font-size: 3.5rem;
-    color: var(--cor6--);
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin: 0;
-    line-height: 50px;
-    text-align: center;
-    margin-bottom: 20px;
-
-}
-
-.p-slide2{
     font-size: 1.5rem;
-    color: var(--cor6--);
-    font-weight: 300;
-    margin: 0 auto;
-    max-width: 700px;
+    color: var(--cor4--);
+    font-weight: 500;
+    margin: 0px auto;
+    text-align: start;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--cor4--);
+    max-width: 90%;
+    line-height: 50px;
 }
   
 /* */
 
 /* slide 3 */
 
-.ondas{
-    margin-top: -140px;
-    margin-bottom: -4px;
-    padding: 0;
-}
-
 .slide3{
+    margin-top: 40px;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -730,6 +717,7 @@ footer {
 
 @media (max-width: 769px) {
     .hero {
+        margin-top: 0;
         flex-direction: column;
         text-align: center;
         padding: 40px 5%;
@@ -964,10 +952,9 @@ footer {
 
     }
 
-    .h1-slide2{
-        font-size: 30px;
-        margin-bottom: 0;
-        font-weight: 700;
+    .slide4-part2 .h1-slide2{
+        z-index: 1000;
+        margin-bottom: -10px;
     }
 
     .p-slide2{
@@ -981,9 +968,13 @@ footer {
     
     .slide3{
         width: 100%;
-        margin: 0;
         height: 50vh;
-        margin-top: 0px;
+        margin-top: 70px;
+
+    }
+
+    .box-slide3{
+        margin-top: -20px;
     }
 
     .ondas{
@@ -1046,6 +1037,7 @@ footer {
     
     .card-wrapper:first-child {
         margin-left: auto; /* Ensures the first card wrapper is also centered */
+        margin-top: 0px;
     }
 
     .card-list .card-item .card-link {

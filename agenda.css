@@ -1,6 +1,6 @@
 body {
     padding: 0;
-    background: linear-gradient(to top, #5ca3a534, #5ca3a560, var(--cor9--));
+    background: linear-gradient(to top, #5ca3a534, #5ca3a52f, var(--cor9--));
     margin: 0;
     box-sizing: border-box;
     transition: all 0.3s;
@@ -178,6 +178,19 @@ a{
     transform: scale(1.02);
     transition: all .5s;
     opacity: 80%;
+}
+
+.tittle{
+    font-size: 1.5rem;
+    color: var(--cor4--);
+    font-weight: 500;
+    margin: 20px auto 40px auto;
+    text-align: start;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--cor4--);
+    max-width: 90%;
+    line-height: 50px;
+
 }
 
 /* Rodapé */
@@ -474,7 +487,7 @@ footer {
 .calendar-container {
     width: 130vh;
     height: 100vh;
-    background-color: var(--cor9--);
+    background: transparent;
     border-radius: 10px;
     padding: 20px;
     margin: 0;
