@@ -1,6 +1,6 @@
 body {
     padding: 0;
-    background-color: var(--cor8--);
+    background-color: var(--cor9--);
     margin: 0;
     box-sizing: border-box;
     transition: all 0.3s;
@@ -269,56 +269,6 @@ a{
   
 /* FIM SLIDE 1 */
 
-/* CARDS */
-
-.cards {
-    justify-content: center;
-    display: flex;
-    padding: 32px;
-}
-
-.cards .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color: var(--cor9--);
-    padding: 1rem;
-    border-radius: 8px;
-    max-height: 256px;
-    margin-left: 32px;
-    box-shadow: 20px 20px 50px -30px var(--cor6--);
-    transition: all 0.3s;
-    cursor: pointer;
-    max-width: 300px;   
-}
-
-.card :hover {
-    transform: scale(1.02);
-    transition: all 0.3s;
-}
-
-.cards .card h3.materia{
-    font-size: 1rem;
-    color: var(--cor6--);
-    font-weight: 600;
-    margin: 10px 0 0 0;
-}
-
-.card a {
-    color: var(--cor6--);
-}
-
-
-.cards .card:first-child {
-    margin-left: 0;
-}
-
-.cards .card img.icon{
-    width: 64px;
-    height: 64px;
-}
-
 
 /* FIM MENU */
 
@@ -328,12 +278,12 @@ a{
     font-size: 1.5rem;
     color: var(--cor4--);
     font-weight: 500;
-    margin: 20px auto 40px auto;
+    margin: 40px auto;
     text-align: start;
     margin-bottom: 20px;
+    border-bottom: 1px solid var(--cor4--);
     max-width: 90%;
     line-height: 50px;
-
 }
 
 .container{
@@ -398,10 +348,29 @@ a{
     transition: all 0.3s ease;
 }
 
+/* CARDS */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.8;
+    }
+
+    to{
+        opacity: 1;
+        scale: 1;
+    }   
+}
+
 .cards {
-    justify-content: center;
     display: flex;
+    justify-content: center;
+    align-items: stretch;
     padding: 32px;
+    gap: 32px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
 }
 
 .cards .card {
@@ -410,48 +379,84 @@ a{
     align-items: center;
     text-align: center;
     background-color: var(--cor9--);
-    padding: 1rem 1rem;
+    padding: 32px;
     border-radius: 8px;
-    margin-left: 32px;
-    box-shadow: 20px 20px 50px -30px var(--cor6--);
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 156px;
+    max-width: 300px;
+    margin: 0;
     transition: all 0.3s;
     cursor: pointer;
-    max-width: 300px;   
-    height: 128px;
-    width: 128px;
+    border: 1px solid #c9c9c9;
+    box-sizing: border-box;
+    position: relative; /* Adicione isso para permitir centralização absoluta de .filo */
 }
 
-.card :hover {
+.cards .card:not(:first-child) {
+    margin-left: 0;
+}
+
+.cards .card h3.materia {
+    font-size: 1rem;
+    color: var(--cor6--);
+    font-weight: 600;
+    margin: 10px 0 0 0;
+}
+
+.cards .card a {
+    color: var(--cor6--);
+}
+
+.cards .card img.icon {
+    width: 64px;
+    height: 64px;
+    padding: 12px;
+    border-radius: 50%;
+    background-color: #e0e0e0; /* fallback */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    z-index: 1000;
+}
+
+.filo{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,55%);
+}
+
+.cards .card:hover {
     transform: scale(1.02);
     transition: all 0.3s;
 }
 
-.cards .card h3 {
-    font-size: 1.5rem;
-    color: var(--cor6--);
-    font-weight: 500;
-    margin: 10px 0 0 0;
+.add-materia-form {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
-.cards .card p {
-    font-size: 1rem;
-    color: var(--cor6--);
-    font-weight: 300;
-    margin: 10px 0 20px 0;
+.add-materia-form input {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }
 
-.cards .card:first-child {
-    margin-left: 0;
+.add-materia-form button {
+  padding: 8px 16px;
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.cards .card .icon{
-    width: 64px;
-    height: 64px;
+.add-materia-form button:hover {
+  background-color: #303f9f;
 }
 
-.cards .card img {
-    width: 100%;
-}
 
 /* FOOTER */
 
@@ -564,6 +569,10 @@ footer {
     font-size: 14px;
   }
 
+.mobile-tabs-container {
+    display: none;
+}
+
 @media (max-width: 769px) {
         body {
         width: 100%;
@@ -674,4 +683,99 @@ footer {
         border: none;
     }
     /* FIM MENU */
-}
+
+
+            .container{
+              display: none;
+            }
+            .mobile-tabs-container {
+              margin: 24px 0px;
+              display: block;
+            }
+            .mobile-tabs-header {
+              display: flex;
+              border-bottom: 2px solid var(--cor9--);
+              margin-bottom: 16px;
+            }
+            .mobile-tab-btn {
+              flex: 1 1 0;
+              background: none;
+              border: none;
+              padding: 12px 0;
+              font-size: 1rem;
+              font-weight: 500;
+              color: var(--cor4--);
+              cursor: pointer;
+              border-bottom: 2px solid transparent;
+              transition: border-color 0.2s, color 0.2s;
+            }
+            .mobile-tab-btn.active {
+              color: var(--cor2--);
+              border-bottom: 2px solid var(--cor2--);
+            }
+            .mobile-tab-content {
+              display: none;
+            }
+            .mobile-tab-content.active {
+              display: block;
+            }
+            .mobile-cards-container {
+              display: flex;
+              flex-direction: column;
+              gap: 36px;
+            }
+
+    .mobile-card:hover {
+        color: var(--cor2--);
+        scale: 1.02;
+    }
+    .mobile-card:hover .materia,
+    .mobile-card:hover .atividade,
+    .mobile-card:hover .nota {
+        color: var(--cor2--);
+    }
+    .mobile-card:hover img {
+        filter: brightness(0) saturate(100%) invert(54%) sepia(12%) saturate(1162%) hue-rotate(134deg) brightness(92%) contrast(92%);
+    }
+
+            .mobile-cards-row {
+              display: flex;
+              gap: 32px;
+              justify-content: center;
+            }
+            .mobile-card {
+              flex: 1 1 0;
+              background: #fff;
+              border-radius: 12px;
+              box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              padding: 28px 16px;
+              text-align: center;
+              min-width: 0;
+              max-width: 140px;
+            }
+            .mobile-card img {
+              width: 40px;
+              height: 40px;
+              margin-bottom: 6px;
+            }
+            .mobile-card .materia {
+              font-size: 1rem;
+              margin: 0;
+              color: #222;
+              font-weight: 500;
+            }
+            .mobile-card .atividade {
+              font-size: 0.95rem;
+              color: #444;
+              margin: 0;
+            }
+            .mobile-card .nota {
+              font-size: 1.1rem;
+              color: #1a73e8;
+              font-weight: bold;
+              margin: 0;
+            }
+          }

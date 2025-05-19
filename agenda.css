@@ -452,6 +452,9 @@ footer {
         align-items: center;
         height: 100%;
         max-height: 400px;
+        animation: appear linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
     }
 
     #agenda-dia textarea {
@@ -466,6 +469,18 @@ footer {
     }
 }
 
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.8;
+    }
+
+    to{
+        opacity: 1;
+        scale: 1;
+    }   
+}
+
 /* Estilos globais */
 .span {
     color: var(--cor8--);
@@ -478,6 +493,7 @@ footer {
     align-items: center;
     justify-content: center;
     margin: 0;
+
 }
 
 .calendar-container {
@@ -664,6 +680,7 @@ footer {
     margin: 0;
     height: 100vh;
     outline: none;
+
 }
 
 #agenda-dia h3 {

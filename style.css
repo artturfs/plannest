@@ -258,6 +258,10 @@ a{
     z-index: 1;
     position: relative;
     mix-blend-mode: multiply;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 00% cover 30%;
+
 }
 
 .hex2 {
@@ -271,11 +275,27 @@ a{
 
 /* CARDS */
 
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.8;
+    }
+
+    to{
+        opacity: 1;
+        scale: 1;
+    }   
+}
+
 .cards {
     justify-content: center;
     display: flex;
     padding: 32px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
+
 
 .cards .card {
     display: flex;
@@ -356,6 +376,9 @@ button  a {
     display: block;
     width: 100%;
     text-align: center;
+        animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 
 .h1-slide2{
@@ -382,6 +405,7 @@ button  a {
     justify-content: center;
     align-items: center;
     background-color: #292e333b;
+    
 }
 
 .box-slide3:hover{
@@ -400,6 +424,9 @@ button  a {
     height: 80%;
     border-radius: 10px;
     box-shadow: 20px 20px 10px 0px #00000036;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 
 .dentro-box{
@@ -470,7 +497,9 @@ button  a {
 
 .container{
     background-color: var(--cor9--);
-
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 
 }
 
@@ -884,8 +913,7 @@ footer {
         overflow-y: auto;
         max-height: 100vh;
         padding-right: 15px; /* Adds space for scrollbar without overlapping content */
-        scrollbar-width: thin; /* For Firefox */
-        scrollbar-color: var(--cor11--) var(--cor9--); /* Custom scrollbar colors */
+        scrollbar-width: none; /* For Firefox */
         width: 70%;
         margin: 0 auto;
     }
@@ -910,6 +938,10 @@ footer {
         align-items: center;
         padding: 0;
         scale: 0.9;
+        animation: none;
+        animation-timeline: none;
+        animation-range: none;
+
     }
 
     .cards .card {
