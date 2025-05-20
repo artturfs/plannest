@@ -497,8 +497,14 @@ a {
 }
 
 .cards .card:hover {
-    transform: scale(1.02);
-    transition: all 0.3s;
+    filter: brightness(0) saturate(100%) invert(54%) sepia(12%) saturate(1162%) hue-rotate(134deg) brightness(92%) contrast(92%);
+    background-color: transparent;
+    color: var(--cor2--);
+    scale: 1.02;
+}
+
+.cards .card img.icon {
+    background-color: transparent;
 }
 
 .add-materia-form {
