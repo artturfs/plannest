@@ -352,13 +352,32 @@ a {
 
 #atividade-form #nova-atividade,
 #btn-atividade {
-    border: .3px solid var(--cor4--);
-    background-color: transparent;
-    padding: 10px;
+    border: 0.5px solid var(--cor2--);
+    background-color: var(--cor8--);
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 12px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 8px rgba(76, 85, 92, 0.06);
+    outline: none;
+}
+
+#atividade-form #nova-atividade:focus {
+    border-color: var(--cor1--);
+    box-shadow: 0 0 0 2px var(--cor10--);
 }
 
 #btn-atividade {
     letter-spacing: 2px;
+    background-color: var(--cor2--);
+    color: var(--cor8--);
+    cursor: pointer;
+    border: none;
+}
+
+#btn-atividade:hover {
+    background-color: var(--cor1--);
+    transform: scale(1.04);
 }
 
 #lista-atividades {
@@ -527,7 +546,6 @@ a {
 .add-materia-form button:hover {
     background-color: #303f9f;
 }
-
 
 /* FOOTER */
 
@@ -756,112 +774,4 @@ footer {
 
     /* FIM MENU */
 
-
-    .container {
-        display: none;
-    }
-
-    .mobile-tabs-container {
-        margin: 24px 0px;
-        display: block;
-    }
-
-    .mobile-tabs-header {
-        display: flex;
-        border-bottom: 2px solid var(--cor9--);
-        margin-bottom: 16px;
-    }
-
-    .mobile-tab-btn {
-        flex: 1 1 0;
-        background: none;
-        border: none;
-        padding: 12px 0;
-        font-size: 1rem;
-        font-weight: 500;
-        color: var(--cor4--);
-        cursor: pointer;
-        border-bottom: 2px solid transparent;
-        transition: border-color 0.2s, color 0.2s;
-    }
-
-    .mobile-tab-btn.active {
-        color: var(--cor2--);
-        border-bottom: 2px solid var(--cor2--);
-    }
-
-    .mobile-tab-content {
-        display: none;
-    }
-
-    .mobile-tab-content.active {
-        display: block;
-    }
-
-    .mobile-cards-container {
-        display: flex;
-        flex-direction: column;
-        gap: 36px;
-    }
-
-    .mobile-card:hover {
-        color: var(--cor2--);
-        scale: 1.02;
-    }
-
-    .mobile-card:hover .materia,
-    .mobile-card:hover .atividade,
-    .mobile-card:hover .nota {
-        color: var(--cor2--);
-    }
-
-    .mobile-card:hover img {
-        filter: brightness(0) saturate(100%) invert(54%) sepia(12%) saturate(1162%) hue-rotate(134deg) brightness(92%) contrast(92%);
-    }
-
-    .mobile-cards-row {
-        display: flex;
-        gap: 32px;
-        justify-content: center;
-    }
-
-    .mobile-card {
-        flex: 1 1 0;
-        background: #fff;
-        border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 28px 16px;
-        text-align: center;
-        min-width: 0;
-        max-width: 140px;
-    }
-
-    .mobile-card img {
-        width: 40px;
-        height: 40px;
-        margin-bottom: 6px;
-    }
-
-    .mobile-card .materia {
-        font-size: 1rem;
-        margin: 0;
-        color: #222;
-        font-weight: 500;
-    }
-
-    .mobile-card .atividade {
-        font-size: 0.95rem;
-        color: #444;
-        margin: 0;
-    }
-
-    .mobile-card .nota {
-        font-size: 1.1rem;
-        color: #1a73e8;
-        font-weight: bold;
-        margin: 0;
-    }
 }

@@ -7,7 +7,7 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-*{
+* {
     transition: all 0.3s;
 }
 
@@ -23,7 +23,7 @@ body {
     --cor9--: rgb(247, 247, 247);
 }
 
-.home{
+.home {
     margin-left: -40px;
 }
 
@@ -62,7 +62,7 @@ span {
     margin: 0;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -80,16 +80,16 @@ li a:hover {
     box-shadow: 1px 1px 100px rgba(0, 0, 0, 0.062);
 }
 
-.link-login-li:hover{
+.link-login-li:hover {
     transition: all 0.3s;
 
 }
 
-.link-login-li{
+.link-login-li {
     color: var(--cor6--);
 }
 
-.btn .login-1 { 
+.btn .login-1 {
     padding: 6px 0px;
     border: none;
     background-color: var(--cor8--);
@@ -122,39 +122,39 @@ li a:hover {
     padding: 8px 32px;
 }
 
-.link-cadastro{
+.link-cadastro {
     color: var(--cor8--);
     text-decoration: none;
     padding: 6px 32px;
 }
 
-.link-cadastro:hover{
+.link-cadastro:hover {
     color: var(--cor8--);
     border-radius: 5px;
     transition: all 0.3s;
 }
 
-.cadastro:hover{
+.cadastro:hover {
     transition: all .3s;
     color: white;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.link-login{
+.link-login {
     font-weight: 600;
     color: var(--cor6--);
     text-decoration: none;
     padding: 5px 10px;
 }
 
-.link-login a{
+.link-login a {
     color: var(--cor6--);
 }
 
-.link-cadastro{
+.link-cadastro {
     font-weight: 600;
     color: var(--cor8--);
     text-decoration: none;
@@ -162,25 +162,26 @@ a{
 
 }
 
-.link-cadastro a{
+.link-cadastro a {
     color: var(--cor8--);
 }
 
-.cadastro-li{
+.cadastro-li {
     display: none;
 }
 
-.login-li{
+.login-li {
     display: none;
 }
 
-.login-1:hover, .cadastro:hover{
+.login-1:hover,
+.cadastro:hover {
     transform: scale(1.02);
     transition: all .5s;
     opacity: 80%;
 }
 
-.tittle{
+.tittle {
     font-size: 1.5rem;
     color: var(--cor4--);
     font-weight: 500;
@@ -199,7 +200,7 @@ a{
     margin-top: 20px;
 }
 
-.icons{
+.icons {
     filter: brightness(0) invert(1) contrast(1.2) saturate(1.5);
 
 }
@@ -209,102 +210,102 @@ footer {
     color: white;
     padding: 40px 20px;
     font-family: sans-serif;
-  }
-  
-  .newsletter {
+}
+
+.newsletter {
     text-align: center;
     margin-bottom: 40px;
-  }
-  
-  .newsletter h2 {
+}
+
+.newsletter h2 {
     font-size: 2.5rem;
     margin: 0;
-  }
-  
-  .newsletter-form {
+}
+
+.newsletter-form {
     margin-top: 15px;
-  }
-  
-  .newsletter-form input {
+}
+
+.newsletter-form input {
     padding: 10px;
     width: 250px;
     border: none;
     border-radius: 3px;
-  }
-  
-  .newsletter-form button {
+}
+
+.newsletter-form button {
     padding: 10px 15px;
     background-color: var(--cor8--);
     color: var(--cor2--);
-    font-weight: bold ;
+    font-weight: bold;
     border: none;
     margin-left: 5px;
     border-radius: 3px;
     cursor: pointer;
-  }
-  
-  .footer-content {
+}
+
+.footer-content {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     border-bottom: 1px solid white;
     border-top: 1px solid white;
     margin-top: 30px;
-  }
-  
-  .footer-logo {
+}
+
+.footer-logo {
     max-width: 250px;
     margin-bottom: 30px;
-  }
-  
-  .logo-icon {
+}
+
+.logo-icon {
     color: var(--cor8--);
     font-weight: bold;
-  }
-  
-  .code {
+}
+
+.code {
     color: #ccc;
-  }
-  
-  .footer-links {
+}
+
+.footer-links {
     display: flex;
     gap: 40px;
     flex-wrap: wrap;
 }
-  
-  .footer-links h4 {
+
+.footer-links h4 {
     color: var(--cor8--);
     margin-bottom: 10px;
-  }
-  
-  .footer-links ul {
+}
+
+.footer-links ul {
     list-style: none;
     padding: 0;
-  }
-  
-  .footer-links ul li {
+}
+
+.footer-links ul li {
     margin-bottom: 5px;
-  }
-  
-  .footer-links ul li a {
+}
+
+.footer-links ul li a {
     text-decoration: none;
     color: white;
     font-size: 14px;
-  }
-  
-  .social .icons a img {
+}
+
+.social .icons a img {
     width: 24px;
     margin-right: 10px;
-  }
-  
-  .footer-bottom {
+}
+
+.footer-bottom {
     text-align: center;
     margin-top: 40px;
     font-size: 14px;
-  }
-  
+}
 
-@media (max-width: 768px){
+
+@media (max-width: 768px) {
     body {
         width: 100% !important;
         overflow-x: hidden !important;
@@ -319,7 +320,7 @@ footer {
     }
 
     .menu-toggle {
-        position: absolute  ;
+        position: absolute;
         left: 10px;
         display: block;
         font-size: x-large;
@@ -420,7 +421,7 @@ footer {
         flex-direction: column;
     }
 
-    .calendar-section{
+    .calendar-section {
         margin-top: -60px;
     }
 
@@ -428,11 +429,16 @@ footer {
         background-color: transparent;
         height: 100%;
         max-height: 600px;
-        max-width: 470px; /* Define um limite máximo para o tamanho */
-        margin: -20px auto; /* Centraliza horizontalmente */
-        scale: 0.8; /* Reduz o tamanho do calendário */
-        padding: 15px; /* Ajusta o espaçamento interno */
+        max-width: 470px;
+        /* Define um limite máximo para o tamanho */
+        margin: -20px auto;
+        /* Centraliza horizontalmente */
+        scale: 0.8;
+        /* Reduz o tamanho do calendário */
+        padding: 15px;
+        /* Ajusta o espaçamento interno */
     }
+
     .calendar-header {
         font-size: 1.2rem;
     }
@@ -440,15 +446,20 @@ footer {
     #agenda-dia {
         background-color: var(--cor2--);
         color: white;
-        scale: 1; /* Reduz o tamanho da agenda */
+        scale: 1;
+        /* Reduz o tamanho da agenda */
         padding: 30px;
-        max-width: 470px; /* Define um limite máximo de largura */
-        height: auto; /* Ajusta a altura automaticamente */
-        border-radius: 70px 70px 0 0 ; /* Adiciona bordas arredondadas */
-        box-shadow: 0px -9px 10px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra para destaque */
+        /* Define um limite máximo de largura */
+        height: auto;
+        /* Ajusta a altura automaticamente */
+        border-radius: 70px 70px 0 0;
+        /* Adiciona bordas arredondadas */
+        box-shadow: 0px -9px 10px rgba(0, 0, 0, 0.2);
+        /* Adiciona uma sombra para destaque */
         position: relative;
         z-index: 10;
         overflow: hidden;
+        width: 100% !important;
         align-items: center;
         height: 100%;
         max-height: 400px;
@@ -475,10 +486,10 @@ footer {
         scale: 0.8;
     }
 
-    to{
+    to {
         opacity: 1;
         scale: 1;
-    }   
+    }
 }
 
 /* Estilos globais */
@@ -487,9 +498,9 @@ footer {
 }
 
 /* Seção do calendário */
-.container{
+.container {
     display: flex;
-    justify-content: space-evenly;    
+    justify-content: space-evenly;
     align-items: center;
     justify-content: center;
     margin: 0;
@@ -569,12 +580,15 @@ footer {
 .calendar-days-content {
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
-    gap: 5px; /* Ajuste menor para espaçamento em telas menores */
-    font-size: 3vw; /* Tamanho de fonte adaptável */
+    gap: 5px;
+    /* Ajuste menor para espaçamento em telas menores */
+    font-size: 3vw;
+    /* Tamanho de fonte adaptável */
 }
 
 .day-number {
-    font-size: 1.5rem; /* Responsivo em relação ao font-size de .calendar-days-content */
+    font-size: 1.5rem;
+    /* Responsivo em relação ao font-size de .calendar-days-content */
     padding: 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -676,7 +690,7 @@ footer {
     color: white;
     padding: 20px;
     margin-top: 10px;
-    width: 100%;
+    width: 100% !important;
     margin: 0;
     height: 100vh;
     outline: none;

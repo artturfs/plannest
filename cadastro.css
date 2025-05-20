@@ -19,7 +19,7 @@ body {
     --cor9--: rgb(247, 247, 247);
 }
 
-.home{
+.home {
     margin-left: -40px;
 }
 
@@ -49,7 +49,7 @@ span {
 .logo {
     font-size: 20px;
     font-weight: 1000;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     letter-spacing: 4px;
     margin: 0;
     color: var(--cor6--);
@@ -61,7 +61,7 @@ span {
     margin: 0;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -79,11 +79,11 @@ li a:hover {
     box-shadow: 1px 1px 100px rgba(0, 0, 0, 0.062);
 }
 
-.link-login-li:hover{
+.link-login-li:hover {
     transition: all 0.3s;
 }
 
-.btn .login-1 { 
+.btn .login-1 {
     padding: 6px 0px;
     border: none;
     background-color: var(--cor8--);
@@ -116,26 +116,26 @@ li a:hover {
     padding: 8px 32px;
 }
 
-.link-cadastro{
+.link-cadastro {
     color: var(--cor8--);
     text-decoration: none;
     padding: 6px 32px;
 }
 
-.link-cadastro:hover{
+.link-cadastro:hover {
     color: var(--cor8--);
     border-radius: 5px;
     transition: all 0.3s;
 }
 
-.cadastro:hover{
+.cadastro:hover {
     transition: all .3s;
     color: white;
 }
 
 
-  
-.login{
+
+.login {
     height: 70vh;
     width: 70%;
     display: flex;
@@ -149,19 +149,21 @@ li a:hover {
 .login>.login-part2 {
     width: 40%;
     height: 100%;
-    background: linear-gradient(to bottom left, var(--cor2--,), var(--cor1--), var(--cor2--), var(--cor1--));
+    background: linear-gradient(to bottom left, var(--cor2--, ), var(--cor1--), var(--cor2--), var(--cor1--));
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.781);
     color: var(--cor8--);
     border-radius: 10px 0px 0px 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;   /* Centraliza verticalmente */
-    align-items: center;       /* Centraliza horizontalmente */
+    justify-content: center;
+    /* Centraliza verticalmente */
+    align-items: center;
+    /* Centraliza horizontalmente */
     text-align: center;
     padding: 0 20px;
 }
 
-.login > .login-part1 {
+.login>.login-part1 {
     width: 100%;
     height: 100%;
     display: flex;
@@ -172,38 +174,40 @@ li a:hover {
     box-sizing: border-box;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.h1-login{
+.h1-login {
     font-size: 40px;
     font-weight: 500;
     letter-spacing: 3px;
     margin-top: 120px;
 }
 
-.p-login{
+.p-login {
     font-size: 15px;
     font-weight: 100;
     letter-spacing: 3px;
     margin: -30px auto 20px auto;
 }
 
-.p-texto{
+.p-texto {
     font-size: 10px;
     font-weight: 100;
     letter-spacing: 2px;
-    margin:10px auto;
+    margin: 10px auto;
 }
 
 
-.h1-login, .p-login, .p-texto {
+.h1-login,
+.p-login,
+.p-texto {
     margin: 10px 0;
     text-align: center;
 }
 
-.p-texto2{
+.p-texto2 {
     font-size: 10px;
     font-weight: 100;
     margin: 0 40px;
@@ -217,14 +221,14 @@ a{
 
 }
 
-.p-conteudo{
+.p-conteudo {
     letter-spacing: 2px;
     font-size: 12px;
     margin: 30px 0 0px 0;
-    text-transform: uppercase;  
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-    
+
 .title {
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
         "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -241,7 +245,7 @@ a{
     border-radius: 5px;
     border: 1px solid #c0c0c0;
 }
-      
+
 .page-link {
     text-decoration: underline;
     margin: 0;
@@ -250,11 +254,11 @@ a{
     text-decoration-color: #747474;
 }
 
-.form-btn{
+.form-btn {
     width: 100%;
     padding: 8px 60px;
     border: none;
-    background: linear-gradient(to bottom left, var(--cor2--,), var(--cor1--), var(--cor2--), var(--cor1--));
+    background: linear-gradient(to bottom left, var(--cor2--, ), var(--cor1--), var(--cor2--), var(--cor1--));
     color: var(--cor8--);
     border-radius: 5px;
     font-size: 15px;
@@ -263,13 +267,15 @@ a{
     transition: 1s;
 }
 
-.form-btn:hover, .login-1:hover, .cadastro:hover{
+.form-btn:hover,
+.login-1:hover,
+.cadastro:hover {
     transform: scale(1.02);
     transition: all .5s;
     opacity: 80%;
 }
 
-.link-login{
+.link-login {
     font-weight: 600;
     color: var(--cor6--);
     text-decoration: none;
@@ -277,11 +283,11 @@ a{
 
 }
 
-.link-login a{
+.link-login a {
     color: var(--cor6--);
 }
 
-.link-cadastro{
+.link-cadastro {
     font-weight: 600;
     color: var(--cor8--);
     text-decoration: none;
@@ -289,15 +295,15 @@ a{
 
 }
 
-.link-cadastro a{
+.link-cadastro a {
     color: var(--cor8--);
 }
 
-.cadastro-li{
+.cadastro-li {
     display: none;
 }
 
-.login-li{
+.login-li {
     display: none;
 }
 
@@ -315,7 +321,7 @@ a{
     }
 
     .menu-toggle {
-        position: absolute  ;
+        position: absolute;
         left: 10px;
         display: block;
         font-size: x-large;
@@ -353,7 +359,7 @@ a{
         align-items: center;
     }
 
-    .login > .login-part2 {
+    .login>.login-part2 {
         display: none;
     }
 
@@ -392,7 +398,7 @@ a{
         width: 100%;
         padding: 12px;
         font-size: 16px;
-        background: linear-gradient(to bottom left, var(--cor2--,), var(--cor1--), var(--cor2--), var(--cor1--));
+        background: linear-gradient(to bottom left, var(--cor2--, ), var(--cor1--), var(--cor2--), var(--cor1--));
         color: var(--cor8--);
         border: none;
         border-radius: 5px;
@@ -409,7 +415,7 @@ a{
     .form .register-link {
         font-size: 13px;
         text-align: center;
-        margin-top:0px;
+        margin-top: 0px;
     }
 
     .logo {
@@ -480,7 +486,7 @@ a{
         text-align: center;
     }
 
-    .title{
+    .title {
         width: 100%;
         font-size: 29px;
         font-weight: 800;
