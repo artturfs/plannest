@@ -1,357 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>plannest - Filosofia e Sociologia</title>
-    <link rel="stylesheet" href="disciplinas.css">
-    <link rel="shortcut icon" href="/imagens/favicon.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>plannest - Filosofia e Sociologia</title>
+  <link rel="stylesheet" href="disciplinas.css">
+  <link rel="shortcut icon" href="/imagens/favicon.png" type="image/x-icon">
 </head>
 <body>
-    <header class="menu1">
-        <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
-        <a href="/index.html"><img height="30px"  src="../imagens/plannest.png" ></a>
-    
-        <nav class="links" id="nav-links">
-            <ul class="nav-itens">
-                <li><a href="../index.html" class="home">Início</a></li>
-                <li><a href="../index.html#paginas"><span>Páginas</span></a></li>
-                <li><a href="../services.html">Sugestões</a></li>
-                <li><a href="../feedbeck.html">Avaliar</a></li>
-                <li><a href="../contato.hml">Fale conosco</a></li>
-                
-                <li><button class="login-li"><a class="link-login-li" href="../login.html">Login</a></button></li>
-                <li><button class="cadastro-li"><a class="link-cadastro-li" href="../cadastro.html" style="color: white;">Cadastro</a></button></li>
-            </ul>
-        </nav>
-    
-        <div class="btn">
-            <button class="login-1" href="../login.html"><a class="link-login" href="../*login.html">Login</a></button>
-            <button class="cadastro"><a href="../cadastro.html" class="link-cadastro">Cadastro</a></button>
-        </div>
-    </header>
+  <header class="menu1">
+    <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+    <a href="/index.html"><img height="30px"  src="../imagens/plannest.png" ></a>
+  
+    <nav class="links" id="nav-links">
+      <ul class="nav-itens">
+        <li><a href="../index.html" class="home">Início</a></li>
+        <li><a href="../index.html#paginas"><span>Páginas</span></a></li>
+        <li><a href="../services.html">Sugestões</a></li>
+        <li><a href="/feedbeck.html">Avaliar</a></li>
+        <li><a href="../contato.hml">Fale conosco</a></li>
+        
+        <li><button class="login-li"><a class="link-login-li" href="../login.html">Login</a></button></li>
+        <li><button class="cadastro-li"><a class="link-cadastro-li" href="../cadastro.html" style="color: white;">Cadastro</a></button></li>
+      </ul>
+    </nav>
+  
+    <div class="btn">
+      <button class="login-1" href="../login.html"><a class="link-login" href="../login.html">Login</a></button>
+      <button class="cadastro"><a href="../cadastro.html" class="link-cadastro">Cadastro</a></button>
+    </div>
+  </header>
 
-        <h1 class="tittle">
-          Suas atividades de classe
-        </h1>
+    <h1 class="tittle">
+      Suas atividades de classe
+    </h1>
 
-        <div class="container">
-            <div class="tab-box">
-                <button class="tab-btn">Disciplinas</button>
-                <button class="tab-btn">Desempenho</button>
-                <div class="line">
-
-                </div>
-            </div>
-            <div class="content-box">
-                <div class="content">
-
-                <section class="slide2">
-                    <h4 class="btn-slide2"><a href="../atividades.html"><span>Disciplinas</span></a> > <a href="biologia.html" style="color: var(--cor6--);">Filosofia e Sociologia</a></h4>
-                    <form id="atividade-form">
-                        <input type="text" id="nova-atividade" placeholder="Digite uma nova atividade" required>
-                        <button type="submit" id="btn-atividade">Adicionar</button>
-                    </form>
-                    <ul id="lista-atividades">
-                        <!-- Atividades adicionadas aparecerão aqui -->
-                    </ul>
-                </section>
-                <script>
-                    // Função para carregar atividades do localStorage
-                    function carregarAtividades() {
-                        const atividades = JSON.parse(localStorage.getItem('atividadesFilo')) || [];
-                        return atividades;
-                    }
-
-                    // Função para salvar atividades no localStorage
-                    function salvarAtividades(atividades) {
-                        localStorage.setItem('atividadesFilo', JSON.stringify(atividades));
-                    }
-
-                    // Função para renderizar a lista de atividades
-                    function renderizarAtividades() {
-                        const lista = document.getElementById('lista-atividades');
-                        lista.innerHTML = '';
-                        const atividades = carregarAtividades();
-                        atividades.forEach((atividade, index) => {
-                            const li = document.createElement('li');
-
-                            const checkbox = document.createElement('input');
-                            checkbox.type = 'checkbox';
-                            checkbox.className = 'atividade-checkbox';
-                            checkbox.style.marginRight = "15px"
-                            checkbox.checked = atividade.concluida;
-                            checkbox.addEventListener('change', function() {
-                                atividades[index].concluida = checkbox.checked;
-                                salvarAtividades(atividades);
-                            });
-                            li.appendChild(checkbox);
-
-                            const span = document.createElement('span');
-                            span.textContent = atividade.texto;
-                            li.appendChild(span);
-
-                            // Botão de excluir
-                            const btnExcluir = document.createElement('button');
-                            btnExcluir.textContent = 'X';
-                            btnExcluir.className = 'btn-excluir';
-                            btnExcluir.style.marginLeft = 'auto';
-                            btnExcluir.style.background = "transparent"
-                            btnExcluir.style.color = "var(--cor2--)"
-                            btnExcluir.style.fontWeight = "1000"
-                            btnExcluir.addEventListener('click', function() {
-                                atividades.splice(index, 1);
-                                salvarAtividades(atividades);
-                                renderizarAtividades();
-                            });
-                            li.appendChild(btnExcluir);
-
-                            lista.appendChild(li);
-                        });
-                    }
-
-                    document.addEventListener('DOMContentLoaded', function() {
-                        const form = document.getElementById('atividade-form');
-                        const input = document.getElementById('nova-atividade');
-
-                        renderizarAtividades();
-
-                        form.addEventListener('submit', function(e) {
-                            e.preventDefault();
-                            const texto = input.value.trim();
-                            if (texto) {
-                                const atividades = carregarAtividades();
-                                atividades.push({ texto: texto, concluida: false });
-                                salvarAtividades(atividades);
-                                renderizarAtividades();
-                                input.value = '';
-                            }
-                        });
-                    });
-                </script>
-                </div>
-
-                <div class="content">
-                <section class="slide2">
-
-                <div class="slide2-part2">
-                  <img src="imagens/ilustrações.png" alt="" />
-                  <div class="cards">
-                  <section class="card agenda">
-                    <a href="desempenho/artesdesem.html">
-                    <img src="imagens/artes.png" alt="" class="icon ling" />
-                    <h3 class="materia">Artes</h3>
-                    </a>
-                  </section>
-                  <section class="card atividades">
-                    <a href="desempenho/biologiadesem.html"></a>
-                    <img src="imagens/biologia.png" alt="" class="icon nat" />
-                    <h3 class="materia">Biologia</h3>
-                    </a>
-                  </section>
-                  <section class="card material">
-                    <a href="desempenho/edfisicadesem.html">
-                    <img src="imagens/edfisica.png" alt="" class="icon ling" />
-                    <h3 class="materia">Ed. Física</h3>
-                    </a>
-                  </section>
-                  <section class="card material">
-                    <a href="desempenho/espanholdesem.html">
-                    <img src="imagens/linguas.png" alt="" class="icon ling" />
-                    <h3 class="materia">Espanhol</h3>
-                    </a>
-                  </section>
-                  <section class="card material" >
-                    <a href="desempenho/filodesem.html">
-                    <img src="imagens/lampada.png" alt="" class="icon hum" />
-                    <h3 class="materia filo">Filosofia e<br>Sociologia</h3>
-                    </a>
-                  </section>
-                  <section class="card material">
-                    <a href="desempenho/geografiadesem.html">
-                    <img src="imagens/fisica.png" alt="" class="icon nat" />
-                    <h3 class="materia">Física</h3>
-                    </a>
-                  </section>
-                  </div>
-
-                  <div class="cards" id="cards2">
-                  <section class="card material">
-                    <a href="desempenho/geografiadesem.html">
-                    <img src="imagens/geografia.png" alt="" class="icon hum" />
-                    <h3 class="materia">Geografia</h3>
-                    </a>
-                  </section>
-                  <section class="card agenda">
-                    <a href="desempenho/historiadesem.html">
-                    <img src="imagens/historia.png" alt="" class="icon hum" />
-                    <h3 class="materia">História</h3>
-                    </a>
-                  </section>
-                  <section class="card atividades">
-                    <a href="desempenho/inglesdesem.html">
-                    <img src="imagens/linguas.png" alt="" class="icon ling" />
-                    <h3 class="materia">Inglês</h3>
-                    </a>
-                  </section>
-                  <section class="card material">
-                    <a href="desempenho/matematicadesem.html">
-                    <img src="imagens/matematica.png" alt="" class="icon nat" />
-                    <h3 class="materia">Matemática</h3>
-                    </a>
-                  </section>
-                  <section class="card material">
-                    <a href="desempenho/portuguesdesem.html">
-                    <img src="imagens/portugues.png" alt="" class="icon ling" />
-                    <h3 class="materia">Português</h3>
-                    </a>
-                  </section>
-                  <section class="card material">
-                    <a href="desempenho/quimicadesem.html">
-                    <img src="imagens/quimica.png" alt="" class="icon nat" />
-                    <h3 class="materia">Química</h3>
-                    </a>
-                  </section>
-                  </div>
-                </div>
-                </section>   
-                </div>
-              </div>
-            </div>
-        </div>
-
+    <div class="container">
+      <div class="tab-box">
+        <button class="tab-btn">Disciplinas</button>
+        <button class="tab-btn">Desempenho</button>
+        <div class="line">
 
         </div>
+      </div>
+      <div class="content-box">
+        <div class="content">
+
+        <section class="slide2">
+          <h4 class="btn-slide2"><a href="../atividades.html"><span>Disciplinas</span></a> > <a href="biologia.html" style="color: var(--cor6--);">Filosofia e Sociologia</a></h4>
+          <form id="atividade-form">
+            <input type="text" id="nova-atividade" placeholder="Digite uma nova atividade" required>
+            <button type="submit" id="btn-atividade">Adicionar</button>
+          </form>
+          <ul id="lista-atividades">
+            <!-- Atividades adicionadas aparecerão aqui -->
+          </ul>
+        </section>
+        <script>
+          // Função para carregar atividades do localStorage
+          function carregarAtividades() {
+            const atividades = JSON.parse(localStorage.getItem('atividadesFilosofia e Sociologia')) || [];
+            return atividades;
+          }
+
+          // Função para salvar atividades no localStorage
+          function salvarAtividades(atividades) {
+            localStorage.setItem('atividadesFilosofia e Sociologia', JSON.stringify(atividades));
+          }
+
+          // Função para renderizar a lista de atividades
+          function renderizarAtividades() {
+            const lista = document.getElementById('lista-atividades');
+            lista.innerHTML = '';
+            const atividades = carregarAtividades();
+            atividades.forEach((atividade, index) => {
+              const li = document.createElement('li');
+
+              const checkbox = document.createElement('input');
+              checkbox.type = 'checkbox';
+              checkbox.className = 'atividade-checkbox';
+              checkbox.style.marginRight = "15px"
+              checkbox.checked = atividade.concluida;
+              checkbox.addEventListener('change', function() {
+                atividades[index].concluida = checkbox.checked;
+                salvarAtividades(atividades);
+              });
+              li.appendChild(checkbox);
+
+              const span = document.createElement('span');
+              span.textContent = atividade.texto;
+              li.appendChild(span);
+
+              // Botão de excluir
+              const btnExcluir = document.createElement('button');
+              btnExcluir.textContent = 'X';
+              btnExcluir.className = 'btn-excluir';
+              btnExcluir.style.marginLeft = 'auto';
+              btnExcluir.style.background = "transparent"
+              btnExcluir.style.color = "var(--cor2--)"
+              btnExcluir.style.fontWeight = "1000"
+              btnExcluir.addEventListener('click', function() {
+                atividades.splice(index, 1);
+                salvarAtividades(atividades);
+                renderizarAtividades();
+              });
+              li.appendChild(btnExcluir);
+
+              lista.appendChild(li);
+            });
+          }
+
+          document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('atividade-form');
+            const input = document.getElementById('nova-atividade');
+
+            renderizarAtividades();
+
+            form.addEventListener('submit', function(e) {
+              e.preventDefault();
+              const texto = input.value.trim();
+              if (texto) {
+                const atividades = carregarAtividades();
+                atividades.push({ texto: texto, concluida: false });
+                salvarAtividades(atividades);
+                renderizarAtividades();
+                input.value = '';
+              }
+            });
+          });
+        </script>
+        </div>
+
+        <div class="content">
+        <section class="slide2">
+
+        <div class="slide2-part2">
+          <img src="/imagens/ilustrações.png" alt="" />
+          <div class="cards">
+          <section class="card agenda">
+          <a href="/desempenho/artesdesem.html">
+          <img src="/imagens/artes.png" alt="" class="icon ling" />
+          <h3 class="materia">Artes</h3>
+          </a>
+          </section>
+          <section class="card atividades">
+          <a href="/desempenho/biologiadesem.html">
+          <img src="/imagens/biologia.png" alt="" class="icon nat" />
+          <h3 class="materia">Biologia</h3>
+          </a>
+          </section>
+          <section class="card material">
+          <a href="/desempenho/edfisicadesem.html">
+          <img src="/imagens/edfisica.png" alt="" class="icon ling" />
+          <h3 class="materia">Ed. Física</h3>
+          </a>
+          </section>
+          <section class="card material">
+          <a href="/desempenho/espanholdesem.html">
+          <img src="/imagens/linguas.png" alt="" class="icon ling" />
+          <h3 class="materia">Espanhol</h3>
+          </a>
+          </section>
+          <section class="card material" >
+          <a href="/desempenho/filodesem.html">
+          <img src="/imagens/lampada.png" alt="" class="icon hum" />
+          <h3 class="materia filo">Filosofia e<br>Sociologia</h3>
+          </a>
+          </section>
+          <section class="card material">
+          <a href="/desempenho/geografiadesem.html">
+          <img src="/imagens/fisica.png" alt="" class="icon nat" />
+          <h3 class="materia">Física</h3>
+          </a>
+          </section>
+          </div>
+
+          <div class="cards" id="cards2">
+          <section class="card material">
+          <a href="/desempenho/geografiadesem.html">
+          <img src="/imagens/geografia.png" alt="" class="icon hum" />
+          <h3 class="materia">Geografia</h3>
+          </a>
+          </section>
+          <section class="card agenda">
+          <a href="/desempenho/historiadesem.html">
+          <img src="/imagens/historia.png" alt="" class="icon hum" />
+          <h3 class="materia">História</h3>
+          </a>
+          </section>
+          <section class="card atividades">
+          <a href="/desempenho/inglesdesem.html">
+          <img src="/imagens/linguas.png" alt="" class="icon ling" />
+          <h3 class="materia">Inglês</h3>
+          </a>
+          </section>
+          <section class="card material">
+          <a href="/desempenho/matematicadesem.html">
+          <img src="/imagens/matematica.png" alt="" class="icon nat" />
+          <h3 class="materia">Matemática</h3>
+          </a>
+          </section>
+          <section class="card material">
+          <a href="/desempenho/portuguesdesem.html">
+          <img src="/imagens/portugues.png" alt="" class="icon ling" />
+          <h3 class="materia">Português</h3>
+          </a>
+          </section>
+          <section class="card material">
+          <a href="/desempenho/quimicadesem.html">
+          <img src="/imagens/quimica.png" alt="" class="icon nat" />
+          <h3 class="materia">Química</h3>
+          </a>
+          </section>
+          </div>
+        </div>
+        </section>   
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+    </div>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    const tabBtns = document.querySelectorAll('.mobile-tab-btn');
-    const tabContents = document.querySelectorAll('.mobile-tab-content');
+  const tabBtns = document.querySelectorAll('.mobile-tab-btn');
+  const tabContents = document.querySelectorAll('.mobile-tab-content');
 
-    tabBtns.forEach(btn => {
-      btn.addEventListener('click', function() {
-        const target = btn.getAttribute('data-tab');
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+    const target = btn.getAttribute('data-tab');
 
-        // Remover "active" de todos os botões e conteúdos
-        tabBtns.forEach(b => b.classList.remove('active'));
-        tabContents.forEach(c => c.classList.remove('active'));
+    // Remover "active" de todos os botões e conteúdos
+    tabBtns.forEach(b => b.classList.remove('active'));
+    tabContents.forEach(c => c.classList.remove('active'));
 
-        // Adicionar "active" ao botão clicado e ao conteúdo correspondente
-        btn.classList.add('active');
-        document.getElementById('mobile-tab-' + target).classList.add('active');
-      });
+    // Adicionar "active" ao botão clicado e ao conteúdo correspondente
+    btn.classList.add('active');
+    document.getElementById('mobile-tab-' + target).classList.add('active');
     });
+  });
   });
 </script>
 
 
 
-        <br><br><br>
+    <br><br><br>
 
-    <footer>
-      <section class="newsletter">
-        <h2>Quer organizar melhor sua rotina?</h2>
-        <p>
-          Inscreva-se na nossa newsletter e receba dicas exclusivas de
-          planejamento e produtividade diretamente no seu e-mail:
-        </p>
-        <div class="newsletter-form">
-          <input type="email" placeholder="Digite seu e-mail" />
-          <button>Cadastrar</button>
-        </div>
-      </section>
+  <footer>
+    <section class="newsletter">
+    <h2>Quer organizar melhor sua rotina?</h2>
+    <p>
+      Inscreva-se na nossa newsletter e receba dicas exclusivas de
+      planejamento e produtividade diretamente no seu e-mail:
+    </p>
+    <div class="newsletter-form">
+      <input type="email" placeholder="Digite seu e-mail" />
+      <button>Cadastrar</button>
+    </div>
+    </section>
 
-      <div class="footer-content">
-        <div class="footer-logo">
-          <img
-            height="40px"
-            class="logo-footer"
-            src="imagens/plannest.png"
-            alt=""
-          />
-          <p>
-            Transforme sua rotina com ferramentas de planejamento simples e
-            eficazes.
-          </p>
-        </div>
+    <div class="footer-content">
+    <div class="footer-logo">
+      <img
+      height="40px"
+      class="logo-footer"
+      src="/imagens/plannest.png"
+      alt=""
+      />
+      <p>
+      Transforme sua rotina com ferramentas de planejamento simples e
+      eficazes.
+      </p>
+    </div>
 
-        <div class="footer-links">
-          <div>
-            <h4>Links úteis</h4>
-            <ul>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Sobre nós</a></li>
-              <li><a href="#">Ferramentas</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4>Serviços</h4>
-            <ul>
-              <li><a href="#">Planejamento Pessoal</a></li>
-              <li><a href="#">Gestão de Tarefas</a></li>
-              <li><a href="#">Calendário Online</a></li>
-              <li><a href="#">Consultoria</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4>Suporte</h4>
-            <ul>
-              <li><a href="#">Fale conosco</a></li>
-              <li><a href="#">Envie um e-mail</a></li>
-              <li><a href="#">Central de ajuda</a></li>
-              <li><a href="#">FAQ</a></li>
-            </ul>
-          </div>
-          <div class="social">
-            <h4>Siga-nos</h4>
-            <div class="icons">
-              <a href="#"
-                ><img src="imagens/instagram.png" alt="Instagram"
-              /></a>
-              <a href="#"><img src="imagens/linkedin.png" alt="LinkedIn" /></a>
-            </div>
-          </div>
-        </div>
+    <div class="footer-links">
+      <div>
+      <h4>Links úteis</h4>
+      <ul>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Sobre nós</a></li>
+        <li><a href="#">Ferramentas</a></li>
+      </ul>
       </div>
-
-      <div class="footer-bottom">
-        <p>Plannest 2024 © Todos os direitos reservados</p>
+      <div>
+      <h4>Serviços</h4>
+      <ul>
+        <li><a href="#">Planejamento Pessoal</a></li>
+        <li><a href="#">Gestão de Tarefas</a></li>
+        <li><a href="#">Calendário Online</a></li>
+        <li><a href="#">Consultoria</a></li>
+      </ul>
       </div>
-    </footer>
+      <div>
+      <h4>Suporte</h4>
+      <ul>
+        <li><a href="#">Fale conosco</a></li>
+        <li><a href="#">Envie um e-mail</a></li>
+        <li><a href="#">Central de ajuda</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+      </div>
+      <div class="social">
+      <h4>Siga-nos</h4>
+      <div class="icons">
+        <a href="#"
+        ><img src="/imagens/instagram.png" alt="Instagram"
+        /></a>
+        <a href="#"><img src="/imagens/linkedin.png" alt="LinkedIn" /></a>
+      </div>
+      </div>
+    </div>
+    </div>
 
-    <script src="menu-toggle.js"></script>
-    <script>
-      const tabs = document.querySelectorAll('.tab-btn');
-      const all_content = document.querySelectorAll('.content');
+    <div class="footer-bottom">
+    <p>Plannest 2024 © Todos os direitos reservados</p>
+    </div>
+  </footer>
 
-      // Função para ativar a aba inicial (Materias)
-      function activateInitialTab() {
-        // Ativa o primeiro botão de aba
-        tabs[0].classList.add('active');
-        // Ativa o primeiro conteúdo
-        all_content[0].classList.add('active');
-        // Ajusta a linha para o primeiro botão
-        var line = document.querySelector('.line');
-        line.style.width = tabs[0].offsetWidth + 'px';
-        line.style.left = tabs[0].offsetLeft + 'px';
-      }
+  <script src="menu-toggle.js"></script>
+  <script>
+    const tabs = document.querySelectorAll('.tab-btn');
+    const all_content = document.querySelectorAll('.content');
 
-      // Ativa a aba inicial ao carregar a página
-      window.addEventListener('DOMContentLoaded', activateInitialTab);
+    // Função para ativar a aba inicial (Materias)
+    function activateInitialTab() {
+    // Ativa o primeiro botão de aba
+    tabs[0].classList.add('active');
+    // Ativa o primeiro conteúdo
+    all_content[0].classList.add('active');
+    // Ajusta a linha para o primeiro botão
+    var line = document.querySelector('.line');
+    line.style.width = tabs[0].offsetWidth + 'px';
+    line.style.left = tabs[0].offsetLeft + 'px';
+    }
 
-      tabs.forEach((tab, index) => {
-        tab.addEventListener('click', () => {
-          tabs.forEach(tab => tab.classList.remove('active'));
-          tab.classList.add('active');
+    // Ativa a aba inicial ao carregar a página
+    window.addEventListener('DOMContentLoaded', activateInitialTab);
 
-          var line = document.querySelector('.line');
-          line.style.width = tab.offsetWidth + 'px';
-          line.style.left = tab.offsetLeft + 'px';
+    tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(tab => tab.classList.remove('active'));
+      tab.classList.add('active');
 
-          all_content.forEach(content => content.classList.remove('active'));
-          all_content[index].classList.add('active');
-        });
-      });
-    </script>
+      var line = document.querySelector('.line');
+      line.style.width = tab.offsetWidth + 'px';
+      line.style.left = tab.offsetLeft + 'px';
+
+      all_content.forEach(content => content.classList.remove('active'));
+      all_content[index].classList.add('active');
+    });
+    });
+  </script>
 
 
 </body>
