@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>plannest - Educação Física</title>
+    <title>plannest - Inglês</title>
     <link rel="stylesheet" href="disciplinas.css">
     <link rel="shortcut icon" href="/imagens/favicon.png" type="image/x-icon">
 </head>
 <body>
     <header class="menu1">
         <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
-        <a href="/index.html"><img height="30px"  src="../imagens/plannest.png" ></a>
+        <a href="../index.html"><img height="30px"  src="../imagens/plannest.png" ></a>
     
         <nav class="links" id="nav-links">
             <ul class="nav-itens">
@@ -26,7 +26,7 @@
         </nav>
     
         <div class="btn">
-            <button class="login-1" href="../login.html"><a class="link-login" href="../login.html">Login</a></button>
+            <button class="login-1" href="../login.html"><a class="link-login" href="..login.html">Login</a></button>
             <button class="cadastro"><a href="../cadastro.html" class="link-cadastro">Cadastro</a></button>
         </div>
     </header>
@@ -47,7 +47,7 @@
                 <div class="content">
 
                 <section class="slide2">
-                    <h4 class="btn-slide2"><a href="../atividades.html"><span>Disciplinas</span></a> > <a href="biologia.html" style="color: var(--cor6--);">Educação Física</a></h4>
+                    <h4 class="btn-slide2"><a href="../atividades.html"><span>Disciplinas</span></a> > <a href="biologia.html" style="color: var(--cor6--);">Inglês</a></h4>
                     <form id="atividade-form">
                         <input type="text" id="nova-atividade" placeholder="Digite uma nova atividade" required>
                         <button type="submit" id="btn-atividade">Adicionar</button>
@@ -59,13 +59,13 @@
                 <script>
                     // Função para carregar atividades do localStorage
                     function carregarAtividades() {
-                        const atividades = JSON.parse(localStorage.getItem('atividadesEdfisica')) || [];
+                        const atividades = JSON.parse(localStorage.getItem('atividadesMatematica')) || [];
                         return atividades;
                     }
 
                     // Função para salvar atividades no localStorage
                     function salvarAtividades(atividades) {
-                        localStorage.setItem('atividadesEdfisica', JSON.stringify(atividades));
+                        localStorage.setItem('atividadesMatematica', JSON.stringify(atividades));
                     }
 
                     // Função para renderizar a lista de atividades
@@ -133,7 +133,6 @@
 
                 <div class="content">
                 <section class="slide2">
-
                 <div class="slide2-part2">
                   <img src="imagens/ilustrações.png" alt="" />
                   <div class="cards">

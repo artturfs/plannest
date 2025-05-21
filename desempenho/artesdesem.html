@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>plannest - Espanhol</title>
+  <title>plannest - Artes</title>
   <link rel="stylesheet" href="disciplinas.css">
   <link rel="shortcut icon" href="/imagens/favicon.png" type="image/x-icon">
 </head>
@@ -17,8 +17,8 @@
         <li><a href="../index.html" class="home">Início</a></li>
         <li><a href="../index.html#paginas"><span>Páginas</span></a></li>
         <li><a href="../services.html">Sugestões</a></li>
-        <li><a href="/feedbeck.html">Avaliar</a></li>
-        <li><a href="../contato.hml">Fale conosco</a></li>
+        <li><a href="../feedbeck.html">Avaliar</a></li>
+        <li><a href="../contato.html">Fale conosco</a></li>
         
         <li><button class="login-li"><a class="link-login-li" href="../login.html">Login</a></button></li>
         <li><button class="cadastro-li"><a class="link-cadastro-li" href="../cadastro.html" style="color: white;">Cadastro</a></button></li>
@@ -47,28 +47,24 @@
         <div class="content">
 
         <section class="slide2">
-          <h4 class="btn-slide2"><a href="../atividades.html"><span>Disciplinas</span></a> > <a href="biologia.html" style="color: var(--cor6--);">Espanhol</a></h4>
+          <h4 class="btn-slide2"><a href="../atividades.html"><span>Disciplinas</span></a> > <a href="artes.html" style="color: var(--cor6--);">Artes</a></h4>
           <form id="atividade-form">
             <input type="text" id="nova-atividade" placeholder="Digite uma nova atividade" required>
             <button type="submit" id="btn-atividade">Adicionar</button>
           </form>
           <ul id="lista-atividades">
-            <!-- Atividades adicionadas aparecerão aqui -->
           </ul>
         </section>
         <script>
-          // Função para carregar atividades do localStorage
           function carregarAtividades() {
-            const atividades = JSON.parse(localStorage.getItem('atividadesEspanhol')) || [];
+            const atividades = JSON.parse(localStorage.getItem('atividadesArtes')) || [];
             return atividades;
           }
 
-          // Função para salvar atividades no localStorage
           function salvarAtividades(atividades) {
-            localStorage.setItem('atividadesEspanhol', JSON.stringify(atividades));
+            localStorage.setItem('atividadesArtes', JSON.stringify(atividades));
           }
 
-          // Função para renderizar a lista de atividades
           function renderizarAtividades() {
             const lista = document.getElementById('lista-atividades');
             lista.innerHTML = '';
@@ -91,7 +87,6 @@
               span.textContent = atividade.texto;
               li.appendChild(span);
 
-              // Botão de excluir
               const btnExcluir = document.createElement('button');
               btnExcluir.textContent = 'X';
               btnExcluir.className = 'btn-excluir';
@@ -138,37 +133,37 @@
           <img src="/imagens/ilustrações.png" alt="" />
           <div class="cards">
           <section class="card agenda">
-          <a href="/desempenho/artesdesem.html">
+          <a href="agenda.html">
           <img src="/imagens/artes.png" alt="" class="icon ling" />
           <h3 class="materia">Artes</h3>
           </a>
           </section>
           <section class="card atividades">
-          <a href="/desempenho/biologiadesem.html"></a>
+          <a href="agenda.html"></a>
           <img src="/imagens/biologia.png" alt="" class="icon nat" />
           <h3 class="materia">Biologia</h3>
           </a>
           </section>
           <section class="card material">
-          <a href="/desempenho/edfisicadesem.html">
+          <a href="agenda.html">
           <img src="/imagens/edfisica.png" alt="" class="icon ling" />
           <h3 class="materia">Ed. Física</h3>
           </a>
           </section>
           <section class="card material">
-          <a href="/desempenho/espanholdesem.html">
+          <a href="agenda.html">
           <img src="/imagens/linguas.png" alt="" class="icon ling" />
           <h3 class="materia">Espanhol</h3>
           </a>
           </section>
           <section class="card material" >
-          <a href="/desempenho/filodesem.html">
+          <a href="agenda.html">
           <img src="/imagens/lampada.png" alt="" class="icon hum" />
           <h3 class="materia filo">Filosofia e<br>Sociologia</h3>
           </a>
           </section>
           <section class="card material">
-          <a href="/desempenho/geografiadesem.html">
+          <a href="agenda.html">
           <img src="/imagens/fisica.png" alt="" class="icon nat" />
           <h3 class="materia">Física</h3>
           </a>
@@ -177,37 +172,37 @@
 
           <div class="cards" id="cards2">
           <section class="card material">
-          <a href="/desempenho/geografiadesem.html">
+          <a href="agenda.html">
           <img src="/imagens/geografia.png" alt="" class="icon hum" />
           <h3 class="materia">Geografia</h3>
           </a>
           </section>
           <section class="card agenda">
-          <a href="/desempenho/historiadesem.html">
+          <a href="agenda.html">
           <img src="/imagens/historia.png" alt="" class="icon hum" />
           <h3 class="materia">História</h3>
           </a>
           </section>
           <section class="card atividades">
-          <a href="/desempenho/inglesdesem.html">
+          <a href="agenda.html">
           <img src="/imagens/linguas.png" alt="" class="icon ling" />
           <h3 class="materia">Inglês</h3>
           </a>
           </section>
           <section class="card material">
-          <a href="/desempenho/matematicadesem.html">
+          <a href="agenda.html">
           <img src="/imagens/matematica.png" alt="" class="icon nat" />
           <h3 class="materia">Matemática</h3>
           </a>
           </section>
           <section class="card material">
-          <a href="/desempenho/portuguesdesem.html">
+          <a href="agenda.html">
           <img src="/imagens/portugues.png" alt="" class="icon ling" />
           <h3 class="materia">Português</h3>
           </a>
           </section>
           <section class="card material">
-          <a href="/desempenho/quimicadesem.html">
+          <a href="agenda.html">
           <img src="/imagens/quimica.png" alt="" class="icon nat" />
           <h3 class="materia">Química</h3>
           </a>
@@ -222,28 +217,6 @@
 
 
     </div>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-  const tabBtns = document.querySelectorAll('.mobile-tab-btn');
-  const tabContents = document.querySelectorAll('.mobile-tab-content');
-
-  tabBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
-    const target = btn.getAttribute('data-tab');
-
-    // Remover "active" de todos os botões e conteúdos
-    tabBtns.forEach(b => b.classList.remove('active'));
-    tabContents.forEach(c => c.classList.remove('active'));
-
-    // Adicionar "active" ao botão clicado e ao conteúdo correspondente
-    btn.classList.add('active');
-    document.getElementById('mobile-tab-' + target).classList.add('active');
-    });
-  });
-  });
-</script>
-
-
 
     <br><br><br>
 
@@ -265,7 +238,7 @@
       <img
       height="40px"
       class="logo-footer"
-      src="/imagens/plannest.png"
+      src="imagens/plannest.png"
       alt=""
       />
       <p>
@@ -305,16 +278,16 @@
       <h4>Siga-nos</h4>
       <div class="icons">
         <a href="#"
-        ><img src="/imagens/instagram.png" alt="Instagram"
+        ><img src="imagens/instagram.png" alt="Instagram"
         /></a>
-        <a href="#"><img src="/imagens/linkedin.png" alt="LinkedIn" /></a>
+        <a href="#"><img src="imagens/linkedin.png" alt="LinkedIn" /></a>
       </div>
       </div>
     </div>
     </div>
 
     <div class="footer-bottom">
-    <p>Plannest 2024 © Todos os direitos reservados</p>
+    <p>Plannest 2025 © Todos os direitos reservados</p>
     </div>
   </footer>
 
@@ -323,19 +296,14 @@
     const tabs = document.querySelectorAll('.tab-btn');
     const all_content = document.querySelectorAll('.content');
 
-    // Função para ativar a aba inicial (Materias)
     function activateInitialTab() {
-    // Ativa o primeiro botão de aba
-    tabs[0].classList.add('active');
-    // Ativa o primeiro conteúdo
-    all_content[0].classList.add('active');
-    // Ajusta a linha para o primeiro botão
+    tabs[1].classList.add('active');
+    all_content[1].classList.add('active');
     var line = document.querySelector('.line');
-    line.style.width = tabs[0].offsetWidth + 'px';
-    line.style.left = tabs[0].offsetLeft + 'px';
+    line.style.width = tabs[1].offsetWidth + 'px';
+    line.style.left = tabs[1].offsetLeft + 'px';
     }
 
-    // Ativa a aba inicial ao carregar a página
     window.addEventListener('DOMContentLoaded', activateInitialTab);
 
     tabs.forEach((tab, index) => {
@@ -352,6 +320,23 @@
     });
     });
   </script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+  const tabBtns = document.querySelectorAll('.mobile-tab-btn');
+  const tabContents = document.querySelectorAll('.mobile-tab-content');
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+    const target = btn.getAttribute('data-tab');
+    tabBtns.forEach(b => b.classList.remove('active'));
+    tabContents.forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('mobile-tab-' + target).classList.add('active');
+    });
+  });
+  });
+</script>
 
 
 </body>

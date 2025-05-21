@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>plannest - Educação Física</title>
+    <title>plannest - Inglês</title>
     <link rel="stylesheet" href="disciplinas.css">
     <link rel="shortcut icon" href="/imagens/favicon.png" type="image/x-icon">
 </head>
 <body>
     <header class="menu1">
         <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
-        <a href="/index.html"><img height="30px"  src="../imagens/plannest.png" ></a>
+        <a href="../index.html"><img height="30px"  src="../imagens/plannest.png" ></a>
     
         <nav class="links" id="nav-links">
             <ul class="nav-itens">
@@ -26,7 +26,7 @@
         </nav>
     
         <div class="btn">
-            <button class="login-1" href="../login.html"><a class="link-login" href="../login.html">Login</a></button>
+            <button class="login-1" href="../login.html"><a class="link-login" href="..login.html">Login</a></button>
             <button class="cadastro"><a href="../cadastro.html" class="link-cadastro">Cadastro</a></button>
         </div>
     </header>
@@ -47,7 +47,7 @@
                 <div class="content">
 
                 <section class="slide2">
-                    <h4 class="btn-slide2"><a href="../atividades.html"><span>Disciplinas</span></a> > <a href="biologia.html" style="color: var(--cor6--);">Educação Física</a></h4>
+                    <h4 class="btn-slide2"><a href="../atividades.html"><span>Disciplinas</span></a> > <a href="biologia.html" style="color: var(--cor6--);">Inglês</a></h4>
                     <form id="atividade-form">
                         <input type="text" id="nova-atividade" placeholder="Digite uma nova atividade" required>
                         <button type="submit" id="btn-atividade">Adicionar</button>
@@ -59,13 +59,13 @@
                 <script>
                     // Função para carregar atividades do localStorage
                     function carregarAtividades() {
-                        const atividades = JSON.parse(localStorage.getItem('atividadesEdfisica')) || [];
+                        const atividades = JSON.parse(localStorage.getItem('atividadesMatematica')) || [];
                         return atividades;
                     }
 
                     // Função para salvar atividades no localStorage
                     function salvarAtividades(atividades) {
-                        localStorage.setItem('atividadesEdfisica', JSON.stringify(atividades));
+                        localStorage.setItem('atividadesMatematica', JSON.stringify(atividades));
                     }
 
                     // Função para renderizar a lista de atividades
@@ -135,41 +135,41 @@
                 <section class="slide2">
 
                 <div class="slide2-part2">
-                  <img src="imagens/ilustrações.png" alt="" />
+                  <img src="/imagens/ilustrações.png" alt="" />
                   <div class="cards">
                   <section class="card agenda">
-                    <a href="desempenho/artesdesem.html">
-                    <img src="imagens/artes.png" alt="" class="icon ling" />
+                    <a href="agenda.html">
+                    <img src="/imagens/artes.png" alt="" class="icon ling" />
                     <h3 class="materia">Artes</h3>
                     </a>
                   </section>
                   <section class="card atividades">
-                    <a href="desempenho/biologiadesem.html"></a>
-                    <img src="imagens/biologia.png" alt="" class="icon nat" />
+                    <a href="agenda.html"></a>
+                    <img src="/imagens/biologia.png" alt="" class="icon nat" />
                     <h3 class="materia">Biologia</h3>
                     </a>
                   </section>
                   <section class="card material">
-                    <a href="desempenho/edfisicadesem.html">
-                    <img src="imagens/edfisica.png" alt="" class="icon ling" />
+                    <a href="agenda.html">
+                    <img src="/imagens/edfisica.png" alt="" class="icon ling" />
                     <h3 class="materia">Ed. Física</h3>
                     </a>
                   </section>
                   <section class="card material">
-                    <a href="desempenho/espanholdesem.html">
-                    <img src="imagens/linguas.png" alt="" class="icon ling" />
+                    <a href="agenda.html">
+                    <img src="/imagens/linguas.png" alt="" class="icon ling" />
                     <h3 class="materia">Espanhol</h3>
                     </a>
                   </section>
                   <section class="card material" >
-                    <a href="desempenho/filodesem.html">
-                    <img src="imagens/lampada.png" alt="" class="icon hum" />
+                    <a href="agenda.html">
+                    <img src="/imagens/lampada.png" alt="" class="icon hum" />
                     <h3 class="materia filo">Filosofia e<br>Sociologia</h3>
                     </a>
                   </section>
                   <section class="card material">
-                    <a href="desempenho/geografiadesem.html">
-                    <img src="imagens/fisica.png" alt="" class="icon nat" />
+                    <a href="agenda.html">
+                    <img src="/imagens/fisica.png" alt="" class="icon nat" />
                     <h3 class="materia">Física</h3>
                     </a>
                   </section>
@@ -177,38 +177,38 @@
 
                   <div class="cards" id="cards2">
                   <section class="card material">
-                    <a href="desempenho/geografiadesem.html">
-                    <img src="imagens/geografia.png" alt="" class="icon hum" />
+                    <a href="agenda.html">
+                    <img src="/imagens/geografia.png" alt="" class="icon hum" />
                     <h3 class="materia">Geografia</h3>
                     </a>
                   </section>
                   <section class="card agenda">
-                    <a href="desempenho/historiadesem.html">
-                    <img src="imagens/historia.png" alt="" class="icon hum" />
+                    <a href="agenda.html">
+                    <img src="/imagens/historia.png" alt="" class="icon hum" />
                     <h3 class="materia">História</h3>
                     </a>
                   </section>
                   <section class="card atividades">
-                    <a href="desempenho/inglesdesem.html">
-                    <img src="imagens/linguas.png" alt="" class="icon ling" />
+                    <a href="agenda.html">
+                    <img src="/imagens/linguas.png" alt="" class="icon ling" />
                     <h3 class="materia">Inglês</h3>
                     </a>
                   </section>
                   <section class="card material">
-                    <a href="desempenho/matematicadesem.html">
-                    <img src="imagens/matematica.png" alt="" class="icon nat" />
+                    <a href="agenda.html">
+                    <img src="/imagens/matematica.png" alt="" class="icon nat" />
                     <h3 class="materia">Matemática</h3>
                     </a>
                   </section>
                   <section class="card material">
-                    <a href="desempenho/portuguesdesem.html">
-                    <img src="imagens/portugues.png" alt="" class="icon ling" />
+                    <a href="agenda.html">
+                    <img src="/imagens/portugues.png" alt="" class="icon ling" />
                     <h3 class="materia">Português</h3>
                     </a>
                   </section>
                   <section class="card material">
-                    <a href="desempenho/quimicadesem.html">
-                    <img src="imagens/quimica.png" alt="" class="icon nat" />
+                    <a href="agenda.html">
+                    <img src="/imagens/quimica.png" alt="" class="icon nat" />
                     <h3 class="materia">Química</h3>
                     </a>
                   </section>
@@ -319,39 +319,34 @@
     </footer>
 
     <script src="menu-toggle.js"></script>
-    <script>
-      const tabs = document.querySelectorAll('.tab-btn');
-      const all_content = document.querySelectorAll('.content');
+  <script>
+    const tabs = document.querySelectorAll('.tab-btn');
+    const all_content = document.querySelectorAll('.content');
 
-      // Função para ativar a aba inicial (Materias)
-      function activateInitialTab() {
-        // Ativa o primeiro botão de aba
-        tabs[0].classList.add('active');
-        // Ativa o primeiro conteúdo
-        all_content[0].classList.add('active');
-        // Ajusta a linha para o primeiro botão
-        var line = document.querySelector('.line');
-        line.style.width = tabs[0].offsetWidth + 'px';
-        line.style.left = tabs[0].offsetLeft + 'px';
-      }
+    function activateInitialTab() {
+    tabs[1].classList.add('active');
+    all_content[1].classList.add('active');
+    var line = document.querySelector('.line');
+    line.style.width = tabs[1].offsetWidth + 'px';
+    line.style.left = tabs[1].offsetLeft + 'px';
+    }
 
-      // Ativa a aba inicial ao carregar a página
-      window.addEventListener('DOMContentLoaded', activateInitialTab);
+    window.addEventListener('DOMContentLoaded', activateInitialTab);
 
-      tabs.forEach((tab, index) => {
-        tab.addEventListener('click', () => {
-          tabs.forEach(tab => tab.classList.remove('active'));
-          tab.classList.add('active');
+    tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(tab => tab.classList.remove('active'));
+      tab.classList.add('active');
 
-          var line = document.querySelector('.line');
-          line.style.width = tab.offsetWidth + 'px';
-          line.style.left = tab.offsetLeft + 'px';
+      var line = document.querySelector('.line');
+      line.style.width = tab.offsetWidth + 'px';
+      line.style.left = tab.offsetLeft + 'px';
 
-          all_content.forEach(content => content.classList.remove('active'));
-          all_content[index].classList.add('active');
-        });
-      });
-    </script>
+      all_content.forEach(content => content.classList.remove('active'));
+      all_content[index].classList.add('active');
+    });
+    });
+  </script>
 
 
 </body>
