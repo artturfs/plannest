@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>plannest - Espanhol</title>
+  <title>plannest - Inglês</title>
   <link rel="stylesheet" href="disciplinas.css">
   <link rel="shortcut icon" href="/imagens/favicon.png" type="image/x-icon">
 </head>
@@ -47,7 +47,7 @@
         <div class="content">
 
         <section class="slide2">
-          <h4 class="btn-slide2"><a href="../atividades.html"><span>Disciplinas</span></a> > <a href="biologia.html" style="color: var(--cor6--);">Espanhol</a></h4>
+          <h4 class="btn-slide2"><a href="../atividades.html"><span>Disciplinas</span></a> > <a href="biologia.html" style="color: var(--cor6--);">Inglês</a></h4>
           <form id="atividade-form">
             <input type="text" id="nova-atividade" placeholder="Digite uma nova atividade" required>
             <button type="submit" id="btn-atividade">Adicionar</button>
@@ -59,13 +59,13 @@
         <script>
           // Função para carregar atividades do localStorage
           function carregarAtividades() {
-            const atividades = JSON.parse(localStorage.getItem('atividadesEspanhol')) || [];
+            const atividades = JSON.parse(localStorage.getItem('atividadesInglês')) || [];
             return atividades;
           }
 
           // Função para salvar atividades no localStorage
           function salvarAtividades(atividades) {
-            localStorage.setItem('atividadesEspanhol', JSON.stringify(atividades));
+            localStorage.setItem('atividadesInglês', JSON.stringify(atividades));
           }
 
           // Função para renderizar a lista de atividades
@@ -130,6 +130,7 @@
           });
         </script>
         </div>
+
         <div class="content">
         <section class="slide2">
 
