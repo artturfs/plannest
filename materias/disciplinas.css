@@ -324,6 +324,7 @@ a {
 
 .content-box {
     padding: 20px;
+
 }
 
 .content-box .content {
@@ -350,91 +351,6 @@ a {
     transition: all 0.3s ease;
 }
 
-#atividade-form #nova-atividade,
-#btn-atividade {
-    border: 0.5px solid var(--cor2--);
-    background-color: var(--cor8--);
-    padding: 10px 16px;
-    border-radius: 6px;
-    font-size: 12px;
-    transition: border-color 0.3s, box-shadow 0.3s;
-    box-shadow: 0 2px 8px rgba(76, 85, 92, 0.06);
-    outline: none;
-}
-
-#atividade-form #nova-atividade:focus {
-    border-color: var(--cor1--);
-    box-shadow: 0 0 0 2px var(--cor10--);
-}
-
-#btn-atividade {
-    letter-spacing: 2px;
-    background-color: var(--cor2--);
-    color: var(--cor8--);
-    cursor: pointer;
-    border: none;
-}
-
-#btn-atividade:hover {
-    background-color: var(--cor1--);
-    transform: scale(1.04);
-}
-
-#lista-atividades {
-    margin-top: 24px;
-    padding: 0;
-    list-style: none;
-    width: 100%;
-}
-
-#lista-atividades li {
-    display: flex;
-    align-items: center;
-    background: var(--cor8--);
-    color: var(--cor6--);
-    border: 1px solid var(--cor10--);
-    border-radius: 6px;
-    padding: 12px 28px;
-    margin-bottom: 12px;
-    font-size: 1rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    transition: background 0.2s, box-shadow 0.2s;
-}
-
-#lista-atividades li:last-child {
-    margin-bottom: 0;
-}
-
-#lista-atividades li:hover {
-    background: var(--cor10--);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
-}
-
-#lista-atividades .atividade-nome {
-    flex: 1 1 0;
-    font-weight: 500;
-    color: var(--cor4--);
-}
-
-#lista-atividades .atividade-actions {
-    display: flex;
-    gap: 10px;
-}
-
-#lista-atividades button {
-    background: var(--cor2--);
-    color: var(--cor8--);
-    border: none;
-    border-radius: 4px;
-    padding: 6px 12px;
-    font-size: 0.95rem;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-#lista-atividades button:hover {
-    background: var(--cor1--);
-}
 
 /* CARDS */
 
@@ -450,105 +366,219 @@ a {
     }
 }
 
-.cards {
+
+/* FIM CARDS */
+/* Estilos adicionais para as novas funcionalidades */
+/* Estilos para as atividades */
+.atividade-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid var(--cor10--);
+    background-color: var(--cor8--);
+    margin-bottom: 5px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(41, 46, 51, 0.05);
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas menores */
+}
+
+.atividade-item.concluida {
+    background-color: #e6ffe6; /* Verde claro */
+}
+
+.atividade-item.atrasada {
+    background-color: #ffe6e6; /* Vermelho claro */
+}
+
+.atividade-item.proximo-vencimento {
+    background-color: #fffacd; /* Amarelo claro (laranja mais suave) */
+}
+
+.atividade-item.futuro {
+    background-color: #f0f8ff; /* Azul claro */
+}
+
+.atividade-info {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.atividade-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+    color: var(--cor4--);
+}
+
+.atividade-info p {
+    margin: 0;
+    font-size: 0.9em;
+    color: var(--cor6--);
+}
+
+.atividade-info .data-entrega {
+    font-size: 0.85em;
+    color: var(--cor2--);
+}
+
+.btn-excluir {
+    margin-left: auto;
+    background: transparent;
+    color: var(--cor2--);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.2s;
+}
+
+.btn-excluir:hover {
+    color: var(--cor1--);
+}
+
+ul#lista-atividades {
+    padding: 0;
+}
+
+/* --- Desempenho: Resumo e Gráfico Principal Lado a Lado (Computadores) --- */
+
+/* Contêiner principal para o resumo e o gráfico da matéria atual */
+.desempenho-principal {
+    display: flex; /* Ativa o flexbox */
+    flex-direction: column; /* Em telas menores, os itens ficam em coluna por padrão */
+    gap: 20px; /* Espaço entre os itens */
+    align-items: center; /* Centraliza itens na coluna */
+    margin-bottom: 30px;
+}
+
+.desempenho-overview {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--cor9--);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(41, 46, 51, 0.08);
+    width: 100%; /* Ocupa toda a largura em mobile */
+    max-width: 400px; /* Limita largura em telas maiores */
+    box-sizing: border-box; /* Inclui padding e border na largura */
+}
+
+.desempenho-overview h2 {
+    color: var(--cor4--);
+    margin-bottom: 10px;
+}
+
+.desempenho-overview p {
+    font-size: 1.1em;
+    color: var(--cor6--);
+    margin-bottom: 5px;
+}
+
+/* Contêiner para o gráfico geral (agora secundário) */
+.graficos-secundarios-container {
+    display: flex;
+    flex-direction: column; /* Gráficos secundários em coluna para mobile */
+    align-items: center;
+    gap: 30px;
+    padding: 20px 0; /* Ajusta padding */
+    width: 100%; /* Ocupa toda a largura */
+}
+
+.chart-box {
+    width: 100%;
+    max-width: 400px; /* Limita largura */
+    height: 350px;
     display: flex;
     justify-content: center;
-    align-items: stretch;
-    padding: 32px;
-    gap: 32px;
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 30%;
-}
-
-.cards .card {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    text-align: center;
-    background-color: var(--cor9--);
-    padding: 32px;
     border-radius: 8px;
-    flex: 1 1 0;
-    min-width: 0;
-    min-height: 156px;
-    max-width: 300px;
-    margin: 0;
-    transition: all 0.3s;
-    cursor: pointer;
-    border: 1px solid #c9c9c9;
+    box-shadow: 0 2px 8px rgba(41, 46, 51, 0.08);
+    padding: 15px;
     box-sizing: border-box;
-    position: relative;
-    /* Adicione isso para permitir centralização absoluta de .filo */
 }
 
-.cards .card:not(:first-child) {
-    margin-left: 0;
-}
-
-.cards .card h3.materia {
-    font-size: 1rem;
-    color: var(--cor6--);
-    font-weight: 600;
-    margin: 10px 0 0 0;
-}
-
-.cards .card a {
-    color: var(--cor6--);
-}
-
-.cards .card img.icon {
-    width: 64px;
-    height: 64px;
-    padding: 12px;
-    border-radius: 50%;
-    background-color: #e0e0e0;
-    /* fallback */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    z-index: 1000;
-}
-
-.filo {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, 55%);
-}
-
-.cards .card:hover {
-    transform: scale(1.02);
-    transition: all 0.3s;
-}
-
-.add-materia-form {
-    margin-top: 20px;
-    display: flex;
+/* --- Formulário de Atividades --- */
+#atividade-form {
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 10px;
-    align-items: center;
-}
-
-.add-materia-form input {
-    padding: 8px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid var(--cor10--);
     border-radius: 8px;
-    border: 1px solid #ccc;
+    background-color: var(--cor9--);
 }
 
-.add-materia-form button {
-    padding: 8px 16px;
-    background-color: #3f51b5;
-    color: white;
+#atividade-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--cor4--);
+}
+
+#atividade-form input[type="text"],
+#atividade-form textarea,
+#atividade-form input[type="date"] {
+    width: 96%; /* Ajusta para considerar o padding */
+    padding: 10px;
+    border: 1px solid var(--cor11--);
+    border-radius: 4px;
+    font-size: 1em;
+    background: var(--cor8--);
+    color: var(--cor6--);
+}
+
+#atividade-form textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+#atividade-form button {
+    background-color: var(--cor2--);
+    color: var(--cor8--);
+    padding: 10px 15px;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
     transition: background-color 0.3s;
 }
 
-.add-materia-form button:hover {
-    background-color: #303f9f;
+#atividade-form button:hover {
+    background-color: var(--cor1--);
 }
 
-/* FOOTER */
+/* --- Media Query para Telas Maiores (Desktop) --- */
+@media (min-width: 768px) {
+    #atividade-form {
+        grid-template-columns: 1fr 1fr; /* Duas colunas para o formulário */
+    }
+    #atividade-form #titulo-atividade,
+    #atividade-form #descricao-atividade {
+        grid-column: span 2; /* Ocupa as duas colunas */
+    }
 
+    /* Resumo e gráfico da matéria atual lado a lado */
+    .desempenho-principal {
+        flex-direction: row; /* Muda para linha em telas maiores */
+        justify-content: center; /* Centraliza o grupo de itens */
+        align-items: flex-start; /* Alinha os itens pelo topo */
+    }
+
+    .desempenho-overview,
+    .chart-box-current { /* Ambos os itens no .desempenho-principal */
+        flex: 1; /* Permite que ocupem espaço igual */
+        max-width: 450px; /* Limita a largura individual para evitar que fiquem muito grandes */
+    }
+
+    /* Gráficos secundários (gráfico geral) lado a lado */
+    .graficos-secundarios-container {
+        flex-direction: row; /* Muda para linha em telas maiores */
+        justify-content: center;
+        flex-wrap: wrap; /* Permite que quebrem linha se não houver espaço suficiente */
+    }
+    .chart-box {
+        max-width: 45%; /* Permite que os gráficos fiquem lado a lado */
+    }
+}
 .logo-footer {
     filter: brightness(0) invert(1) contrast(1.2) saturate(1.5);
     margin-top: 20px;

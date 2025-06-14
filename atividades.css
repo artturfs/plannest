@@ -649,7 +649,6 @@ footer {
 .mobile-tabs-container {
     display: none;
 }
-
 @media (max-width: 769px) {
     body {
         width: 100%;
@@ -774,22 +773,28 @@ footer {
         width: 100%;
         margin: 0 auto;
     }
+
+    /* Gráficos em 2 colunas, múltiplas linhas */
     .graficos-container {
-        grid-template-columns: 1fr;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: auto !important;
+        gap: 24px !important;
+        padding: 16px !important;
+        align-items: stretch !important;
+        justify-items: center !important;
+        width: 100% !important;
     }
 
-    .graficos-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 24px;
-        padding: 16px;
-        align-items: stretch;
-        justify-items: center;
-    }
-
+    .graficos-container > div,
     .graficos-container div {
-        width: 200px;
-        height: 200px;
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+        min-width: 120px !important;
+        min-height: 120px !important;
+        max-width: 150px !important;
+        height: auto !important;
     }
 }
 
