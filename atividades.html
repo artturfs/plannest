@@ -1,548 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>plannest - Atividades</title>
-    <link rel="stylesheet" href="atividades.css">
-    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>plannest - Atividades</title>
+  <link rel="stylesheet" href="atividades.css" />
+  <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <header class="menu1">
-        <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
-        <a href="index.html"><img height="30px"  src="imagens/plannest.png" ></a>
-
-        <nav class="links" id="nav-links">
-            <ul class="nav-itens">
-                <li><a href="index.html" class="home">Início</a></li>
-                <li><a href="index.html#paginas"><span>Páginas</span></a></li>
-                <li><a href="services.html">Sugestões</a></li>
-                <li><a href="feedbeck.html">Avaliar</a></li>
-                <li><a href="contato.html">Fale conosco</a></li>
-
-                <li><button class="login-li"><a class="link-login-li" href="login.html">Login</a></button></li>
-                <li><button class="cadastro-li"><a class="link-cadastro-li" href="cadastro.html" style="color: white;">Cadastro</a></button></li>
-            </ul>
-        </nav>
-
-        <div class="btn">
-            <button class="login-1"><a class="link-login" href="login.html">Login</a></button>
-            <button class="cadastro"><a href="cadastro.html" class="link-cadastro">Cadastro</a></button>
-        </div>
-    </header>
-
-        <h1 class="tittle">
-          Suas atividades de classe
-        </h1>
-
-        <div class="container">
-            <div class="tab-box">
-                <button class="tab-btn">Disciplinas</button>
-                <button class="tab-btn">Desempenho</button>
-                <div class="line">
-
-                </div>
-            </div>
-            <div class="content-box">
-                <div class="content">
-                    <section class="slide2">
-                        <div class="slide2-part2">
-                            <img src="imagens/ilustrações.png" alt="" />
-                            <div class="cards">
-                                <section class="card agenda">
-                                    <a href="materias/artes.html">
-                                    <img src="imagens/artes.png" alt="" class="icon ling" />
-                                    <h3 class="materia">Artes</h3>
-                                    </a>
-                                </section>
-                                <section class="card atividades">
-                                    <a href="materias/biologia.html">
-                                    <img src="imagens/biologia.png" alt="" class="icon nat" />
-                                    <h3 class="materia">Biologia</h3>
-                                    </a>
-                                </section>
-                                <section class="card material">
-                                    <a href="materias/edfisica.html">
-                                    <img src="imagens/edfisica.png" alt="" class="icon ling" />
-                                    <h3 class="materia">Ed. Física</h3>
-                                    </a>
-                                </section>
-                                <section class="card material">
-                                    <a href="materias/espanhol.html">
-                                    <img src="imagens/linguas.png" alt="" class="icon ling" />
-                                    <h3 class="materia">Espanhol</h3>
-                                    </a>
-                                </section>
-                                <section class="card material" >
-                                    <a href="materias/filo.html">
-                                    <img src="imagens/lampada.png" alt="" class="icon hum" />
-                                    <h3 class="materia filo">Filosofia e<br>Sociologia</h3>
-                                    </a>
-                                </section>
-                                <section class="card material">
-                                    <a href="materias/fisica.html">
-                                    <img src="imagens/fisica.png" alt="" class="icon nat" />
-                                    <h3 class="materia">Física</h3>
-                                    </a>
-                                </section>
-                            </div>
-
-                            <div class="cards" id="cards2">
-                                <section class="card material">
-                                    <a href="materias/geografia.html">
-                                    <img src="imagens/geografia.png" alt="" class="icon hum" />
-                                    <h3 class="materia">Geografia</h3>
-                                    </a>
-                                </section>
-                                <section class="card agenda">
-                                    <a href="materias/historia.html">
-                                    <img src="imagens/historia.png" alt="" class="icon hum" />
-                                    <h3 class="materia">História</h3>
-                                    </a>
-                                </section>
-                                <section class="card atividades">
-                                    <a href="materias/ingles.html">
-                                    <img src="imagens/linguas.png" alt="" class="icon ling" />
-                                    <h3 class="materia">Inglês</h3>
-                                    </a>
-                                </section>
-                                <section class="card material">
-                                    <a href="materias/matematica.html">
-                                    <img src="imagens/matematica.png" alt="" class="icon nat" />
-                                    <h3 class="materia">Matemática</h3>
-                                    </a>
-                                </section>
-                                <section class="card material">
-                                    <a href="materias/portugues.html">
-                                    <img src="imagens/portugues.png" alt="" class="icon ling" />
-                                    <h3 class="materia">Português</h3>
-                                    </a>
-                                </section>
-                                <section class="card material">
-                                    <a href="materias/quimica.html">
-                                    <img src="imagens/quimica.png" alt="" class="icon nat" />
-                                    <h3 class="materia">Química</h3>
-                                    </a>
-                                </section>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-
-                <div class="content">
-                    <section class="slide2">
-                        <h2>Desempenho Geral por Matéria</h2>
-                        <div class="graficos-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-                            <div style="width: 300px; height: 300px;"><canvas id="chartArtes"></canvas></div>
-                            <div style="width: 300px; height: 300px;"><canvas id="chartBiologia"></canvas></div>
-                            <div style="width: 300px; height: 300px;"><canvas id="chartEdFisica"></canvas></div>
-                            <div style="width: 300px; height: 300px;"><canvas id="chartEspanhol"></canvas></div>
-                            <div style="width: 300px; height: 300px;"><canvas id="chartFilosofiaSociologia"></canvas></div>
-                            <div style="width: 300px; height: 300px;"><canvas id="chartFisica"></canvas></div>
-                            <div style="width: 300px; height: 300px;"><canvas id="chartGeografia"></canvas></div>
-                            <div style="width: 300px; height: 300px;"><canvas id="chartHistoria"></canvas></div>
-                            <div style="width: 300px; height: 300px;"><canvas id="chartIngles"></canvas></div>
-                            <div style="width: 300px; height: 300px;"><canvas id="chartMatematica"></canvas></div>
-                            <div style="width: 300px; height: 300px;"><canvas id="chartPortugues"></canvas></div>
-                            <div style="width: 300px; height: 300px;"><canvas id="chartQuimica"></canvas></div>
-                        </div>
-                    </section>    
-                </div>
-            </div>
-        </div>
-
-    <div class="mobile-tabs-container">
-        <div class="mobile-tabs-header">
-            <button class="mobile-tab-btn active" data-tab="materias">Matérias</button>
-            <button class="mobile-tab-btn" data-tab="desempenho">Desempenho</button>
-        </div>
-        <div class="mobile-tab-content active" id="mobile-tab-materias">
-            <div class="mobile-cards-container">
-              <div class="mobile-cards-row">
-                <a href="materias/artes.html" class="mobile-card">
-                  <img src="imagens/artes.png" alt="Artes" />
-                  <span class="materia">Artes</span>
-                </a>
-                <a href="materias/biologia.html" class="mobile-card">
-                  <img src="imagens/biologia.png" alt="Biologia" />
-                  <span class="materia">Biologia</span>
-                </a>
-              </div>
-              <div class="mobile-cards-row">
-                <a href="materias/edfisica.html" class="mobile-card">
-                  <img src="imagens/edfisica.png" alt="Ed. Física" />
-                  <span class="materia">Ed. Física</span>
-                </a>
-                <a href="materias/espanhol.html" class="mobile-card">
-                  <img src="imagens/linguas.png" alt="Espanhol" />
-                  <span class="materia">Espanhol</span>
-                </a>
-              </div>
-              <div class="mobile-cards-row">
-                <a href="materias/filo.html" class="mobile-card">
-                  <img src="imagens/lampada.png" alt="Filosofia e Sociologia" />
-                  <span class="materia">Filosofia<br>e Sociologia</span>
-                </a>
-                <a href="materias/fisica.html" class="mobile-card">
-                  <img src="imagens/fisica.png" alt="Física" />
-                  <span class="materia">Física</span>
-                </a>
-              </div>
-              <div class="mobile-cards-row">
-                <a href="materias/geografia.html" class="mobile-card">
-                  <img src="imagens/geografia.png" alt="Geografia" />
-                  <span class="materia">Geografia</span>
-                </a>
-                <a href="materias/historia.html" class="mobile-card">
-                  <img src="imagens/historia.png" alt="História" />
-                  <span class="materia">História</span>
-                </a>
-              </div>
-              <div class="mobile-cards-row">
-                <a href="materias/ingles.html" class="mobile-card">
-                  <img src="imagens/linguas.png" alt="Inglês" />
-                  <span class="materia">Inglês</span>
-                </a>
-                <a href="materias/matematica.html" class="mobile-card">
-                  <img src="imagens/matematica.png" alt="Matemática" />
-                  <span class="materia">Matemática</span>
-                </a>
-              </div>
-              <div class="mobile-cards-row">
-                <a href="materias/portugues.html" class="mobile-card">
-                  <img src="imagens/portugues.png" alt="Português" />
-                  <span class="materia">Português</span>
-                </a>
-                <a href="materias/quimica.html" class="mobile-card">
-                  <img src="imagens/quimica.png" alt="Química" />
-                  <span class="materia">Química</span>
-                </a>
-              </div>
-            </div>
-        </div>
-        <div class="mobile-tab-content" id="mobile-tab-desempenho">
-            <div class="graficos-container-mobile" style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
-                <div style="width: 250px; height: 250px;"><canvas id="chartArtesMobile"></canvas></div>
-                <div style="width: 250px; height: 250px;"><canvas id="chartBiologiaMobile"></canvas></div>
-                <div style="width: 250px; height: 250px;"><canvas id="chartEdFisicaMobile"></canvas></div>
-                <div style="width: 250px; height: 250px;"><canvas id="chartEspanholMobile"></canvas></div>
-                <div style="width: 250px; height: 250px;"><canvas id="chartFilosofiaSociologiaMobile"></canvas></div>
-                <div style="width: 250px; height: 250px;"><canvas id="chartFisicaMobile"></canvas></div>
-                <div style="width: 250px; height: 250px;"><canvas id="chartGeografiaMobile"></canvas></div>
-                <div style="width: 250px; height: 250px;"><canvas id="chartHistoriaMobile"></canvas></div>
-                <div style="width: 250px; height: 250px;"><canvas id="chartInglesMobile"></canvas></div>
-                <div style="width: 250px; height: 250px;"><canvas id="chartMatematicaMobile"></canvas></div>
-                <div style="width: 250px; height: 250px;"><canvas id="chartPortuguesMobile"></canvas></div>
-                <div style="width: 250px; height: 250px;"><canvas id="chartQuimicaMobile"></canvas></div>
-            </div>
-        </div>
+  <header class="menu1">
+    <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+    <a href="index.html"><img height="30px" src="imagens/plannest.png" /></a>
+    <nav class="links" id="nav-links">
+      <ul class="nav-itens">
+        <li><a href="index.html" class="home">Início</a></li>
+        <li><a href="index.html#paginas"><span>Páginas</span></a></li>
+        <li><a href="services.html">Sugestões</a></li>
+        <li><a href="feedbeck.html">Avaliar</a></li>
+        <li><a href="contato.html">Fale conosco</a></li>
+        <li><button class="login-li"><a class="link-login-li" href="login.html">Login</a></button></li>
+        <li><button class="cadastro-li"><a class="link-cadastro-li" href="cadastro.html" style="color: white;">Cadastro</a></button></li>
+      </ul>
+    </nav>
+    <div class="btn">
+      <button class="login-1"><a class="link-login" href="login.html">Login</a></button>
+      <button class="cadastro"><a href="cadastro.html" class="link-cadastro">Cadastro</a></button>
     </div>
-    <br><br><br>
-    <footer>
-        <section class="newsletter">
-            <h2>Quer organizar melhor sua rotina?</h2>
-            <p>
-                Inscreva-se na nossa newsletter e receba dicas exclusivas de
-                planejamento e produtividade diretamente no seu e-mail:
-            </p>
-            <div class="newsletter-form">
-                <input type="email" placeholder="Digite seu e-mail" />
-                <button>Cadastrar</button>
+  </header>
+
+  <h1 class="tittle">Suas atividades de classe</h1>
+
+  <div class="container">
+    <div class="tab-box">
+      <button class="tab-btn">Disciplinas</button>
+      <button class="tab-btn">Desempenho</button>
+      <div class="line"></div>
+    </div>
+    <div class="content-box">
+      <div class="content">
+        <section class="slide2">
+          <div class="slide2-part2">
+            <img src="imagens/ilustrações.png" alt="" />
+            <div class="cards">
+              <!-- Primeira linha de matérias -->
+              <section class="card agenda"><a href="materias/artes.html"><img src="imagens/artes.png" class="icon ling"/><h3 class="materia">Artes</h3></a></section>
+              <section class="card atividades"><a href="materias/biologia.html"><img src="imagens/biologia.png" class="icon nat"/><h3 class="materia">Biologia</h3></a></section>
+              <section class="card material"><a href="materias/edfisica.html"><img src="imagens/edfisica.png" class="icon ling"/><h3 class="materia">Ed. Física</h3></a></section>
+              <section class="card material"><a href="materias/espanhol.html"><img src="imagens/linguas.png" class="icon ling"/><h3 class="materia">Espanhol</h3></a></section>
+              <section class="card material"><a href="materias/filo.html"><img src="imagens/lampada.png" class="icon hum"/><h3 class="materia filo">Filosofia e<br>Sociologia</h3></a></section>
+              <section class="card material"><a href="materias/fisica.html"><img src="imagens/fisica.png" class="icon nat"/><h3 class="materia">Física</h3></a></section>
             </div>
+            <div class="cards" id="cards2">
+              <!-- Segunda linha de matérias -->
+              <section class="card material"><a href="materias/geografia.html"><img src="imagens/geografia.png" class="icon hum"/><h3 class="materia">Geografia</h3></a></section>
+              <section class="card agenda"><a href="materias/historia.html"><img src="imagens/historia.png" class="icon hum"/><h3 class="materia">História</h3></a></section>
+              <section class="card atividades"><a href="materias/ingles.html"><img src="imagens/linguas.png" class="icon ling"/><h3 class="materia">Inglês</h3></a></section>
+              <section class="card material"><a href="materias/matematica.html"><img src="imagens/matematica.png" class="icon nat"/><h3 class="materia">Matemática</h3></a></section>
+              <section class="card material"><a href="materias/portugues.html"><img src="imagens/portugues.png" class="icon ling"/><h3 class="materia">Português</h3></a></section>
+              <section class="card material"><a href="materias/quimica.html"><img src="imagens/quimica.png" class="icon nat"/><h3 class="materia">Química</h3></a></section>
+            </div>
+          </div>
         </section>
+      </div>
 
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img
-                    height="40px"
-                    class="logo-footer"
-                    src="imagens/plannest.png"
-                    alt=""
-                />
-                <p>
-                    Transforme sua rotina com ferramentas de planejamento simples e
-                    eficazes.
-                </p>
-            </div>
-
-            <div class="footer-links">
-                <div>
-                    <h4>Links úteis</h4>
-                    <ul>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Sobre nós</a></li>
-                        <li><a href="#">Ferramentas</a></li>
-                    </ul>
+        <div class="content">
+            <section class="slide2">
+                <div class="graficos-container">
+                    <div><canvas id="chartArtes"></canvas></div>
+                    <div><canvas id="chartBiologia"></canvas></div>
+                    <div><canvas id="chartEdFisica"></canvas></div>
+                    <div><canvas id="chartEspanhol"></canvas></div>
+                    <div><canvas id="chartFilosofiaSociologia"></canvas></div>
+                    <div><canvas id="chartFisica"></canvas></div>
+                    <div><canvas id="chartGeografia"></canvas></div>
+                    <div><canvas id="chartHistoria"></canvas></div>
+                    <div><canvas id="chartIngles"></canvas></div>
+                    <div><canvas id="chartMatematica"></canvas></div>
+                    <div><canvas id="chartPortugues"></canvas></div>
+                    <div><canvas id="chartQuimica"></canvas></div>
                 </div>
-                <div>
-                    <h4>Serviços</h4>
-                    <ul>
-                        <li><a href="#">Planejamento Pessoal</a></li>
-                        <li><a href="#">Gestão de Tarefas</a></li>
-                        <li><a href="#">Calendário Online</a></li>
-                        <li><a href="#">Consultoria</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Suporte</h4>
-                    <ul>
-                        <li><a href="#">Fale conosco</a></li>
-                        <li><a href="#">Envie um e-mail</a></li>
-                        <li><a href="#">Central de ajuda</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="social">
-                    <h4>Siga-nos</h4>
-                    <div class="icons">
-                        <a href="#"><img src="imagens/instagram.png" alt="Instagram"/></a>
-                        <a href="#"><img src="imagens/linkedin.png" alt="LinkedIn" /></a>
-                    </div>
-                </div>
-            </div>
+            </section>
         </div>
 
-        <div class="footer-bottom">
-            <p>Plannest 2025 © Todos os direitos reservados</p>
+    </div>
+  </div>
+
+  <br><br><br>
+
+  <footer>
+    <section class="newsletter">
+      <h2>Quer organizar melhor sua rotina?</h2>
+      <p>Inscreva-se na nossa newsletter e receba dicas exclusivas de planejamento e produtividade diretamente no seu e-mail:</p>
+      <div class="newsletter-form">
+        <input type="email" placeholder="Digite seu e-mail" />
+        <button>Cadastrar</button>
+      </div>
+    </section>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img height="40px" class="logo-footer" src="imagens/plannest.png" alt="" />
+        <p>Transforme sua rotina com ferramentas de planejamento simples e eficazes.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Links úteis</h4>
+          <ul><li><a href="#">Blog</a></li><li><a href="#">Sobre nós</a></li><li><a href="#">Ferramentas</a></li></ul>
         </div>
-    </footer>
+        <div>
+          <h4>Serviços</h4>
+          <ul><li><a href="#">Planejamento Pessoal</a></li><li><a href="#">Gestão de Tarefas</a></li><li><a href="#">Calendário Online</a></li><li><a href="#">Consultoria</a></li></ul>
+        </div>
+        <div>
+          <h4>Suporte</h4>
+          <ul><li><a href="#">Fale conosco</a></li><li><a href="#">Envie um e-mail</a></li><li><a href="#">Central de ajuda</a></li><li><a href="#">FAQ</a></li></ul>
+        </div>
+        <div class="social">
+          <h4>Siga-nos</h4>
+          <div class="icons">
+            <a href="#"><img src="imagens/instagram.png" alt="Instagram" /></a>
+            <a href="#"><img src="imagens/linkedin.png" alt="LinkedIn" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Plannest 2025 © Todos os direitos reservados</p>
+    </div>
+  </footer>
 
-    <script src="menu-toggle.js"></script>
-    <script>
-        // Mapeamento das matérias e suas chaves no localStorage
-        // As chaves no 'materiasMap' são os nomes amigáveis que serão usados no título do gráfico
-        // Os valores são as chaves correspondentes no localStorage (como 'atividadesArtes')
-        const materiasMap = {
-            'Artes': 'atividadesArtes',
-            'Biologia': 'atividadesBiologia',
-            'Ed. Física': 'atividadesEdFisica',
-            'Espanhol': 'atividadesEspanhol',
-            'Filosofia e Sociologia': 'atividadesFilosofiaSociologia',
-            'Física': 'atividadesFisica',
-            'Geografia': 'atividadesGeografia',
-            'História': 'atividadesHistoria',
-            'Inglês': 'atividadesIngles',
-            'Matemática': 'atividadesMatematica',
-            'Português': 'atividadesPortugues',
-            'Química': 'atividadesQuimica'
-        };
+  <script src="menu-toggle.js"></script>
+  <script>
+    const tabs = document.querySelectorAll('.tab-btn');
+    const all_content = document.querySelectorAll('.content');
+    const charts = {};
+    const materias = {
+      'Artes': 'atividadesArtes',
+      'Biologia': 'atividadesBiologia',
+      'EdFisica': 'atividadesEdFisica',
+      'Espanhol': 'atividadesEspanhol',
+      'FilosofiaSociologia': 'atividadesFilosofiaSociologia',
+      'Fisica': 'atividadesFisica',
+      'Geografia': 'atividadesGeografia',
+      'Historia': 'atividadesHistoria',
+      'Ingles': 'atividadesIngles',
+      'Matematica': 'atividadesMatematica',
+      'Portugues': 'atividadesPortugues',
+      'Quimica': 'atividadesQuimica'
+    };
 
-        // Objeto para armazenar as instâncias dos gráficos (para desktop e mobile)
-        let charts = {};
-        let chartsMobile = {};
+    function calcularPorcentagemConclusao(materiaKey) {
+      const atividades = JSON.parse(localStorage.getItem(materiaKey)) || [];
+      const total = atividades.length;
+      if (total === 0) return 0;
+      const concluidas = atividades.filter(a => a.concluida).length;
+      return (concluidas / total) * 100;
+    }
 
-        // Função auxiliar para limpar e padronizar nomes para IDs de elementos
-        function cleanStringForId(str) {
-            // Esta função remove acentos, espaços e caracteres especiais, transformando "Filosofia e Sociologia" em "FilosofiaSociologia"
-            const normalizedStr = str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-            return normalizedStr.replace(/[^a-zA-Z0-9]/g, '');
+    function criarOuAtualizarGrafico(nome, key) {
+      const ctx = document.getElementById('chart' + nome).getContext('2d');
+      const concluido = calcularPorcentagemConclusao(key);
+      const pendente = 100 - concluido;
+      if (charts[nome]) charts[nome].destroy();
+      charts[nome] = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: ['Concluídas', 'Pendentes'],
+          datasets: [{
+            data: [concluido, pendente],
+            backgroundColor: ['#5ca3a5', '#f5c542']
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            title: {
+              display: true,
+              text: nome.replace(/([A-Z])/g, ' $1').trim(),
+              font: { size: 16 }
+            },
+            tooltip: {
+              callbacks: {
+                label: ctx => `${ctx.label}: ${ctx.parsed.toFixed(2)}%`
+              }
+            }
+          }
         }
+      });
+    }
 
-        // Função para calcular a porcentagem de conclusão de uma matéria
-        function calcularPorcentagemConclusao(materiaKey) {
-            const atividades = JSON.parse(localStorage.getItem(materiaKey)) || [];
-            const totalAtividades = atividades.length;
-            if (totalAtividades === 0) {
-                return 0; // Se não há atividades, a porcentagem é 0
-            }
-            const atividadesConcluidas = atividades.filter(atividade => atividade.concluida).length;
-            return (atividadesConcluidas / totalAtividades) * 100;
-        }
+    function renderizarGraficosDesempenho() {
+      for (const nome in materias) {
+        criarOuAtualizarGrafico(nome, materias[nome]);
+      }
+    }
 
-        // Função para criar ou atualizar um gráfico (para DESKTOP)
-        function criarOuAtualizarGrafico(materiaNomeDisplay, materiaKey) {
-            // O ID do canvas é gerado usando cleanStringForId
-            const canvasId = 'chart' + cleanStringForId(materiaNomeDisplay);
-            const ctx = document.getElementById(canvasId);
-            if (!ctx) {
-                console.warn(`[DESKTOP] Canvas para "${materiaNomeDisplay}" (ID esperado: "${canvasId}") NÃO encontrado.`);
-                return;
-            }
+    function activateInitialTab() {
+      tabs[0].classList.add('active');
+      all_content[0].classList.add('active');
+      const line = document.querySelector('.line');
+      line.style.width = tabs[0].offsetWidth + 'px';
+      line.style.left = tabs[0].offsetLeft + 'px';
+    }
 
-            const porcentagemConcluida = calcularPorcentagemConclusao(materiaKey);
-            const porcentagemPendente = 100 - porcentagemConcluida;
+    window.addEventListener('DOMContentLoaded', () => {
+      activateInitialTab();
+    });
 
-            if (charts[materiaNomeDisplay]) {
-                charts[materiaNomeDisplay].destroy();
-            }
-
-            charts[materiaNomeDisplay] = new Chart(ctx.getContext('2d'), {
-                type: 'doughnut',
-                data: {
-                    labels: ['Concluídas', 'Pendentes'],
-                    datasets: [{
-                        data: [porcentagemConcluida, porcentagemPendente],
-                        backgroundColor: ['#4CAF50', '#FFC107'],
-                        hoverOffset: 4
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        title: {
-                            display: true,
-                            text: materiaNomeDisplay,
-                            font: {
-                                size: 16
-                            }
-                        },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    let label = context.label || '';
-                                    if (label) {
-                                        label += ': ';
-                                    }
-                                    if (context.parsed !== null) {
-                                        label += context.parsed.toFixed(2) + '%';
-                                    }
-                                    return label;
-                                }
-                            }
-                        }
-                    }
-                }
-            });
-        }
-
-        // Função para criar ou atualizar um gráfico (para MOBILE)
-        function criarOuAtualizarGraficoMobile(materiaNomeDisplay, materiaKey) {
-            // O ID do canvas é gerado usando cleanStringForId + 'Mobile'
-            const canvasId = 'chart' + cleanStringForId(materiaNomeDisplay) + 'Mobile';
-            const ctxMobile = document.getElementById(canvasId);
-            if (!ctxMobile) {
-                console.warn(`[MOBILE] Canvas para "${materiaNomeDisplay}" (ID esperado: "${canvasId}") NÃO encontrado.`);
-                return;
-            }
-
-            const porcentagemConcluida = calcularPorcentagemConclusao(materiaKey);
-            const porcentagemPendente = 100 - porcentagemConcluida;
-
-            if (chartsMobile[materiaNomeDisplay]) {
-                chartsMobile[materiaNomeDisplay].destroy();
-            }
-
-            chartsMobile[materiaNomeDisplay] = new Chart(ctxMobile.getContext('2d'), {
-                type: 'doughnut',
-                data: {
-                    labels: ['Concluídas', 'Pendentes'],
-                    datasets: [{
-                        data: [porcentagemConcluida, porcentagemPendente],
-                        backgroundColor: ['#4CAF50', '#FFC107'],
-                        hoverOffset: 4
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        title: {
-                            display: true,
-                            text: materiaNomeDisplay,
-                            font: {
-                                size: 14
-                            }
-                        },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    let label = context.label || '';
-                                    if (label) {
-                                        label += ': ';
-                                    }
-                                    if (context.parsed !== null) {
-                                        label += context.parsed.toFixed(2) + '%';
-                                    }
-                                    return label;
-                                }
-                            }
-                        }
-                    }
-                }
-            });
-        }
-
-        // Função para renderizar TODOS os gráficos de desempenho (Desktop e Mobile)
-        function renderizarTodosGraficosDesempenho() {
-            for (const materiaNomeDisplay in materiasMap) {
-                if (Object.hasOwnProperty.call(materiasMap, materiaNomeDisplay)) {
-                    const materiaKey = materiasMap[materiaNomeDisplay];
-                    criarOuAtualizarGrafico(materiaNomeDisplay, materiaKey);
-                    criarOuAtualizarGraficoMobile(materiaNomeDisplay, materiaKey);
-                }
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            // Lógica das abas para Desktop
-            const tabs = document.querySelectorAll('.tab-btn');
-            const all_content = document.querySelectorAll('.content');
-
-            function activateInitialTabDesktop() {
-                // Inicia na aba de Disciplinas (índice 0)
-                tabs[0].classList.add('active');
-                all_content[0].classList.add('active');
-                var line = document.querySelector('.line');
-                line.style.width = tabs[0].offsetWidth + 'px';
-                line.style.left = tabs[0].offsetLeft + 'px';
-            }
-            activateInitialTabDesktop();
-
-            tabs.forEach((tab, index) => {
-                tab.addEventListener('click', () => {
-                    tabs.forEach(tabItem => tabItem.classList.remove('active'));
-                    tab.classList.add('active');
-
-                    var line = document.querySelector('.line');
-                    line.style.width = tab.offsetWidth + 'px';
-                    line.style.left = tab.offsetLeft + 'px';
-
-                    all_content.forEach(contentItem => contentItem.classList.remove('active'));
-                    all_content[index].classList.add('active');
-
-                    // Se a aba de Desempenho for clicada, renderiza os gráficos
-                    if (tab.textContent === 'Desempenho') {
-                        renderizarTodosGraficosDesempenho();
-                    }
-                });
-            });
-
-            // Lógica das abas para Mobile
-            const mobileTabBtns = document.querySelectorAll('.mobile-tab-btn');
-            const mobileTabContents = document.querySelectorAll('.mobile-tab-content');
-
-            // Garante que a aba de Matérias mobile seja a inicial
-            // Remova a classe 'active' de todos os conteúdos mobile e adicione apenas ao de matérias
-            mobileTabContents.forEach(c => c.classList.remove('active'));
-            document.getElementById('mobile-tab-materias').classList.add('active');
-
-
-            mobileTabBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const target = btn.getAttribute('data-tab');
-
-                    mobileTabBtns.forEach(b => b.classList.remove('active'));
-                    mobileTabContents.forEach(c => c.classList.remove('active'));
-
-                    btn.classList.add('active');
-                    document.getElementById('mobile-tab-' + target).classList.add('active');
-
-                    if (target === 'desempenho') {
-                        renderizarTodosGraficosDesempenho();
-                    }
-                });
-            });
-
-            // Chamada inicial para renderizar os gráficos se a aba de desempenho estiver ativa no carregamento
-            // No seu caso, "Disciplinas" é a padrão, então essa linha não será ativada inicialmente.
-            // Ela é uma rede de segurança caso a aba "Desempenho" fosse a padrão por alguma razão.
-            // Para ver os gráficos, você PRECISA CLICAR na aba "Desempenho".
-            if (tabs[1].classList.contains('active') || mobileTabBtns[1].classList.contains('active')) {
-                renderizarTodosGraficosDesempenho();
-            }
-        });
-    </script>
+    tabs.forEach((tab, i) => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const line = document.querySelector('.line');
+        line.style.width = tab.offsetWidth + 'px';
+        line.style.left = tab.offsetLeft + 'px';
+        all_content.forEach(c => c.classList.remove('active'));
+        all_content[i].classList.add('active');
+        if (tab.textContent === 'Desempenho') renderizarGraficosDesempenho();
+      });
+    });
+  </script>
 </body>
 </html>

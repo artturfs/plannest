@@ -761,113 +761,52 @@ footer {
     }
 
     /* FIM MENU */
-
-
-    .container {
-        display: none;
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        padding: 16px;
+        align-items: stretch;
     }
 
-    .mobile-tabs-container {
-        margin: 24px 0px;
-        display: block;
+    .cards .card {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .graficos-container {
+        grid-template-columns: 1fr;
     }
 
-    .mobile-tabs-header {
-        display: flex;
-        border-bottom: 2px solid var(--cor9--);
-        margin-bottom: 16px;
+    .graficos-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        padding: 16px;
+        align-items: stretch;
+        justify-items: center;
     }
 
-    .mobile-tab-btn {
-        flex: 1 1 0;
-        background: none;
-        border: none;
-        padding: 12px 0;
-        font-size: 1rem;
-        font-weight: 500;
-        color: var(--cor4--);
-        cursor: pointer;
-        border-bottom: 2px solid transparent;
-        transition: border-color 0.2s, color 0.2s;
+    .graficos-container div {
+        width: 200px;
+        height: 200px;
     }
+}
 
-    .mobile-tab-btn.active {
-        color: var(--cor2--);
-        border-bottom: 2px solid var(--cor2--);
-    }
+.graficos-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 24px;
+    padding: 16px;
+    align-items: stretch;
+    justify-items: center;
+}
 
-    .mobile-tab-content {
-        display: none;
-    }
-
-    .mobile-tab-content.active {
-        display: block;
-    }
-
-    .mobile-cards-container {
-        display: flex;
-        flex-direction: column;
-        gap: 36px;
-    }
-
-    .mobile-card:hover {
-        color: var(--cor2--);
-        scale: 1.02;
-    }
-
-    .mobile-card:hover .materia,
-    .mobile-card:hover .atividade,
-    .mobile-card:hover .nota {
-        color: var(--cor2--);
-    }
-
-    .mobile-card:hover img {
-        filter: brightness(0) saturate(100%) invert(54%) sepia(12%) saturate(1162%) hue-rotate(134deg) brightness(92%) contrast(92%);
-    }
-
-    .mobile-cards-row {
-        display: flex;
-        gap: 32px;
-        justify-content: center;
-    }
-
-    .mobile-card {
-        flex: 1 1 0;
-        background: #fff;
-        border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 28px 16px;
-        text-align: center;
-        min-width: 0;
-        max-width: 140px;
-    }
-
-    .mobile-card img {
-        width: 40px;
-        height: 40px;
-        margin-bottom: 6px;
-    }
-
-    .mobile-card .materia {
-        font-size: 1rem;
-        margin: 0;
-        color: #222;
-        font-weight: 500;
-    }
-
-    .mobile-card .atividade {
-        font-size: 0.95rem;
-        color: #444;
-        margin: 0;
-    }
-
-    .mobile-card .nota {
-        font-size: 1.1rem;
-        color: #1a73e8;
-        font-weight: bold;
-        margin: 0;
-    }
+.graficos-container div {
+    width: 18vw;
+    height: 18vw;
+    max-width: 150px;
+    min-width: 120px;
+    min-height: 120px;
 }
