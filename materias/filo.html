@@ -208,14 +208,58 @@
             const diffTime = due - today;
             const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
-            if (diffDays < 0) {
+            if (diffDays < 1) {
                 return 'atrasada'; // Vermelho claro
-            } else if (diffDays <= 3) {
+            } else if (diffDays <= 4) {
                 return 'proximo-vencimento'; // Laranja suave (usando amarelo claro na folha de estilo)
             } else {
                 return 'futuro'; // Azul claro
             }
         }
+
+                        // --- Funções de Desempenho e Gráficos ---
+        // Adiciona botão para mostrar a porcentagem de conclusão no desempenho
+        document.addEventListener('DOMContentLoaded', function() {
+            // Cria o botão estilizado conforme o site
+            const desempenhoOverview = document.querySelector('.desempenho-overview');
+            if (desempenhoOverview) {
+            const btnMostrarPorcentagem = document.createElement('button');
+            btnMostrarPorcentagem.textContent = 'Calcular processual de atividades';
+            btnMostrarPorcentagem.id = 'btnMostrarPorcentagem';
+            btnMostrarPorcentagem.style.marginTop = '10px';
+            btnMostrarPorcentagem.style.background = 'var(--cor2--, #5ca3a5)';
+            btnMostrarPorcentagem.style.color = '#fff';
+            btnMostrarPorcentagem.style.border = 'none';
+            btnMostrarPorcentagem.style.borderRadius = '6px';
+            btnMostrarPorcentagem.style.padding = '8px 18px';
+            btnMostrarPorcentagem.style.fontSize = '1rem';
+            btnMostrarPorcentagem.style.cursor = 'pointer';
+            btnMostrarPorcentagem.style.transition = 'background 0.2s';
+            btnMostrarPorcentagem.addEventListener('mouseover', function() {
+                btnMostrarPorcentagem.style.background = 'var(--cor1--, #498b8d)';
+            });
+            btnMostrarPorcentagem.addEventListener('mouseout', function() {
+                btnMostrarPorcentagem.style.background = 'var(--cor2--, #5ca3a5)';
+            });
+
+            desempenhoOverview.appendChild(btnMostrarPorcentagem);
+
+            btnMostrarPorcentagem.addEventListener('click', function() {
+                const materiaKey = getMateriaKeyFromURL();
+                const atividades = carregarAtividades(materiaKey);
+                const porcentagem = calcularPorcentagemConclusao(atividades);
+                alert(`Provável processual de atividades: ${porcentagem * .025}`);
+            });
+            }
+        });
+
+        function calcularPorcentagemConclusao(atividades) {
+            if (!atividades || atividades.length === 0) return 0;
+            const totalAtividades = atividades.length;
+            const atividadesConcluidas = atividades.filter(atividade => atividade.concluida).length;
+            return (atividadesConcluidas / totalAtividades);
+        }
+
 
         function renderizarAtividades() {
             const lista = document.getElementById('lista-atividades');
