@@ -614,7 +614,7 @@
                 const materiaKey = getMateriaKeyFromURL();
                 const atividades = carregarAtividades(materiaKey);
                 const porcentagem = calcularPorcentagemConclusao(atividades);
-                alert(`Provável processual de atividades: ${porcentagem * .025}`);
+                alert(`Provável processual de atividades: ${(porcentagem * .025).toFixed(2)}`);
             });
             }
         });
