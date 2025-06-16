@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Sugestões | Plannest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonte e ícones do Google Fonts e Material Icons -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="services.css">
+</head>
+<body>
+    <header class="menu1">
+      <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+      <img height="30px" src="imagens/plannest.png" />
+
+      <nav class="links" id="nav-links">
+        <ul class="nav-itens">
+          <li>
+            <a href="index.html" class="home"><span>Início</span></a>
+          </li>
+          <li><a href="#paginas">Páginas</a></li>
+          <li><a href="services.html">Sugestões</a></li>
+          <li><a href="feedbeck.html">Avaliar</a></li>
+          <li><a href="contato.hml">Fale conosco</a></li>
+
+          <li>
+            <button class="login-li">
+              <a class="link-login-li" href="login.html">Login</a>
+            </button>
+          </li>
+          <li>
+            <button class="cadastro-li">
+              <a
+                class="link-cadastro-li"
+                href="cadastro.html"
+                style="color: white"
+                >Cadastro</a
+              >
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="btn">
+        <button class="login-1" href="login.html">
+          <a class="link-login" href="login.html">Login</a>
+        </button>
+        <button class="cadastro">
+          <a href="cadastro.html" class="link-cadastro">Cadastro</a>
+        </button>
+      </div>
+    </header>
+    <main>
+        <form class="sugestao-form" id="sugestaoForm">
+            <h2>Envie sua sugestão</h2>
+            <label for="nome">Seu nome (opcional)</label>
+            <input type="text" id="nome" name="nome" maxlength="32" placeholder="Digite seu nome">
+            <label for="mensagem">Sugestão</label>
+            <textarea id="mensagem" name="mensagem" rows="4" maxlength="400" required placeholder="Como podemos melhorar?"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <section class="sugestoes-list" id="sugestoesList">
+            <!-- Sugestões enviadas aparecerão aqui -->
+        </section>
+    </main>
+
+            <footer>
+            <section class="newsletter">
+              <h2>Quer organizar melhor sua rotina?</h2>
+              <p>Inscreva-se na nossa newsletter e receba dicas exclusivas de planejamento e produtividade diretamente no seu e-mail:</p>
+              <div class="newsletter-form">
+            <input type="email" placeholder="Digite seu e-mail">
+            <button>Cadastrar</button>
+              </div>
+            </section>
+          
+            <div class="footer-content">
+              <div class="footer-logo">
+            <img height="40px" class="logo-footer" src="imagens/plannest.png" alt="">
+            <p>Transforme sua rotina com ferramentas de planejamento simples e eficazes.</p>
+              </div>
+          
+              <div class="footer-links">
+            <div>
+              <h4>Links úteis</h4>
+              <ul>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Sobre nós</a></li>
+                <li><a href="#">Ferramentas</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Serviços</h4>
+              <ul>
+                <li><a href="#">Planejamento Pessoal</a></li>
+                <li><a href="#">Gestão de Tarefas</a></li>
+                <li><a href="#">Calendário Online</a></li>
+                <li><a href="#">Consultoria</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Suporte</h4>
+              <ul>
+                <li><a href="#">Fale conosco</a></li>
+                <li><a href="#">Envie um e-mail</a></li>
+                <li><a href="#">Central de ajuda</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+            </div>
+            <div class="social">
+              <h4>Siga-nos</h4>
+              <div class="icons">
+                <a href="#"><img src="imagens/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="imagens/linkedin.png" alt="LinkedIn"></a>
+              </div>
+            </div>
+              </div>
+            </div>
+          
+            <div class="footer-bottom">
+              <p>Plannest 2024 © Todos os direitos reservados</p>
+            </div>
+          </footer>
+        
+    <script>
+        // Simulação de armazenamento local das sugestões
+        const form = document.getElementById('sugestaoForm');
+        const lista = document.getElementById('sugestoesList');
+
+        function renderSugestoes() {
+            const sugestoes = JSON.parse(localStorage.getItem('sugestoesPlannest') || '[]');
+            lista.innerHTML = '';
+            sugestoes.reverse().forEach(s => {
+                const card = document.createElement('div');
+                card.className = 'sugestao-card';
+                card.innerHTML = `
+                    <div class="autor">${s.nome ? s.nome : 'Anônimo'}</div>
+                    <div class="mensagem">${s.mensagem.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</div>
+                `;
+                lista.appendChild(card);
+            });
+        }
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nome = form.nome.value.trim();
+            const mensagem = form.mensagem.value.trim();
+            if (!mensagem) return;
+            const sugestoes = JSON.parse(localStorage.getItem('sugestoesPlannest') || '[]');
+            sugestoes.push({ nome, mensagem });
+            localStorage.setItem('sugestoesPlannest', JSON.stringify(sugestoes));
+            form.reset();
+            renderSugestoes();
+        });
+
+        // Inicializa lista ao carregar
+        renderSugestoes();
+    </script>
+
+    <script src="menu-toggle.js"></script>
+</body>
+</html>

@@ -280,12 +280,13 @@ a {
     font-size: 1.5rem;
     color: var(--cor4--);
     font-weight: 500;
-    margin: 40px auto;
+    margin: 80px auto;
     text-align: start;
     margin-bottom: 20px;
     border-bottom: 1px solid var(--cor4--);
     max-width: 90%;
     line-height: 50px;
+
 }
 
 .container {
@@ -296,6 +297,7 @@ a {
     border-radius: 5px;
     margin: 0 auto;
 }
+
 
 .tab-box .tab-btn.active {
     color: var(--cor2--);
@@ -702,7 +704,12 @@ footer {
 
     .menu1 {
         justify-content: center;
-        position: relative;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.10); /* sombra adicionada */
     }
 
     .menu-toggle {
@@ -728,7 +735,8 @@ footer {
         background-color: var(--cor9--);
         padding: 40px 0px 100% 0;
         justify-content: start;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 1px 108px rgba(0, 0, 0, 0.418); /* sombra adicionada */
+        position: fixed;
     }
 
     .logo {
@@ -744,7 +752,7 @@ footer {
     }
 
     .nav-itens {
-        margin-top: 20px;
+        margin-top: 10px;
         margin-left: -30px;
         list-style: none;
         text-align: start;
@@ -753,6 +761,9 @@ footer {
         flex-direction: column;
         gap: 10px;
         background-color: var(--cor9--);
+        position: fixed;
+        height: 100vh;
+        box-shadow: 0 104px 108px rgba(0, 0, 0, 0.418); /* sombra adicionada */
     }
 
     .cadastro {
