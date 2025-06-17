@@ -296,8 +296,16 @@
                 const checkbox = document.createElement('input');
                 checkbox.type = 'checkbox';
                 checkbox.className = 'atividade-checkbox';
-                checkbox.checked = atividade.concluida;
-                checkbox.addEventListener('change', function() {
+                atividades[index].concluida = checkbox.checked;
+                    if (!checkbox.checked) {
+                        if (window.confirm('Tem certeza que deseja marcar esta atividade como não concluída?')) {
+                            // O usuário confirmou, pode desmarcar normalmente
+                        } else {
+                            // O usuário cancelou, volta o checkbox para marcado
+                            checkbox.checked = true;
+                            return;
+                        }
+                    }                checkbox.addEventListener('change', function() {
                     atividades[index].concluida = checkbox.checked;
                     salvarAtividades(materiaKey, atividades);
                     renderizarAtividades(); // Re-renderiza para aplicar a cor de concluída

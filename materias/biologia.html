@@ -253,7 +253,16 @@
                 checkbox.className = 'atividade-checkbox';
                 checkbox.checked = atividade.concluida;
                 checkbox.addEventListener('change', function() {
-                    atividades[index].concluida = checkbox.checked;
+                atividades[index].concluida = checkbox.checked;
+                    if (!checkbox.checked) {
+                        if (window.confirm('Tem certeza que deseja marcar esta atividade como não concluída?')) {
+                            // O usuário confirmou, pode desmarcar normalmente
+                        } else {
+                            // O usuário cancelou, volta o checkbox para marcado
+                            checkbox.checked = true;
+                            return;
+                        }
+                    }
                     salvarAtividades(materiaKey, atividades);
                     renderizarAtividades(); // Re-renderiza para aplicar a cor de concluída
                     updatePerformanceMetrics(); // Atualiza os números de desempenho
@@ -278,7 +287,7 @@
                     const date = document.createElement('p');
                     date.className = 'data-entrega';
                     
-                    // Cria um objeto Date a partir da string AAAA-MM-DD
+                    // Cria um objeto Date a partir da string YYYY-MM-DD
                     // Adiciona um dia para compensar a interpretação UTC para fuso horário local
                     const dataObj = new Date(atividade.dataEntrega + 'T00:00:00'); // Adiciona 'T00:00:00' para garantir que seja interpretado como início do dia local
                     
