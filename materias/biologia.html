@@ -292,7 +292,14 @@
                 btnExcluir.textContent = 'X';
                 btnExcluir.className = 'btn-excluir';
                 btnExcluir.addEventListener('click', function() {
-                    atividades.splice(index, 1);
+                    if (btnExcluir) {
+                        resultado = confirm('aaaa')
+                        if (resultado == true) {
+                            atividades.splice(index, 1);
+                        } else{
+                            return
+                        }
+                    }
                     salvarAtividades(materiaKey, atividades);
                     renderizarAtividades();
                     updatePerformanceMetrics();

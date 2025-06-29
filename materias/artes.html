@@ -186,6 +186,15 @@
             }
             return null; // Caso não encontre a matéria
         }
+        function confirmarAlteracao(checkbox) {
+            if (checkbox.checked === false) {
+            return confirm("Tem certeza que deseja marcar esta atividade como pendente novamente?");
+            } else if (checkbox.checked === true) {
+            return confirm("Tem certeza que deseja marcar esta atividade como concluída?");
+            }
+            return true;
+        }
+
 
         function carregarAtividades(materiaKey) {
             return JSON.parse(localStorage.getItem(materiaKey)) || [];
@@ -336,7 +345,14 @@
                 btnExcluir.textContent = 'X';
                 btnExcluir.className = 'btn-excluir';
                 btnExcluir.addEventListener('click', function() {
-                    atividades.splice(index, 1);
+                    if (btnExcluir) {
+                        resultado = confirm('aaaa')
+                        if (resultado == true) {
+                            atividades.splice(index, 1);
+                        } else{
+                            return
+                        }
+                    }
                     salvarAtividades(materiaKey, atividades);
                     renderizarAtividades();
                     updatePerformanceMetrics();

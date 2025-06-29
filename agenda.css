@@ -485,11 +485,22 @@ footer {
         max-width: 470px;
         width: 90%;
         margin: 10px auto;
+        min-height: 120px;
+        height: 20vh; /* aumenta o tamanho da textarea em telas pequenas */
+        font-size: 1.1rem;
+        scale: 0.9;
     }
 
     .agenda-form button {
         width: 90%;
         margin: 10px auto;
+    }
+    .agenda-form textarea,
+    #agenda-dia textarea {
+        max-width: 90%;
+        width: 90%;
+        box-sizing: border-box;
+        overflow-x: auto;
     }
 }
 
@@ -740,7 +751,7 @@ footer {
 .agenda-form textarea,
 #agenda-dia textarea {
     max-width: 100%;
-    width: 90%;
+    width: 100%;
     box-sizing: border-box;
     overflow-x: auto;
 }
