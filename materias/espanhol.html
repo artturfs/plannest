@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>plannest - Espanhol</title>
+    <link rel="stylesheet" href="disciplinas.css">
+    <link rel="shortcut icon" href="../imagens/favicon.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="menu1">
+        <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+        <a href="../index.html"><img height="30px" src="../imagens/plannest.png" ></a>
+     
+        <nav class="links" id="nav-links">
+            <ul class="nav-itens">
+                <li><a href="../index.html" class="home">Início</a></li>
+                <li><a href="../index.html#paginas"><span>Páginas</span></a></li>
+                <li><a href="../services.html">Sugestões</a></li>
+                <li><a href="../feedbeck.html">Avaliar</a></li>
+                <li><a href="../contato.html">Fale conosco</a></li>
+         
+                <li><button class="login-li"><a class="link-login-li" href="../login.html">Login</a></button></li>
+                <li><button class="cadastro-li"><a class="link-cadastro-li" href="../cadastro.html" style="color: white;">Cadastro</a></button></li>
+            </ul>
+        </nav>
+     
+        <div class="btn">
+            <button class="login-1"><a class="link-login" href="../login.html">Login</a></button>
+            <button class="cadastro"><a href="../cadastro.html" class="link-cadastro">Cadastro</a></button>
+        </div>
+    </header>
+    <h1 class="tittle">
+        Suas atividades de classe
+    </h1>
+    <div class="container">
+        <div class="tab-box">
+            <button class="tab-btn">Disciplinas</button>
+            <button class="tab-btn">Desempenho</button>
+            <div class="line">
+            </div>
+        </div>
+        <div class="content-box">
+            <div class="content">
+                <section class="slide2">
+                    <h4 class="btn-slide2"><a href="../atividades.html"><span>Disciplinas</span></a> > <a href="espanhol.html" style="color: var(--cor6--);">Espanhol</a></h4>
+                    <form id="atividade-form">
+                        <div>
+                            <label for="titulo-atividade">Título da Atividade:</label>
+                            <input type="text" id="titulo-atividade" placeholder="Ex: Vocabulário sobre Comida" required>
+                        </div>
+                        <div>
+                            <label for="descricao-atividade">Descrição:</label>
+                            <textarea id="descricao-atividade" placeholder="Detalhes da atividade..."></textarea>
+                        </div>
+                        <div>
+                            <label for="data-entrega">Data de Entrega:</label>
+                            <input type="date" id="data-entrega" required>
+                        </div>
+                        <button type="submit" id="btn-atividade">Adicionar Atividade</button>
+                    </form>
+                    <ul id="lista-atividades">
+                    </ul>
+                </section>
+            </div>
+            <div class="content">
+                <section class="slide2">
+                    <h4 class="btn-slide2"><a href="../atividades.html"><span>Disciplinas</span></a> > <a href="espanhol.html" style="color: var(--cor6--);" id="currentSubjectNameDisplay">Espanhol</a></h4>
+                     
+                    <div class="desempenho-principal">
+                        <div class="chart-box chart-box-current"> <canvas id="chartCurrentSubject"></canvas></div>
+                        <div class="desempenho-overview">
+                            <h2>Resumo de Desempenho</h2>
+                            <p>Total de atividades: <strong id="totalAtividades">0</strong></p>
+                            <p>Atividades concluídas: <strong id="concluidasAtividades">0</strong></p>
+                            <p>Atividades pendentes: <strong id="pendentesAtividades">0</strong></p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <footer>
+        <section class="newsletter">
+            <h2>Quer organizar melhor sua rotina?</h2>
+            <p>
+                Inscreva-se na nossa newsletter e receba dicas exclusivas de
+                planejamento e produtividade diretamente no seu e-mail:
+            </p>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Digite seu e-mail" />
+                <button>Cadastrar</button>
+            </div>
+        </section>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img
+                    height="40px"
+                    class="logo-footer"
+                    src="../imagens/plannest.png"
+                    alt=""
+                />
+                <p>
+                    Transforme sua rotina com ferramentas de planejamento simples e
+                    eficazes.
+                </p>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <h4>Links úteis</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Sobre nós</a></li>
+                        <li><a href="#">Ferramentas</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="#">Planejamento Pessoal</a></li>
+                        <li><a href="#">Gestão de Tarefas</a></li>
+                        <li><a href="#">Calendário Online</a></li>
+                        <li><a href="#">Consultoria</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="#">Fale conosco</a></li>
+                        <li><a href="#">Envie um e-mail</a></li>
+                        <li><a href="#">Central de ajuda</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="social">
+                    <h4>Siga-nos</h4>
+                    <div class="icons">
+                        <a href="#"><img src="../imagens/instagram.png" alt="Instagram"/></a>
+                        <a href="#"><img src="../imagens/linkedin.png" alt="LinkedIn" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Plannest 2025 © Todos os direitos reservados</p>
+        </div>
+    </footer>
+    <script src="../menu-toggle.js"></script>
+    <script>
+        // Mapeamento das matérias e suas chaves no localStorage
+        const materiasData = {
+            'artes': { key: 'atividadesArtes', displayName: 'Artes' },
+            'biologia': { key: 'atividadesBiologia', displayName: 'Biologia' },
+            'educacaofisica': { key: 'atividadesEdFisica', displayName: 'Educação Física' },
+            'espanhol': { key: 'atividadesEspanhol', displayName: 'Espanhol' }, // Mantido o mapeamento correto
+            'filosofiaesociologia': { key: 'atividadesFilosofiaSociologia', displayName: 'Filosofia e Sociologia' },
+            'fisica': { key: 'atividadesFisica', displayName: 'Física' },
+            'geografia': { key: 'atividadesGeografia', displayName: 'Geografia' },
+            'historia': { key: 'atividadesHistoria', displayName: 'História' },
+            'ingles': { key: 'atividadesIngles', displayName: 'Inglês' },
+            'matematica': { key: 'atividadesMatematica', displayName: 'Matemática' },
+            'portugues': { key: 'atividadesPortugues', displayName: 'Português' },
+            'quimica': { key: 'atividadesQuimica', displayName: 'Química' }
+        };
+
+        let chartCurrentSubjectInstance = null; // Para o gráfico da matéria atual
+
+        // --- Funções de Manipulação de Atividades ---
+        function getMateriaKeyFromURL() {
+            const pageTitle = document.title;
+            const startIndex = pageTitle.indexOf('- ') + 2;
+            let rawSubjectNameFromTitle = pageTitle.substring(startIndex).trim();
+            // Normaliza o nome para remover acentos e espaços, tornando-o compatível com as chaves do materiasData
+            const normalizedRawTitleName = rawSubjectNameFromTitle.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]/g, '');
+
+            for (const key in materiasData) {
+                if (materiasData.hasOwnProperty(key)) {
+                    if (key === normalizedRawTitleName || (key === 'filosofiaesociologia' && normalizedRawTitleName.includes('filosofia'))) {
+                        return materiasData[key].key;
+                    }
+                }
+            }
+            return null; // Caso não encontre a matéria
+        }
+
+        function carregarAtividades(materiaKey) {
+            return JSON.parse(localStorage.getItem(materiaKey)) || [];
+        }
+
+        function salvarAtividades(materiaKey, atividades) {
+            localStorage.setItem(materiaKey, JSON.stringify(atividades));
+        }
+
+        function getColorByDueDate(dueDate, isConcluida) {
+            if (isConcluida) {
+                return 'concluida'; // Verde claro
+            }
+
+            const today = new Date();
+            today.setHours(0, 0, 0, 0); // Zera a hora para comparação de data
+            const due = new Date(dueDate);
+            due.setHours(0, 0, 0, 0);
+
+            const diffTime = due - today;
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+            if (diffDays < 1) {
+                return 'atrasada'; // Vermelho claro
+            } else if (diffDays <= 4) {
+                return 'proximo-vencimento'; // Laranja suave (usando amarelo claro na folha de estilo)
+            } else {
+                return 'futuro'; // Azul claro
+            }
+        }
+        
+                        // --- Funções de Desempenho e Gráficos ---
+        // Adiciona botão para mostrar a porcentagem de conclusão no desempenho
+        document.addEventListener('DOMContentLoaded', function() {
+            // Cria o botão estilizado conforme o site
+            const desempenhoOverview = document.querySelector('.desempenho-overview');
+            if (desempenhoOverview) {
+            const btnMostrarPorcentagem = document.createElement('button');
+            btnMostrarPorcentagem.textContent = 'Calcular processual de atividades';
+            btnMostrarPorcentagem.id = 'btnMostrarPorcentagem';
+            btnMostrarPorcentagem.style.marginTop = '10px';
+            btnMostrarPorcentagem.style.background = 'var(--cor2--, #5ca3a5)';
+            btnMostrarPorcentagem.style.color = '#fff';
+            btnMostrarPorcentagem.style.border = 'none';
+            btnMostrarPorcentagem.style.borderRadius = '6px';
+            btnMostrarPorcentagem.style.padding = '8px 18px';
+            btnMostrarPorcentagem.style.fontSize = '1rem';
+            btnMostrarPorcentagem.style.cursor = 'pointer';
+            btnMostrarPorcentagem.style.transition = 'background 0.2s';
+            btnMostrarPorcentagem.addEventListener('mouseover', function() {
+                btnMostrarPorcentagem.style.background = 'var(--cor1--, #498b8d)';
+            });
+            btnMostrarPorcentagem.addEventListener('mouseout', function() {
+                btnMostrarPorcentagem.style.background = 'var(--cor2--, #5ca3a5)';
+            });
+
+            desempenhoOverview.appendChild(btnMostrarPorcentagem);
+
+            btnMostrarPorcentagem.addEventListener('click', function() {
+                const materiaKey = getMateriaKeyFromURL();
+                const atividades = carregarAtividades(materiaKey);
+                const porcentagem = calcularPorcentagemConclusao(atividades);
+                alert(`Provável processual de atividades: ${(porcentagem * .025).toFixed(2)}`);
+            });
+            }
+        });
+
+        function calcularPorcentagemConclusao(atividades) {
+            if (!atividades || atividades.length === 0) return 0;
+            const totalAtividades = atividades.length;
+            const atividadesConcluidas = atividades.filter(atividade => atividade.concluida).length;
+            return (atividadesConcluidas / totalAtividades);
+        }
+
+
+        function renderizarAtividades() {
+            const lista = document.getElementById('lista-atividades');
+            lista.innerHTML = '';
+            const materiaKey = getMateriaKeyFromURL();
+            if (!materiaKey) {
+                lista.innerHTML = '<p>Nenhuma matéria encontrada para carregar atividades.</p>';
+                return;
+            }
+
+            let atividades = carregarAtividades(materiaKey);
+
+            // Ordena as atividades: não concluídas e mais próximas do vencimento primeiro
+            atividades.sort((a, b) => {
+                // Se uma está concluída e a outra não, a não concluída vem primeiro
+                if (a.concluida && !b.concluida) return 1;
+                if (!a.concluida && b.concluida) return -1;
+                 
+                // Se ambas têm data de entrega, ordena pela data
+                if (a.dataEntrega && b.dataEntrega) {
+                    return new Date(a.dataEntrega) - new Date(b.dataEntrega);
+                }
+                // Se apenas uma tem data, a que tem data vem primeiro
+                if (a.dataEntrega && !b.dataEntrega) return -1;
+                if (!a.dataEntrega && b.dataEntrega) return 1;
+                 
+                return 0; // Mantém a ordem original se não houver datas ou se forem iguais
+            });
+
+            atividades.forEach((atividade, index) => {
+                const li = document.createElement('li');
+                li.className = `atividade-item ${getColorByDueDate(atividade.dataEntrega, atividade.concluida)}`;
+
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.className = 'atividade-checkbox';
+                atividades[index].concluida = checkbox.checked;
+                    if (!checkbox.checked) {
+                        if (window.confirm('Tem certeza que deseja marcar esta atividade como não concluída?')) {
+                            // O usuário confirmou, pode desmarcar normalmente
+                        } else {
+                            // O usuário cancelou, volta o checkbox para marcado
+                            checkbox.checked = true;
+                            return;
+                        }
+                    }                checkbox.addEventListener('change', function() {
+                    atividades[index].concluida = checkbox.checked;
+                    salvarAtividades(materiaKey, atividades);
+                    renderizarAtividades(); // Re-renderiza para aplicar a cor de concluída
+                    updatePerformanceMetrics(); // Atualiza os números de desempenho
+                    renderizarGraficosDesempenho(); // Atualiza todos os gráficos
+                });
+                li.appendChild(checkbox);
+
+                const infoDiv = document.createElement('div');
+                infoDiv.className = 'atividade-info';
+
+                const title = document.createElement('h3');
+                title.textContent = atividade.titulo;
+                infoDiv.appendChild(title);
+
+                if (atividade.descricao) {
+                    const description = document.createElement('p');
+                    description.textContent = atividade.descricao;
+                    infoDiv.appendChild(description);
+                }
+
+                if (atividade.dataEntrega) {
+                    const date = document.createElement('p');
+                    date.className = 'data-entrega';
+                     
+                    // Cria um objeto Date a partir da string AAAA-MM-DD
+                    // Adiciona 'T00:00:00' para garantir que seja interpretado como início do dia local
+                    const dataObj = new Date(atividade.dataEntrega + 'T00:00:00');  
+                     
+                    const formattedDate = dataObj.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' });
+                    date.textContent = `Entrega: ${formattedDate}`;
+                    infoDiv.appendChild(date);
+                }
+                li.appendChild(infoDiv);
+
+                const btnExcluir = document.createElement('button');
+                btnExcluir.textContent = 'X';
+                btnExcluir.className = 'btn-excluir';
+                btnExcluir.addEventListener('click', function() {
+                    atividades.splice(index, 1);
+                    salvarAtividades(materiaKey, atividades);
+                    renderizarAtividades();
+                    updatePerformanceMetrics();
+                    renderizarGraficosDesempenho();
+                });
+                li.appendChild(btnExcluir);
+                lista.appendChild(li);
+            });
+        }
+
+        // --- Funções de Desempenho e Gráficos ---
+
+        function calcularPorcentagemConclusao(atividades) {
+            const totalAtividades = atividades.length;
+            if (totalAtividades === 0) {
+                return 0;
+            }
+            const atividadesConcluidas = atividades.filter(atividade => atividade.concluida).length;
+            return (atividadesConcluidas / totalAtividades) * 100;
+        }
+
+        function updatePerformanceMetrics() {
+            const materiaKey = getMateriaKeyFromURL();
+            if (!materiaKey) return;
+
+            const atividades = carregarAtividades(materiaKey);
+            const total = atividades.length;
+            const concluidas = atividades.filter(atividade => atividade.concluida).length;
+            const pendentes = total - concluidas;
+
+            document.getElementById('totalAtividades').textContent = total;
+            document.getElementById('concluidasAtividades').textContent = concluidas;
+            document.getElementById('pendentesAtividades').textContent = pendentes;
+        }
+
+        function renderizarGraficoMateriaAtual(materiaNomeDisplay, materiaKey) {
+            const ctx = document.getElementById('chartCurrentSubject');
+            if (!ctx) {
+                console.error("Canvas para o gráfico da matéria atual não encontrado.");
+                return;
+            }
+            const canvasContext = ctx.getContext('2d');
+            const atividades = carregarAtividades(materiaKey);
+            const porcentagemConcluida = calcularPorcentagemConclusao(atividades);
+            const porcentagemPendente = 100 - porcentagemConcluida;
+
+            if (chartCurrentSubjectInstance) {
+                chartCurrentSubjectInstance.destroy();
+            }
+
+            chartCurrentSubjectInstance = new Chart(canvasContext, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Concluídas', 'Pendentes'],
+                    datasets: [{
+                        data: [porcentagemConcluida, porcentagemPendente],
+                        backgroundColor: ['#5ca3a5', '#f5c542'],
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: `Desempenho em ${materiaNomeDisplay}`,
+                            font: { size: 18 }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.label || '';
+                                    if (label) { label += ': '; }
+                                    if (context.parsed !== null) { label += context.parsed.toFixed(2) + '%'; }
+                                    return label;
+                                }
+                            }
+                        },
+                        legend: {
+                            position: 'bottom',
+                        }
+                    }
+                }
+            });
+        }
+
+        function renderizarGraficosDesempenho() {
+            const pageTitle = document.title;
+            const startIndex = pageTitle.indexOf('- ') + 2;
+            let rawSubjectNameFromTitle = pageTitle.substring(startIndex).trim();
+            const normalizedRawTitleName = rawSubjectNameFromTitle.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]/g, '');
+             
+            let currentSubjectData = null;
+            for (const key in materiasData) {
+                if (materiasData.hasOwnProperty(key)) {
+                    if (key === normalizedRawTitleName || (key === 'filosofiaesociologia' && normalizedRawTitleName.includes('filosofia'))) {
+                        currentSubjectData = materiasData[key];
+                        break;
+                    }
+                }
+            }
+
+            if (currentSubjectData) {
+                document.getElementById('currentSubjectNameDisplay').textContent = currentSubjectData.displayName;
+                renderizarGraficoMateriaAtual(currentSubjectData.displayName, currentSubjectData.key);
+            } else {
+                console.warn('Não foi possível encontrar dados para a matéria:', rawSubjectNameFromTitle);
+                document.getElementById('currentSubjectNameDisplay').textContent = rawSubjectNameFromTitle;
+                // Exibe mensagem no canvas se os dados não forem encontrados para o gráfico atual
+                const ctxCurrent = document.getElementById('chartCurrentSubject');
+                if (ctxCurrent) {
+                    const canvasContext = ctxCurrent.getContext('2d');
+                    if (chartCurrentSubjectInstance) chartCurrentSubjectInstance.destroy();
+                    canvasContext.clearRect(0, 0, ctxCurrent.width, ctxCurrent.height);
+                    canvasContext.font = '16px Arial';
+                    canvasContext.fillStyle = 'gray';
+                    canvasContext.textAlign = 'center';
+                    canvasContext.fillText('Dados de desempenho não disponíveis.', ctxCurrent.width / 2, ctxCurrent.height / 2);
+                }
+            }
+        }
+
+        // --- Lógica para controle das abas e inicialização ---
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('atividade-form');
+            const tituloInput = document.getElementById('titulo-atividade');
+            const descricaoInput = document.getElementById('descricao-atividade');
+            const dataEntregaInput = document.getElementById('data-entrega');
+             
+            renderizarAtividades(); // Carrega as atividades da matéria atual ao carregar a página
+            updatePerformanceMetrics(); // Atualiza os números de desempenho
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const titulo = tituloInput.value.trim();
+                const descricao = descricaoInput.value.trim();
+                const dataEntrega = dataEntregaInput.value; // Formato AAAA-MM-DD
+
+                if (titulo && dataEntrega) {
+                    const materiaKey = getMateriaKeyFromURL();
+                    if (!materiaKey) {
+                        alert("Não foi possível adicionar a atividade. Matéria não identificada.");
+                        return;
+                    }
+                    let atividades = carregarAtividades(materiaKey);
+                    atividades.push({ titulo: titulo, descricao: descricao, dataEntrega: dataEntrega, concluida: false });
+                    salvarAtividades(materiaKey, atividades);
+                    renderizarAtividades();
+                    updatePerformanceMetrics();
+                    renderizarGraficosDesempenho();
+                    tituloInput.value = '';
+                    descricaoInput.value = '';
+                    dataEntregaInput.value = '';
+                } else {
+                    alert("Por favor, preencha o título e a data de entrega da atividade.");
+                }
+            });
+
+            const tabs = document.querySelectorAll('.tab-btn');
+            const all_content = document.querySelectorAll('.content');
+
+            // Função para ativar a aba inicial (Disciplinas)
+            function activateInitialTab() {
+                tabs[0].classList.add('active'); // Ativa o primeiro botão de aba (Disciplinas)
+                all_content[0].classList.add('active'); // Ativa o primeiro conteúdo
+                var line = document.querySelector('.line');
+                line.style.width = tabs[0].offsetWidth + 'px';
+                line.style.left = tabs[0].offsetLeft + 'px';
+            }
+
+            // Ativa a aba inicial ao carregar a página
+            activateInitialTab();
+
+            tabs.forEach((tab, index) => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(tabItem => tabItem.classList.remove('active'));
+                    tab.classList.add('active');
+
+                    var line = document.querySelector('.line');
+                    line.style.width = tab.offsetWidth + 'px';
+                    line.style.left = tab.offsetLeft + 'px';
+
+                    all_content.forEach(contentItem => contentItem.classList.remove('active'));
+                    all_content[index].classList.add('active');
+
+                    // Se a aba de Desempenho for clicada, renderiza os gráficos
+                    if (tab.textContent === 'Desempenho') {
+                        updatePerformanceMetrics();
+                        renderizarGraficosDesempenho();
+                    }
+                });
+            });
+
+            // Este script é do seu código original para mobile, mantido separado para não quebrar a lógica.
+            const mobileTabBtns = document.querySelectorAll('.mobile-tab-btn');
+            const mobileTabContents = document.querySelectorAll('.mobile-tab-content');
+
+            mobileTabBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const target = btn.getAttribute('data-tab');
+                    mobileTabBtns.forEach(b => b.classList.remove('active'));
+                    mobileTabContents.forEach(c => c.classList.remove('active'));
+                    btn.classList.add('active');
+                    document.getElementById('mobile-tab-' + target).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
