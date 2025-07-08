@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>plannest - Início</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="/imagens/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dela+Gothic+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sen:wght@400..800&display=swap");
     </style>
@@ -14,18 +17,59 @@
   <body>
     <header class="menu1">
       <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
-      <img height="30px" src="imagens/plannest.png" />
+      <a class="logo" href="index.html"><img height="30px" src="imagens/plannest.png" alt="Plannest Logo" class="logo"/></a>
 
       <nav class="links" id="nav-links">
         <ul class="nav-itens">
-          <li>
-            <a href="index.html" class="home"><span>Início</span></a>
+          <!-- Seção principal -->
+          <li class="li-itens">
+            <img src="imagens/casa.png" alt="" width="20px" />
+            <a href="index.html">Início</a>
           </li>
-          <li><a href="#paginas">Páginas</a></li>
-          <li><a href="services.html">Sugestões</a></li>
-          <li><a href="feedbeck.html">Avaliar</a></li>
-          <li><a href="contato.hml">Fale conosco</a></li>
 
+          <li class="li-itens">
+            <img src="imagens/agenda.png" alt="" width="20px" />
+            <a href="agenda.html">Agenda</a>
+          </li>
+          <li class="li-itens">
+            <img src="imagens/caderno.png" alt="" width="20px" />
+            <a href="atividades.html">Atividades</a>
+          </li>
+          <li class="li-itens">
+            <img src="imagens/pasta-aberta.png" alt="" width="23px" />
+            <a href="material.html">Material</a>
+          </li>
+          <!-- Seção de estudos -->
+          <li class="li-itens">
+            <img src="imagens/cronometro.png" alt="" width="23px" />
+            <a href="agenda.html">Estudos</a>
+          </li>
+          <li class="li-itens">
+            <img src="imagens/flashcards-para-estudar.png" alt="" width="20px" />
+            <a href="flashcards.html">Flashcards</a>
+          </li>
+          <li class="li-itens">
+            <img src="imagens/mapeamento-da-mente.png" alt="" width="20px" />
+            <a href="mapas.html">Mapas Mentais</a>
+          </li>
+          <li style="border-bottom: 1px solid #5e5e5e; margin: 0px 0;"></li>
+
+            <li class="li-itens">
+
+              <a href="suporte.html">Feedback</a>
+            </li>
+            <li class="li-itens">
+
+              <a href="sobre.html">Sobre Nós</a>
+            </li>
+            <li class="li-itens">
+              <a href="faq.html">FAQ</a>
+            </li>
+            <li class="li-itens">
+              <a href="contato.html">Contato</a>
+            </li>
+
+          <!-- Login/Cadastro -->
           <li>
             <button class="login-li">
               <a class="link-login-li" href="login.html">Login</a>
@@ -33,13 +77,8 @@
           </li>
           <li>
             <button class="cadastro-li">
-              <a
-                class="link-cadastro-li"
-                href="cadastro.html"
-                style="color: white"
-                >Cadastro</a
-              >
-            </button>
+              <a class="link-cadastro-li" href="cadastro.html" style="color: white">Cadastro</a>
+            </button> <br>
           </li>
         </ul>
       </nav>
@@ -53,32 +92,34 @@
         </button>
       </div>
     </header>
+    
+    <div class="content-wrapper">
+      <section class="hero">
+        <div class="hero-text">
+          <h1>
+            <span>Plannest</span><br />
+            <span class="cor-de-texto">Cria</span>
+            <span class="texto-destaque">Soluções</span><br />
+            <span class="cor-de-texto">Para seus estudos</span>
+          </h1>
+          <p class="p-slide1">
+            A plannest é uma plataforma inovadora que conecta estudantes ao
+            planejamento inteligente, facilitando o aprendizado e aprimorando o
+            conhecimento
+          </p>
+          <a href="#" class="subscribe-btn">
+            <span class="icon-coracao">&hearts;</span> Saiba mais!
+          </a>
+        </div>
+        <div class="hero-img">
+          <img
+            class="img"
+            src="imagens/IMG_2529.PNG"
+            alt="Website Illustration"
+          />
+        </div>
+      </section>
 
-    <section class="hero">
-      <div class="hero-text">
-        <h1>
-          <span>Plannest</span><br />
-          <span class="cor-de-texto">Cria</span>
-          <span class="texto-destaque">Soluções</span><br />
-          <span class="cor-de-texto">Para seus estudos</span>
-        </h1>
-        <p class="p-slide1">
-          A plannest é uma plataforma inovadora que conecta estudantes ao
-          planejamento inteligente, facilitando o aprendizado e aprimorando o
-          conhecimento
-        </p>
-        <a href="#" class="subscribe-btn">
-          <span class="icon-coracao">&hearts;</span> Saiba mais!
-        </a>
-      </div>
-      <div class="hero-img">
-        <img
-          class="img"
-          src="imagens/IMG_2529.PNG"
-          alt="Website Illustration"
-        />
-      </div>
-    </section>
 
     <span id="paginas"></span>
     <section class="slide2">
@@ -93,7 +134,7 @@
             <img src="imagens/agenda.png" alt="" class="icon" />
             <h3>Agenda</h3>
             <p>
-              Organize suas tarefas e compromissos de forma prática e eficiente.
+              Organize suas tarefas e compromissos de forma eficiente.
             </p>
             <button><a href="agenda.html">Saiba mais</a></button>
           </section>
@@ -116,7 +157,7 @@
             <img src="imagens/cronometro.png" alt="" class="icon" />
             <h3>Métodos de Estudo</h3>
             <p>
-              Organize suas tarefas e compromissos de forma prática e eficiente.
+              Organize suas tarefas e compromissos de forma prática.
             </p>
             <button><a href="#">Saiba mais</a></button>
           </section>
@@ -139,128 +180,156 @@
     </section>
 
     <section class="slide3">
-
       <div class="box-slide3">
         <div class="dentro-box">
           <div class="slide3-part1">
-            <img  src="imagens/cronograma.PNG" alt="">
+            <img src="imagens/cronograma.PNG" alt="" />
           </div>
           <div class="slide3-part2">
             <h1 class="h1-slide3">Determine sua <span>rotina</span> de estudos!</h1>
-            <p class="p-slide3">Acesse seu cronograma semanal e monte sua agenda personalizada</p>
+            <p class="p-slide3">
+              Acesse seu cronograma semanal e monte sua agenda personalizada
+            </p>
             <a href="cronograma.html" class="btn-slide3">Ver cronograma</a>
           </div>
         </div>
-      </div> </div>
+      </div>
     </section>
 
     <section class="slide4">
       <div class="slide4-part2">
         <h1 class="h1-slide2">Fique atento às <span>notificações</span></h1>
 
-      <div class="container swiper">
-        <div class="card-wrapper">
-          <ul class="card-list swiper-wrapper">
-            <li class="card-item swiper-slide">
-              <a href="agenda.html" class="card-link">
-                <div class="card-image-wrapper">
-                  <img src="imagens/agenda.png" alt="" class="card-image">
-                  <div class="image-inform">
-                    <h3 class="image-tittle">Lorem ipsum dolor sit.</h3>
-                    <h4 class="image-text">Lorem ipsum dolor sit amet.</h4>
-                    <span class="symbol">NOVA NOTIFICAÇÃO</span>
+        <div class="container swiper">
+          <div class="card-wrapper">
+            <ul class="card-list swiper-wrapper">
+              <li class="card-item swiper-slide">
+                <a href="agenda.html" class="card-link">
+                  <div class="card-image-wrapper">
+                    <img src="imagens/agenda.png" alt="" class="card-image" />
+                    <div class="image-inform">
+                      <h3 class="image-tittle">Lorem ipsum dolor sit.</h3>
+                      <h4 class="image-text">Lorem ipsum dolor sit amet.</h4>
+                      <span class="symbol">NOVA NOTIFICAÇÃO</span>
+                    </div>
                   </div>
-                </div>
-                <p class="badge">Agenda</p>
-                <h2 class="card-tittle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, earum?</h2>
-                <button class="card-button material-symbols-rounded">➔</button>
-              </a>
-            </li>
+                  <p class="badge">Agenda</p>
+                  <h2 class="card-tittle">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Inventore, earum?
+                  </h2>
+                  <button class="card-button material-symbols-rounded">➔</button>
+                </a>
+              </li>
 
-            <li class="card-item swiper-slide">
-              <a href="atividades.html" class="card-link">
-                <div class="card-image-wrapper">
-                  <img src="imagens/caderno.png" alt="" class="card-image">
-                  <div class="image-inform">
-                    <h3 class="image-tittle">Lorem ipsum dolor sit.</h3>
-                    <h4 class="image-text">Lorem ipsum dolor sit amet.</h4>
-                    <span class="symbol">NOVA NOTIFICAÇÃO</span>
+              <li class="card-item swiper-slide">
+                <a href="atividades.html" class="card-link">
+                  <div class="card-image-wrapper">
+                    <img src="imagens/caderno.png" alt="" class="card-image" />
+                    <div class="image-inform">
+                      <h3 class="image-tittle">Lorem ipsum dolor sit.</h3>
+                      <h4 class="image-text">Lorem ipsum dolor sit amet.</h4>
+                      <span class="symbol">NOVA NOTIFICAÇÃO</span>
+                    </div>
                   </div>
-                </div>
-                <p class="badge">Atividades</p>
-                <h2 class="card-tittle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, earum?</h2>
-                <button class="card-button material-symbols-rounded">➔</button>
-              </a>
-            </li>
+                  <p class="badge">Atividades</p>
+                  <h2 class="card-tittle">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Inventore, earum?
+                  </h2>
+                  <button class="card-button material-symbols-rounded">➔</button>
+                </a>
+              </li>
 
-            <li class="card-item swiper-slide">
-              <a href="material.html" class="card-link">
-                <div class="card-image-wrapper">
-                  <img src="imagens/pasta-aberta.png" alt="" class="card-image">
-                  <div class="image-inform">
-                    <h3 class="image-tittle">Lorem ipsum dolor sit.</h3>
-                    <h4 class="image-text">Lorem ipsum dolor sit amet.</h4>
-                    <span class="symbol">NOVA NOTIFICAÇÃO</span>
+              <li class="card-item swiper-slide">
+                <a href="material.html" class="card-link">
+                  <div class="card-image-wrapper">
+                    <img
+                      src="imagens/pasta-aberta.png"
+                      alt=""
+                      class="card-image"
+                    />
+                    <div class="image-inform">
+                      <h3 class="image-tittle">Lorem ipsum dolor sit.</h3>
+                      <h4 class="image-text">Lorem ipsum dolor sit amet.</h4>
+                      <span class="symbol">NOVA NOTIFICAÇÃO</span>
+                    </div>
                   </div>
-                </div>
-                <p class="badge">Material</p>
-                <h2 class="card-tittle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, earum?</h2>
-                <button class="card-button material-symbols-rounded">➔</button>
-              </a>
-            </li>
+                  <p class="badge">Material</p>
+                  <h2 class="card-tittle">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Inventore, earum?
+                  </h2>
+                  <button class="card-button material-symbols-rounded">➔</button>
+                </a>
+              </li>
 
-            <li class="card-item swiper-slide">
-              <a href="agenda.html" class="card-link">
-                <div class="card-image-wrapper">
-                  <img src="imagens/agenda.png" alt="" class="card-image">
-                  <div class="image-inform">
-                    <h3 class="image-tittle">Lorem ipsum dolor sit.</h3>
-                    <h4 class="image-text">Lorem ipsum dolor sit amet.</h4>
-                    <span class="symbol">NOVA NOTIFICAÇÃO</span>
+              <li class="card-item swiper-slide">
+                <a href="agenda.html" class="card-link">
+                  <div class="card-image-wrapper">
+                    <img src="imagens/agenda.png" alt="" class="card-image" />
+                    <div class="image-inform">
+                      <h3 class="image-tittle">Lorem ipsum dolor sit.</h3>
+                      <h4 class="image-text">Lorem ipsum dolor sit amet.</h4>
+                      <span class="symbol">NOVA NOTIFICAÇÃO</span>
+                    </div>
                   </div>
-                </div>
-                <p class="badge">Agenda</p>
-                <h2 class="card-tittle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, earum?</h2>
-                <button class="card-button material-symbols-rounded">➔</button>
-              </a>
-            </li>
+                  <p class="badge">Agenda</p>
+                  <h2 class="card-tittle">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Inventore, earum?
+                  </h2>
+                  <button class="card-button material-symbols-rounded">➔</button>
+                </a>
+              </li>
 
-            <li class="card-item swiper-slide">
-              <a href="atividades.html" class="card-link">
-                <div class="card-image-wrapper">
-                  <img src="imagens/caderno.png" alt="" class="card-image">
-                  <div class="image-inform">
-                    <h3 class="image-tittle">Lorem ipsum dolor sit.</h3>
-                    <h4 class="image-text">Lorem ipsum dolor sit amet.</h4>
-                    <span class="symbol">NOVA NOTIFICAÇÃO</span>
+              <li class="card-item swiper-slide">
+                <a href="atividades.html" class="card-link">
+                  <div class="card-image-wrapper">
+                    <img src="imagens/caderno.png" alt="" class="card-image" />
+                    <div class="image-inform">
+                      <h3 class="image-tittle">Lorem ipsum dolor sit.</h3>
+                      <h4 class="image-text">Lorem ipsum dolor sit amet.</h4>
+                      <span class="symbol">NOVA NOTIFICAÇÃO</span>
+                    </div>
                   </div>
-                </div>
-                <p class="badge">Atividades</p>
-                <h2 class="card-tittle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, earum?</h2>
-                <button class="card-button material-symbols-rounded">➔</button>
-              </a>
-            </li>
+                  <p class="badge">Atividades</p>
+                  <h2 class="card-tittle">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Inventore, earum?
+                  </h2>
+                  <button class="card-button material-symbols-rounded">➔</button>
+                </a>
+              </li>
 
-            <li class="card-item swiper-slide">
-              <a href="material.html" class="card-link">
-                <div class="card-image-wrapper">
-                  <img src="imagens/pasta-aberta.png" alt="" class="card-image">
-                  <div class="image-inform">
-                    <h3 class="image-tittle">Lorem ipsum dolor sit.</h3>
-                    <h4 class="image-text">Lorem ipsum dolor sit amet.</h4>
-                    <span class="symbol">NOVA NOTIFICAÇÃO</span>
+              <li class="card-item swiper-slide">
+                <a href="material.html" class="card-link">
+                  <div class="card-image-wrapper">
+                    <img
+                      src="imagens/pasta-aberta.png"
+                      alt=""
+                      class="card-image"
+                    />
+                    <div class="image-inform">
+                      <h3 class="image-tittle">Lorem ipsum dolor sit.</h3>
+                      <h4 class="image-text">Lorem ipsum dolor sit amet.</h4>
+                      <span class="symbol">NOVA NOTIFICAÇÃO</span>
+                    </div>
                   </div>
-                </div>
-                <p class="badge">Material</p>
-                <h2 class="card-tittle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, earum?</h2>
-                <button class="card-button material-symbols-rounded">➔</button>
-              </a>
-            </li>
-          </ul>
+                  <p class="badge">Material</p>
+                  <h2 class="card-tittle">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Inventore, earum?
+                  </h2>
+                  <button class="card-button material-symbols-rounded">➔</button>
+                </a>
+              </li>
+            </ul>
 
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -335,10 +404,10 @@
         <p>Plannest 2024 © Todos os direitos reservados</p>
       </div>
     </footer>
+        </div>
 
     <script src="menu-toggle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
-    
   </body>
 </html>

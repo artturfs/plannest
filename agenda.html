@@ -5,34 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>plannest - Agenda</title>
     <link rel="stylesheet" href="agenda.css">
-    <link rel="shortcut icon" href="/imagens/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
 </head>
 <body>
     <header class="menu1">
-        <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
-            <a href="index.html"><img height="30px"  src="imagens/plannest.png" ></a>
+      <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+      <a class="logo" href="index.html"><img height="30px" src="imagens/plannest.png" alt="Plannest Logo" class="logo"/></a>
 
-        <nav class="links" id="nav-links">
-            <ul class="nav-itens">
-                <li><a href="index.html" class="home">Início</a></li>
-                <li><a href="index.html#paginas"><span>Páginas</span></a></li>
-                <li><a href="services.html">Sugestões</a></li>
-                <li><a href="feedbeck.html">Avaliar</a></li>
-                <li><a href="contato.hml">Contact us</a></li>
-                
-                <li><button class="login-li"><a class="link-login-li" href="login.html">Login</a></button></li>
-                <li><button class="cadastro-li"><a class="link-cadastro-li" href="cadastro.html" style="color: white;">Cadastro</a></button></li>
-            </ul>
-          </nav>
+      <nav class="links" id="nav-links">
+        <ul class="nav-itens">
+          <!-- Seção principal -->
+          <li class="li-itens">
+            <img src="imagens/casa.png" alt="" width="20px" />
+            <a href="index.html">Início</a>
+          </li>
 
-        <div class="btn">
-            <button class="login-1" href="login.html"><a class="link-login" href="login.html">Login</a></button>
-            <button class="cadastro"><a href="cadastro.html" class="link-cadastro">Cadastro</a></button>
-        </div>
+          <li class="li-itens">
+            <img src="imagens/agenda.png" alt="" width="20px" />
+            <a href="agenda.html">Agenda</a>
+          </li>
+          <li class="li-itens">
+            <img src="imagens/caderno.png" alt="" width="20px" />
+            <a href="atividades.html">Atividades</a>
+          </li>
+          <li class="li-itens">
+            <img src="imagens/pasta-aberta.png" alt="" width="23px" />
+            <a href="material.html">Material</a>
+          </li>
+          <!-- Seção de estudos -->
+          <li class="li-itens">
+            <img src="imagens/cronometro.png" alt="" width="23px" />
+            <a href="agenda.html">Estudos</a>
+          </li>
+          <li class="li-itens">
+            <img src="imagens/flashcards-para-estudar.png" alt="" width="20px" />
+            <a href="flashcards.html">Flashcards</a>
+          </li>
+          <li class="li-itens">
+            <img src="imagens/mapeamento-da-mente.png" alt="" width="20px" />
+            <a href="mapas.html">Mapas Mentais</a>
+          </li>
+          <li style="border-bottom: 1px solid #5e5e5e; margin: 0px 0;"></li>
+
+            <li class="li-itens">
+
+              <a href="suporte.html">Feedback</a>
+            </li>
+            <li class="li-itens">
+
+              <a href="sobre.html">Sobre Nós</a>
+            </li>
+            <li class="li-itens">
+              <a href="faq.html">FAQ</a>
+            </li>
+            <li class="li-itens">
+              <a href="contato.html">Contato</a>
+            </li>
+
+          <!-- Login/Cadastro -->
+          <li>
+            <button class="login-li">
+              <a class="link-login-li" href="login.html">Login</a>
+            </button>
+          </li>
+          <li>
+            <button class="cadastro-li">
+              <a class="link-cadastro-li" href="cadastro.html" style="color: white">Cadastro</a>
+            </button> <br>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="btn">
+        <button class="login-1" href="login.html">
+          <a class="link-login" href="login.html">Login</a>
+        </button>
+        <button class="cadastro">
+          <a href="cadastro.html" class="link-cadastro">Cadastro</a>
+        </button>
+      </div>
     </header>
 
     <br><br><br>  
-
+    <div class="content-wrapper">
         <h1 class="tittle">
           Sua agenda de classe
         </h1>
@@ -141,7 +196,8 @@
               <p>Plannest 2024 © Todos os direitos reservados</p>
             </div>
           </footer>
-          
+         </div>
+
 
     <script src="agenda.js"></script>
     <script>

@@ -1,3 +1,12 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    transition: all 0.3s; /* Keep this for general smooth transitions, but be aware of potential overrides */
+}
+
 body {
     padding: 0;
     background: linear-gradient(to top, #5ca3a534, #5ca3a52f, var(--cor9--));
@@ -5,10 +14,6 @@ body {
     box-sizing: border-box;
     transition: all 0.3s;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-* {
-    transition: all 0.3s;
 }
 
 :root {
@@ -21,165 +26,172 @@ body {
     --cor7--: #85c8ff;
     --cor8--: white;
     --cor9--: rgb(247, 247, 247);
-}
-
-.home {
-    margin-left: -40px;
-}
-
-/* MENU */
-
-.menu-toggle {
-    display: none;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-top: 25px;
-    color: var(--cor6--);
-    z-index: 1000;
-}
-
-.menu1 {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px;
-    background-color: var(--cor9--);
-    z-index: 1000;
-}
-
-
-span {
-    color: var(--cor2--);
-}
-
-
-
-.nav-itens {
-    list-style: none;
-    display: flex;
-    margin: 0;
+    --cor10--: #5ca3a527;
+    --cor11--: #292e3369;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+span {
+  color: var(--cor2);
+}
+
+/* Menu */
+.menu1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  background-color: var(--cor9--);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: none; /* No desktop, o menu1 não se move */
+}
+
+.menu-toggle {
+  font-size: large;
+  font-weight: 700;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--cor6);
+  position: absolute;
+  left: 15px;
+  z-index: 1000;
+  margin: 0;
+  display: block;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--cor9--);
+  padding-top: 40px;
+  justify-content: flex-start;
+  z-index: 999;
+  height: 100vh;
+  width: 20%; /* Largura fixa do menu */
+  min-width: 250px;
+  transform: translateX(-100%); /* Esconde o menu para a esquerda */
+  transition: transform 0.3s ease-in-out; /* Transição para o movimento */
+}
+
+.links.active {
+  transform: translateX(0); /* Mostra o menu */
+  box-shadow: 0 1px 108px rgba(0, 0, 0, 0.418);
+}
+
+.logo {
+  font-weight: 200;
+  margin: 10px auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-itens {
+  list-style: none;
+  display: flex;
+  margin: 10px 0 0 -30px;
+  text-align: start;
+  padding-right: 30px;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  background-color: var(--cor9--);
+  opacity: 0.97;
+  height: 100%;
+  overflow-y: auto;
+  max-height: 90vh;
+  scrollbar-width: thin;
+  scrollbar-color: var(--cor4----) var(--cor5--);
+}
+
+.li-itens {
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.li-itens:hover{
+    text-decoration: underline;
+    background-color: rgba(0, 0, 0, 0.082);
+}
+
+.li-itens img {
+  display: block;
+}
+
+.li-itens a {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
 }
 
 li a {
-    color: var(--cor6--);
-    text-decoration: none;
-    font-weight: 600;
-    padding: 5px 10px 5px 10px;
-
+  color: var(--cor6);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 5px 10px;
 }
 
-li a:hover {
-    transition: all .3s;
-    text-decoration: underline;
-    box-shadow: 1px 1px 100px rgba(0, 0, 0, 0.062);
-}
-
-.link-login-li:hover {
-    transition: all 0.3s;
-
+.nav-itens a:hover {
+  text-decoration: underline;
 }
 
 .link-login-li {
-    color: var(--cor6--);
+  color: var(--cor6);
 }
 
-.btn .login-1 {
-    padding: 6px 0px;
-    border: none;
-    background-color: var(--cor8--);
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 15px;
-    font-weight: 600;
-    margin-right: 10px;
-    transition: 0.3s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.082);
+/* Botões de Login e Cadastro */
+.cadastro,
+.login-1 {
+  display: none;
 }
 
-.btn .cadastro {
-    padding: 6px 0px;
-    border: none;
-    background-color: var(--cor2--);
-    color: var(--cor6--);
-    border-radius: 5px;
-    padding: 10px;
-    font-weight: 600;
-    font-size: 15px;
-    transition: 1s;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.082);
-}
-
-.link-login {
-    color: var(--cor6--);
-    text-decoration: none;
-    padding: 8px 32px;
-}
-
-.link-cadastro {
-    color: var(--cor8--);
-    text-decoration: none;
-    padding: 6px 32px;
-}
-
-.link-cadastro:hover {
-    color: var(--cor8--);
-    border-radius: 5px;
-    transition: all 0.3s;
-}
-
-.cadastro:hover {
-    transition: all .3s;
-    color: white;
-}
-
-a {
-    text-decoration: none;
-}
-
-.link-login {
-    font-weight: 600;
-    color: var(--cor6--);
-    text-decoration: none;
-    padding: 5px 10px;
-}
-
-.link-login a {
-    color: var(--cor6--);
-}
-
-.link-cadastro {
-    font-weight: 600;
-    color: var(--cor8--);
-    text-decoration: none;
-    padding: 5px 10px;
-
-}
-
-.link-cadastro a {
-    color: var(--cor8--);
-}
-
+.login-li,
 .cadastro-li {
-    display: none;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  box-shadow: 1px 6px 10px rgba(0, 0, 0, 0.274);
+  border: none;
 }
 
 .login-li {
-    display: none;
+  background-color: var(--cor8);
+  color: var(--cor6);
 }
 
-.login-1:hover,
-.cadastro:hover {
-    transform: scale(1.02);
-    transition: all .5s;
-    opacity: 80%;
+.cadastro-li {
+  background-color: var(--cor2--);
+  color: white;
 }
+
+.cadastro-li a,
+.login-li a {
+  width: 100%;
+  text-align: center;
+  border: none;
+}
+
+/* FIM MENU */
 
 .tittle {
     font-size: 1.5rem;
@@ -304,128 +316,162 @@ footer {
     font-size: 14px;
 }
 
+/* content wrapper */
 
-@media (max-width: 768px) {
-    body {
-        width: 100%;
-        overflow-x: hidden;
-        padding: 0;
-        margin: 0;
-    }
 
-    .menu1 {
-        justify-content: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-        box-shadow: 0 2px 12px rgba(0,0,0,0.10); /* sombra adicionada */
-    }
 
-    .menu-toggle {
-        position: absolute;
-        left: 10px;
-        display: block;
-        font-size: x-large;
-        font-weight: 700;
-        z-index: 500;
-        margin: 0;
-    }
+@media (max-width: 769px) {
+  body {
+    flex-direction: column;
+    overflow-x: hidden;
+  }
 
-    .home {
-        display: block;
-        margin-left: 0px;
-    }
+.menu1 {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: var(--cor9--);
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    box-shadow: 0 2px 12px rgba(44, 62, 80, 0.07);
+    border-bottom: 1px solid var(--cor10--);
+    transition: none;
+    z-index: 1;
+}
 
-    .links {
-        display: none;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        background-color: var(--cor9--);
-        padding: 40px 0px 100% 0;
-        justify-content: start;
-        box-shadow: 0 1px 108px rgba(0, 0, 0, 0.418); /* sombra adicionada */
-        position: fixed;
-    }
+.menu-toggle {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    font-size: 1.6rem;
+    color: var(--cor6--);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+}
 
-    .logo {
-        font-weight: 200;
-        margin: 10px auto;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-    }
+.logo {
+    z-index: 9999;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--cor2--);
+    letter-spacing: 1px;
+    margin: 0 auto;
+    text-align: center;
+}
 
-    .links.active {
-        display: block;
-    }
+.links {
+    width: 100vw;
+    min-width: unset;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--cor9--);
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(.77,0,.18,1);
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    box-shadow: 0 4px 32px rgba(44, 62, 80, 0.08);
+    z-index: 1050;
+}
 
-    .nav-itens {
-        margin-top: 10px;
-        margin-left: -30px;
-        list-style: none;
-        text-align: start;
-        display: flex;
-        padding-right: 30px;
-        flex-direction: column;
-        gap: 10px;
-        background-color: var(--cor9--);
-        position: fixed;
-        height: 100vh;
-        box-shadow: 0 104px 108px rgba(0, 0, 0, 0.418); /* sombra adicionada */
-    }
+.links.active {
+    transform: translateX(0);
+    box-shadow: 0 4px 32px rgba(44, 62, 80, 0.12);
+}
 
-    .cadastro {
-        display: none;
-    }
+.nav-itens {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+    height: 100%;
+}
 
-    .login-1 {
-        display: none;
-    }
+.li-itens {
+    margin: 0;
+    width: 90%;
+    max-width: 320px;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
 
-    .login-li,
-    .cadastro-li {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        padding: 10px;
-        border-radius: 5px;
-        font-weight: 600;
-        font-size: 15px;
-        margin-top: 10px;
-        cursor: pointer;
-        box-shadow: 1px 6px 10px rgba(0, 0, 0, 0.274);
-    }
+.li-itens:first-child {
+    margin-top: 0px;
+}
 
-    .login-li {
-        background-color: var(--cor8--);
-        color: var(--cor6--);
-        border: none;
-    }
+.li-itens a {
+    width: 100%;
+    color: var(--cor6--);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-left: 5px;
+    letter-spacing: 0.5px;
+    padding: 8px 0;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
 
-    .cadastro-li {
-        background-color: var(--cor2--);
-        color: white;
-        border: none;
+.li-itens img {
+    margin-left: 12px;
 
-    }
+}
 
-    .cadastro-lo li {
-        color: var(--cor8--);
+.li-itens:hover {
+    background: var(--cor10--);
+    color: var(--cor2--);
+    text-decoration: underline;
+}
 
-    }
+  /* Garante que o conteúdo não se desloque no celular e não tenha transição */
 
-    .cadastro-li a,
-    .login-li a {
-        width: 100%;
-        text-align: center;
-        border: none;
-    }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+    height: auto;
+    min-height: 100vh;
+    background: linear-gradient(to top, #5ca3a536, var(--cor9--));
+  }
 
+  body.menu-open .links {
+    transform: translateX(0); /* Menu cobre a tela inteira quando ativo no celular */
+  }
+
+  body.menu-open .content-wrapper {
+    /* No celular, o conteúdo não se move, o menu apenas se sobrepõe */
+    margin-left: 0;
+    width: 100%;
+    transform: translateX(0);
+  }
+
+  /* Centralização dos botões de cadastro e login */
+  button .login-li,
+  button .cadastro-li {
+    margin: 20px auto 0 auto;
+    width: 200%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
     /* FIM MENU */
-
     .container {
         display: flex;
         margin: 0px 0;
@@ -457,6 +503,7 @@ footer {
     }
 
     #agenda-dia {
+        z-index: 0;
         background-color: var(--cor2--);
         color: white;
         scale: 1;
@@ -470,7 +517,6 @@ footer {
         box-shadow: 0px -9px 10px rgba(0, 0, 0, 0.2);
         /* Adiciona uma sombra para destaque */
         position: relative;
-        z-index: 10;
         overflow: hidden;
         width: 100% !important;
         align-items: center;
@@ -501,18 +547,6 @@ footer {
         width: 90%;
         box-sizing: border-box;
         overflow-x: auto;
-    }
-}
-
-@keyframes appear {
-    from {
-        opacity: 0;
-        scale: 0.8;
-    }
-
-    to {
-        opacity: 1;
-        scale: 1;
     }
 }
 

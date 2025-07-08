@@ -5,88 +5,179 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>plannest - Atividades</title>
   <link rel="stylesheet" href="atividades.css" />
+  <link rel="stylesheet" href="disciplinas.css" />
   <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <header class="menu1">
-    <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
-    <a href="index.html"><img height="30px" src="imagens/plannest.png" /></a>
-    <nav class="links" id="nav-links">
-      <ul class="nav-itens">
-        <li><a href="index.html" class="home">Início</a></li>
-        <li><a href="index.html#paginas"><span>Páginas</span></a></li>
-        <li><a href="services.html">Sugestões</a></li>
-        <li><a href="feedbeck.html">Avaliar</a></li>
-        <li><a href="contato.html">Fale conosco</a></li>
-        <li><button class="login-li"><a class="link-login-li" href="login.html">Login</a></button></li>
-        <li><button class="cadastro-li"><a class="link-cadastro-li" href="cadastro.html" style="color: white;">Cadastro</a></button></li>
-      </ul>
-    </nav>
-    <div class="btn">
-      <button class="login-1"><a class="link-login" href="login.html">Login</a></button>
-      <button class="cadastro"><a href="cadastro.html" class="link-cadastro">Cadastro</a></button>
-    </div>
-  </header>
+    <header class="menu1">
+      <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+      <a class="logo" href="index.html"><img height="30px" src="imagens/plannest.png" alt="Plannest Logo" class="logo"/></a>
 
-  <br><br><br>
+      <nav class="links" id="nav-links">
+        <ul class="nav-itens">
+          <!-- Seção principal -->
+          <li class="li-itens">
+            <img src="imagens/casa.png" alt="" width="20px" />
+            <a href="index.html">Início</a>
+          </li>
 
-  <h1 class="tittle">Suas atividades de classe</h1>
+          <li class="li-itens">
+            <img src="imagens/agenda.png" alt="" width="20px" />
+            <a href="agenda.html">Agenda</a>
+          </li>
+          <li class="li-itens">
+            <img src="imagens/caderno.png" alt="" width="20px" />
+            <a href="atividades.html">Atividades</a>
+          </li>
+          <li class="li-itens">
+            <img src="imagens/pasta-aberta.png" alt="" width="23px" />
+            <a href="material.html">Material</a>
+          </li>
+          <!-- Seção de estudos -->
+          <li class="li-itens">
+            <img src="imagens/cronometro.png" alt="" width="23px" />
+            <a href="agenda.html">Estudos</a>
+          </li>
+          <li class="li-itens">
+            <img src="imagens/flashcards-para-estudar.png" alt="" width="20px" />
+            <a href="flashcards.html">Flashcards</a>
+          </li>
+          <li class="li-itens">
+            <img src="imagens/mapeamento-da-mente.png" alt="" width="20px" />
+            <a href="mapas.html">Mapas Mentais</a>
+          </li>
+          <li style="border-bottom: 1px solid #5e5e5e; margin: 0px 0;"></li>
 
-  <div class="container">
-    <div class="tab-box">
-      <button class="tab-btn">Disciplinas</button>
-      <button class="tab-btn">Desempenho</button>
-      <div class="line"></div>
-    </div>
-    <div class="content-box">
-      <div class="content">
-        <section class="slide2">
-          <div class="slide2-part2">
-            <img src="imagens/ilustrações.png" alt="" />
-            <div class="cards">
-              <!-- Primeira linha de matérias -->
-              <section class="card agenda"><a href="materias/artes.html"><img src="imagens/artes.png" class="icon ling"/><h3 class="materia">Artes</h3></a></section>
-              <section class="card atividades"><a href="materias/biologia.html"><img src="imagens/biologia.png" class="icon nat"/><h3 class="materia">Biologia</h3></a></section>
-              <section class="card material"><a href="materias/edfisica.html"><img src="imagens/edfisica.png" class="icon ling"/><h3 class="materia">Ed. Física</h3></a></section>
-              <section class="card material"><a href="materias/espanhol.html"><img src="imagens/linguas.png" class="icon ling"/><h3 class="materia">Espanhol</h3></a></section>
-              <section class="card material"><a href="materias/filo.html"><img src="imagens/lampada.png" class="icon hum"/><h3 class="materia filo">Filosofia e<br>Sociologia</h3></a></section>
-              <section class="card material"><a href="materias/fisica.html"><img src="imagens/fisica.png" class="icon nat"/><h3 class="materia">Física</h3></a></section>
+            <li class="li-itens">
+
+              <a href="suporte.html">Feedback</a>
+            </li>
+            <li class="li-itens">
+
+              <a href="sobre.html">Sobre Nós</a>
+            </li>
+            <li class="li-itens">
+              <a href="faq.html">FAQ</a>
+            </li>
+            <li class="li-itens">
+              <a href="contato.html">Contato</a>
+            </li>
+
+          <!-- Login/Cadastro -->
+          <li>
+            <button class="login-li">
+              <a class="link-login-li" href="login.html">Login</a>
+            </button>
+          </li>
+          <li>
+            <button class="cadastro-li">
+              <a class="link-cadastro-li" href="cadastro.html" style="color: white">Cadastro</a>
+            </button> <br>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="btn">
+        <button class="login-1" href="login.html">
+          <a class="link-login" href="login.html">Login</a>
+        </button>
+        <button class="cadastro">
+          <a href="cadastro.html" class="link-cadastro">Cadastro</a>
+        </button>
+      </div>
+    </header>
+
+  <br>
+    <div class="content-wrapper">
+      <h1 class="tittle" id="mainTitle">Suas atividades de classe</h1>
+
+      <div class="main-activity-view">
+        <div class="container">
+          <div class="tab-box">
+            <button class="tab-btn">Disciplinas</button>
+            <button class="tab-btn">Desempenho</button>
+            <div class="line"></div>
+          </div>
+          <div class="content-box">
+            <div class="content">
+              <section class="slide2">
+                <div class="slide2-part2">
+                  <div class="cards" id="subject-cards-container">
+                    <section class="card add-new-subject" id="addNewSubjectCard">
+                      <img src="imagens/plus.png" class="icon" alt="Adicionar Nova Matéria"/>
+                      <h3 class="materia">Adicionar Matéria</h3>
+                    </section>
+                  </div>
+                </div>
+              </section>
             </div>
-            <div class="cards" id="cards2">
-              <!-- Segunda linha de matérias -->
-              <section class="card material"><a href="materias/geografia.html"><img src="imagens/geografia.png" class="icon hum"/><h3 class="materia">Geografia</h3></a></section>
-              <section class="card agenda"><a href="materias/historia.html"><img src="imagens/historia.png" class="icon hum"/><h3 class="materia">História</h3></a></section>
-              <section class="card atividades"><a href="materias/ingles.html"><img src="imagens/linguas.png" class="icon ling"/><h3 class="materia">Inglês</h3></a></section>
-              <section class="card material"><a href="materias/matematica.html"><img src="imagens/matematica.png" class="icon nat"/><h3 class="materia">Matemática</h3></a></section>
-              <section class="card material"><a href="materias/portugues.html"><img src="imagens/portugues.png" class="icon ling"/><h3 class="materia">Português</h3></a></section>
-              <section class="card material"><a href="materias/quimica.html"><img src="imagens/quimica.png" class="icon nat"/><h3 class="materia">Química</h3></a></section>
+
+            <div class="content">
+                <section class="slide2">
+                    <div class="graficos-container-overall" id="graficos-container-overall">
+                        <canvas id="chartOverallPerformance"></canvas>
+                    </div>
+                </section>
             </div>
           </div>
-        </section>
+        </div>
       </div>
 
-        <div class="content">
-            <section class="slide2">
-                <div class="graficos-container">
-                    <div><canvas id="chartArtes"></canvas></div>
-                    <div><canvas id="chartBiologia"></canvas></div>
-                    <div><canvas id="chartEdFisica"></canvas></div>
-                    <div><canvas id="chartEspanhol"></canvas></div>
-                    <div><canvas id="chartFilosofiaSociologia"></canvas></div>
-                    <div><canvas id="chartFisica"></canvas></div>
-                    <div><canvas id="chartGeografia"></canvas></div>
-                    <div><canvas id="chartHistoria"></canvas></div>
-                    <div><canvas id="chartIngles"></canvas></div>
-                    <div><canvas id="chartMatematica"></canvas></div>
-                    <div><canvas id="chartPortugues"></canvas></div>
-                    <div><canvas id="chartQuimica"></canvas></div>
+      <div class="subject-detail-view" style="display: none;">
+        <div class="container">
+            <div class="tab-box">
+                <button class="tab-btn-detail" data-tab-content="activity-list">Atividades</button>
+                <button class="tab-btn-detail" data-tab-content="performance-detail">Desempenho</button>
+                <div class="line-detail"></div>
+            </div>
+            <div class="content-box">
+                <div class="content-detail" id="activity-list-content">
+                    <section class="slide2">
+                        <h4 class="btn-slide2">
+                            <a href="#" id="backToSubjectsBtn"><span>Disciplinas</span></a> > 
+                            <span style="color: var(--cor6--);" id="currentSubjectNameDetail"></span>
+                        </h4>
+                        <form id="atividade-form">
+                            <div>
+                                <label for="titulo-atividade">Título da Atividade:</label>
+                                <input type="text" id="titulo-atividade" placeholder="Ex: Pesquisa sobre Modernismo" required>
+                            </div>
+                            <div>
+                                <label for="descricao-atividade">Descrição:</label>
+                                <textarea id="descricao-atividade" placeholder="Detalhes da atividade..."></textarea>
+                            </div>
+                            <div>
+                                <label for="data-entrega">Data de Entrega:</label>
+                                <input type="date" id="data-entrega" required>
+                            </div>
+                            <button type="submit" id="btn-atividade">Adicionar Atividade</button>
+                        </form>
+                        <ul id="lista-atividades">
+                        </ul>
+                    </section>
                 </div>
-            </section>
+                <div class="content-detail" id="performance-detail-content">
+                    <section class="slide2">
+                        <h4 class="btn-slide2">
+                            <a href="#" id="backToSubjectsBtn2"><span>Disciplinas</span></a> > 
+                            <span style="color: var(--cor6--);" id="currentSubjectNamePerformance"></span>
+                        </h4>
+                        <div class="desempenho-principal">
+                            <div class="chart-box chart-box-current"> <canvas id="chartCurrentSubject"></canvas></div>
+                            <div class="desempenho-overview">
+                                <h2>Resumo de Desempenho</h2>
+                                <p>Total de atividades: <strong id="totalAtividades">0</strong></p>
+                                <p>Atividades concluídas: <strong id="concluidasAtividades">0</strong></p>
+                                <p>Atividades pendentes: <strong id="pendentesAtividades">0</strong></p>
+                            </div>
+                            <button id="btnMostrarPorcentagem" class="btn-processual">Calcular processual de atividades</button>
+                        </div>
+                    </section>
+                </div>
+            </div>
         </div>
-
-    </div>
-  </div>
+      </div>
 
   <br><br><br>
 
@@ -113,7 +204,7 @@
           <h4>Serviços</h4>
           <ul><li><a href="#">Planejamento Pessoal</a></li><li><a href="#">Gestão de Tarefas</a></li><li><a href="#">Calendário Online</a></li><li><a href="#">Consultoria</a></li></ul>
         </div>
-        <div>
+        <div class="footer-links">
           <h4>Suporte</h4>
           <ul><li><a href="#">Fale conosco</a></li><li><a href="#">Envie um e-mail</a></li><li><a href="#">Central de ajuda</a></li><li><a href="#">FAQ</a></li></ul>
         </div>
@@ -130,28 +221,92 @@
       <p>Plannest 2025 © Todos os direitos reservados</p>
     </div>
   </footer>
+    </div>
+
+    <div id="newSubjectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Adicionar Nova Matéria</h2>
+            <form id="newSubjectForm">
+                <label for="subjectName">Nome da Matéria:</label>
+                <input type="text" id="subjectName" required>
+
+                <label for="subjectIcon">Ícone da Matéria (URL da imagem - opcional):</label>
+                <input type="text" id="subjectIcon" placeholder="Ex: imagens/matematica.png">
+                
+                <button type="submit">Criar Matéria</button>
+            </form>
+        </div>
+    </div>
 
   <script src="menu-toggle.js"></script>
   <script>
     const tabs = document.querySelectorAll('.tab-btn');
     const all_content = document.querySelectorAll('.content');
-    const charts = {};
-    const materias = {
+    const subjectDetailTabs = document.querySelectorAll('.tab-btn-detail');
+    const subjectDetailContents = document.querySelectorAll('.content-detail');
+    
+    const mainActivityView = document.querySelector('.main-activity-view');
+    const subjectDetailView = document.querySelector('.subject-detail-view');
+    const mainTitle = document.getElementById('mainTitle');
+
+    const charts = {}; // For overall performance charts
+    let chartCurrentSubjectInstance = null; // For the single subject performance chart
+
+    let currentSubjectKey = null; // Stores the localStorage key for the currently viewed subject
+    let currentSubjectDisplayName = null; // Stores the display name for the currently viewed subject
+
+    // Load existing materias from localStorage or use default
+    let materias = JSON.parse(localStorage.getItem('materiasData')) || {
       'Artes': 'atividadesArtes',
       'Biologia': 'atividadesBiologia',
-      'EdFisica': 'atividadesEdFisica',
+      'Ed. Física': 'atividadesEdFisica', 
       'Espanhol': 'atividadesEspanhol',
-      'FilosofiaSociologia': 'atividadesFilosofiaSociologia',
-      'Fisica': 'atividadesFisica',
+      'Filosofia e Sociologia': 'atividadesFilosofiaSociologia',
+      'Física': 'atividadesFisica',
       'Geografia': 'atividadesGeografia',
-      'Historia': 'atividadesHistoria',
-      'Ingles': 'atividadesIngles',
-      'Matematica': 'atividadesMatematica',
-      'Portugues': 'atividadesPortugues',
-      'Quimica': 'atividadesQuimica'
+      'História': 'atividadesHistoria',
+      'Inglês': 'atividadesIngles',
+      'Matemática': 'atividadesMatematica',
+      'Português': 'atividadesPortugues',
+      'Química': 'atividadesQuimica'
     };
 
-    function calcularPorcentagemConclusao(materiaKey) {
+    // Define base subjects that cannot be removed
+    const baseSubjects = [
+      'Artes', 'Biologia', 'Ed. Física', 'Espanhol',
+      'Filosofia e Sociologia', 'Física', 'Geografia',
+      'História', 'Inglês', 'Matemática', 'Português', 'Química'
+    ];
+
+    // Store subject icons (assuming default icons are in 'imagens/')
+    let subjectIcons = JSON.parse(localStorage.getItem('subjectIcons')) || {
+        'artes': 'imagens/artes.png',
+        'biologia': 'imagens/biologia.png',
+        'edfisica': 'imagens/edfisica.png',
+        'espanhol': 'imagens/linguas.png',
+        'filosofiaesociologia': 'imagens/lampada.png',
+        'fisica': 'imagens/fisica.png',
+        'geografia': 'imagens/geografia.png',
+        'historia': 'imagens/historia.png',
+        'ingles': 'imagens/linguas.png',
+        'matematica': 'imagens/matematica.png',
+        'portugues': 'imagens/portugues.png',
+        'quimica': 'imagens/quimica.png'
+    };
+
+
+    function saveMateriasData() {
+        localStorage.setItem('materiasData', JSON.stringify(materias));
+        localStorage.setItem('subjectIcons', JSON.stringify(subjectIcons));
+    }
+
+    function normalizeString(str) {
+        return str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]/g, '');
+    }
+
+    // --- OVERALL PERFORMANCE CHARTS (on main activities page) ---
+    function calculatePorcentagemConclusao(materiaKey) {
       const atividades = JSON.parse(localStorage.getItem(materiaKey)) || [];
       const total = atividades.length;
       if (total === 0) return 0;
@@ -159,68 +314,584 @@
       return (concluidas / total) * 100;
     }
 
-    function criarOuAtualizarGrafico(nome, key) {
-      const ctx = document.getElementById('chart' + nome).getContext('2d');
-      const concluido = calcularPorcentagemConclusao(key);
-      const pendente = 100 - concluido;
-      if (charts[nome]) charts[nome].destroy();
-      charts[nome] = new Chart(ctx, {
-        type: 'doughnut',
-        data: {
-          labels: ['Concluídas', 'Pendentes'],
-          datasets: [{
-            data: [concluido, pendente],
-            backgroundColor: ['#5ca3a5', '#f5c542']
-          }]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            title: {
-              display: true,
-              text: nome.replace(/([A-Z])/g, ' $1').trim(),
-              font: { size: 16 }
-            },
-            tooltip: {
-              callbacks: {
-                label: ctx => `${ctx.label}: ${ctx.parsed.toFixed(2)}%`
-              }
+    function renderizarGraficoDesempenhoGeral() {
+        const ctx = document.getElementById('chartOverallPerformance');
+        if (!ctx) return;
+        const canvasContext = ctx.getContext('2d');
+
+        const labels = [];
+        const data = [];
+        const backgroundColors = [];
+        const borderColors = [];
+
+        for (const displayName in materias) {
+            const materiaKey = materias[displayName];
+            const atividades = JSON.parse(localStorage.getItem(materiaKey)) || [];
+            const porcentagem = calculatePorcentagemConclusao(materiaKey);
+            
+            labels.push(displayName);
+            data.push(porcentagem);
+            
+            if (porcentagem === 100) {
+                backgroundColors.push('rgba(92, 163, 165, 0.7)');
+                borderColors.push('rgba(92, 163, 165, 1)');
+            } else if (porcentagem > 70) {
+                backgroundColors.push('rgba(173, 216, 230, 0.7)');
+                borderColors.push('rgba(173, 216, 230, 1)');
+            } else if (porcentagem > 40) {
+                backgroundColors.push('rgba(255, 206, 86, 0.7)');
+                borderColors.push('rgba(255, 206, 86, 1)');
+            } else {
+                backgroundColors.push('rgba(255, 99, 132, 0.7)');
+                borderColors.push('rgba(255, 99, 132, 1)');
             }
-          }
         }
-      });
+
+        if (charts['overall']) { // Use a fixed key for the overall chart instance
+            charts['overall'].destroy();
+        }
+
+        charts['overall'] = new Chart(canvasContext, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: '% de Conclusão',
+                    data: data,
+                    backgroundColor: backgroundColors,
+                    borderColor: borderColors,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Desempenho Geral por Matéria',
+                        font: { size: 18 }
+                    },
+                    legend: {
+                        display: false 
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return `${context.label}: ${context.parsed.toFixed(2)}%`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: {
+                            display: true,
+                            text: 'Porcentagem de Conclusão'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Matéria'
+                        }
+                    }
+                }
+            }
+        });
     }
 
-    function renderizarGraficosDesempenho() {
-      for (const nome in materias) {
-        criarOuAtualizarGrafico(nome, materias[nome]);
-      }
+    function renderSubjectCards() {
+        const container = document.getElementById('subject-cards-container');
+        const addNewCard = document.getElementById('addNewSubjectCard');
+        
+        // Remove all children except the last one (addNewCard)
+        while (container.firstChild && container.firstChild !== addNewCard) {
+            container.removeChild(container.firstChild);
+        }
+        
+        // Re-add existing subject cards before the "Add New Subject" card
+        for (const displayName in materias) {
+            const materiaKey = materias[displayName];
+            const normalizedName = normalizeString(displayName);
+            const iconPath = subjectIcons[normalizedName] || 'imagens/caderno.png'; // Default icon
+
+            // Special handling for the display of "Filosofia e Sociologia"
+            const displayMateriaName = (displayName === 'Filosofia e Sociologia') ? 'Filosofia e<br>Sociologia' : displayName;
+
+            // Check if the current subject is a base subject
+            const isBaseSubject = baseSubjects.includes(displayName);
+
+            const card = document.createElement('section');
+            card.className = 'card';
+            card.innerHTML = `
+                <a href="#" class="subject-card-link" 
+                   data-subject-key="${materiaKey}" 
+                   data-subject-display-name="${displayName.replace(/"/g, '&quot;')}"
+                   data-subject-icon="${iconPath}">
+                    <img src="${iconPath}" class="icon"/>
+                    <h3 class="materia">${displayMateriaName}</h3>
+                </a>
+                ${!isBaseSubject ? `
+                <button class="remove-subject-btn" 
+                        data-subject-key="${materiaKey}" 
+                        data-subject-display-name="${displayName.replace(/"/g, '&quot;')}"
+                        aria-label="Remover ${displayName}">X</button>
+                ` : ''}
+            `;
+            // Insert before the 'addNewSubjectCard'
+            addNewCard.insertAdjacentElement('beforebegin', card);
+        }
+
+        // Re-attach event listener to the "Add New Subject" card
+        addNewCard.removeEventListener('click', openModal); 
+        addNewCard.addEventListener('click', openModal);
+
+        // Attach event listeners to all subject card links
+        container.querySelectorAll('.subject-card-link').forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent default link navigation
+                const subjectKey = link.getAttribute('data-subject-key');
+                const subjectDisplayName = link.getAttribute('data-subject-display-name');
+                showSubjectDetail(subjectKey, subjectDisplayName);
+            });
+        });
+
+        // Attach event listeners to all remove buttons
+        container.querySelectorAll('.remove-subject-btn').forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.stopPropagation(); // Prevent card link from being clicked
+                const subjectKeyToDelete = button.getAttribute('data-subject-key');
+                const subjectDisplayNameToDelete = button.getAttribute('data-subject-display-name');
+                
+                // Double check if it's a base subject (shouldn't happen if button isn't rendered, but for safety)
+                if (baseSubjects.includes(subjectDisplayNameToDelete)) {
+                    alert('Não é possível remover matérias base.');
+                    return;
+                }
+
+                if (confirm(`Tem certeza que deseja remover a matéria "${subjectDisplayNameToDelete}" e todas as suas atividades? Esta ação não pode ser desfeita.`)) {
+                    // Remove from materias object
+                    for (const displayName in materias) {
+                        if (materias[displayName] === subjectKeyToDelete) {
+                            delete materias[displayName];
+                            break;
+                        }
+                    }
+                    // Remove from subjectIcons object
+                    const normalizedName = normalizeString(subjectDisplayNameToDelete);
+                    if (subjectIcons[normalizedName]) {
+                        delete subjectIcons[normalizedName];
+                    }
+                    // Remove activities data from localStorage
+                    localStorage.removeItem(subjectKeyToDelete);
+                    
+                    saveMateriasData(); // Save updated materias and icons
+                    renderSubjectCards(); // Re-render cards
+                    renderizarGraficoDesempenhoGeral(); // Re-render overall chart
+
+                    // If the deleted subject was the one currently being viewed, go back to main view
+                    if (currentSubjectKey === subjectKeyToDelete) {
+                        hideSubjectDetail();
+                    }
+                    alert(`Matéria "${subjectDisplayNameToDelete}" removida com sucesso.`);
+                }
+            });
+        });
     }
 
-    function activateInitialTab() {
-      tabs[0].classList.add('active');
-      all_content[0].classList.add('active');
-      const line = document.querySelector('.line');
-      line.style.width = tabs[0].offsetWidth + 'px';
-      line.style.left = tabs[0].offsetLeft + 'px';
+    // --- MODAL FUNCTIONALITY ---
+    const modal = document.getElementById('newSubjectModal');
+    const closeButton = document.querySelector('.close-button');
+    const newSubjectForm = document.getElementById('newSubjectForm');
+
+    function openModal() {
+        modal.style.display = 'flex'; 
     }
 
-    window.addEventListener('DOMContentLoaded', () => {
-      activateInitialTab();
+    closeButton.addEventListener('click', () => {
+        modal.style.display = 'none';
     });
 
-    tabs.forEach((tab, i) => {
-      tab.addEventListener('click', () => {
-        tabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-        const line = document.querySelector('.line');
-        line.style.width = tab.offsetWidth + 'px';
-        line.style.left = tab.offsetLeft + 'px';
-        all_content.forEach(c => c.classList.remove('active'));
-        all_content[i].classList.add('active');
-        if (tab.textContent === 'Desempenho') renderizarGraficosDesempenho();
-      });
+    window.addEventListener('click', (event) => {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    newSubjectForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        let subjectName = document.getElementById('subjectName').value.trim();
+        const subjectIconUrl = document.getElementById('subjectIcon').value.trim();
+
+        if (subjectName) {
+            subjectName = subjectName.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ');
+
+            const normalizedSubjectName = normalizeString(subjectName);
+            const materiaKey = `atividades${normalizedSubjectName.charAt(0).toUpperCase() + normalizedSubjectName.slice(1)}`;
+
+            let subjectExists = false;
+            for (const existingDisplayName in materias) {
+                if (normalizeString(existingDisplayName) === normalizedSubjectName) {
+                    subjectExists = true;
+                    break;
+                }
+            }
+
+            if (!subjectExists) {
+                materias[subjectName] = materiaKey;
+                subjectIcons[normalizedSubjectName] = subjectIconUrl || `https://via.placeholder.com/64/5ca3a5/FFFFFF?text=${subjectName.charAt(0).toUpperCase()}`; 
+                localStorage.setItem(materiaKey, JSON.stringify([])); 
+                saveMateriasData(); 
+                renderSubjectCards(); 
+                renderizarGraficoDesempenhoGeral(); 
+                modal.style.display = 'none';
+                newSubjectForm.reset();
+                alert(`Matéria "${subjectName}" criada com sucesso!`);
+
+            } else {
+                alert('Esta matéria já existe!');
+            }
+        } else {
+            alert('Por favor, insira o nome da matéria.');
+        }
+    });
+
+    // --- SUBJECT DETAIL VIEW FUNCTIONALITY ---
+
+    function showSubjectDetail(materiaKey, displayName) {
+        currentSubjectKey = materiaKey;
+        currentSubjectDisplayName = displayName;
+
+        mainActivityView.style.display = 'none';
+        subjectDetailView.style.display = 'block';
+        mainTitle.textContent = 'Detalhes da Matéria'; // Update main title
+
+        // Set subject names in the detail view
+        document.getElementById('currentSubjectNameDetail').textContent = displayName;
+        document.getElementById('currentSubjectNamePerformance').textContent = displayName;
+        
+        // Render activities and performance for the selected subject
+        renderizarAtividades();
+        updatePerformanceMetrics();
+        renderizarGraficoMateriaAtual(); // This function uses currentSubjectKey and currentSubjectDisplayName
+        
+        // Activate the first tab in subject detail view (Atividades)
+        subjectDetailTabs[0].click(); // Simulate click to activate first tab and line
+    }
+
+    function hideSubjectDetail() {
+        mainActivityView.style.display = 'block';
+        subjectDetailView.style.display = 'none';
+        mainTitle.textContent = 'Suas atividades de classe'; // Reset main title
+        currentSubjectKey = null;
+        currentSubjectDisplayName = null;
+        renderizarGraficoDesempenhoGeral(); // Re-render overall charts when returning
+    }
+
+    // Back buttons
+    document.getElementById('backToSubjectsBtn').addEventListener('click', (e) => {
+        e.preventDefault();
+        hideSubjectDetail();
+    });
+    document.getElementById('backToSubjectsBtn2').addEventListener('click', (e) => {
+        e.preventDefault();
+        hideSubjectDetail();
+    });
+
+
+    // --- ACTIVITY MANAGEMENT FUNCTIONS (for subject detail view) ---
+
+    function carregarAtividades(materiaKey) {
+        return JSON.parse(localStorage.getItem(materiaKey)) || [];
+    }
+
+    function salvarAtividades(materiaKey, atividades) {
+        localStorage.setItem(materiaKey, JSON.stringify(atividades));
+    }
+
+    function getColorByDueDate(dueDate, isConcluida) {
+        if (isConcluida) {
+            return 'concluida'; 
+        }
+
+        const today = new Date();
+        today.setHours(0, 0, 0, 0); 
+        const due = new Date(dueDate);
+        due.setHours(0, 0, 0, 0);
+
+        const diffTime = due - today;
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+        if (diffDays < 1) {
+            return 'atrasada'; 
+        } else if (diffDays <= 4) {
+            return 'proximo-vencimento'; 
+        } else {
+            return 'futuro'; 
+        }
+    }
+
+    function renderizarAtividades() {
+        const lista = document.getElementById('lista-atividades');
+        lista.innerHTML = '';
+        if (!currentSubjectKey) {
+            lista.innerHTML = '<p>Nenhuma matéria selecionada para carregar atividades.</p>';
+            return;
+        }
+
+        let atividades = carregarAtividades(currentSubjectKey);
+
+        atividades.sort((a, b) => {
+            if (a.concluida && !b.concluida) return 1;
+            if (!a.concluida && b.concluida) return -1;
+            
+            if (a.dataEntrega && b.dataEntrega) {
+                return new Date(a.dataEntrega) - new Date(b.dataEntrega);
+            }
+            if (a.dataEntrega && !b.dataEntrega) return -1;
+            if (!a.dataEntrega && b.dataEntrega) return 1;
+            
+            return 0; 
+        });
+
+        atividades.forEach((atividade, index) => {
+            const li = document.createElement('li');
+            li.className = `atividade-item ${getColorByDueDate(atividade.dataEntrega, atividade.concluida)}`;
+
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.className = 'atividade-checkbox';
+            checkbox.checked = atividade.concluida;
+            checkbox.addEventListener('change', function() {
+                atividades[index].concluida = checkbox.checked;
+                salvarAtividades(currentSubjectKey, atividades);
+                renderizarAtividades(); 
+                updatePerformanceMetrics(); 
+                renderizarGraficoMateriaAtual(); 
+                renderizarGraficoDesempenhoGeral(); // Update overall chart too
+            });
+            li.appendChild(checkbox);
+
+            const infoDiv = document.createElement('div');
+            infoDiv.className = 'atividade-info';
+
+            const title = document.createElement('h3');
+            title.textContent = atividade.titulo;
+            infoDiv.appendChild(title);
+
+            if (atividade.descricao) {
+                const description = document.createElement('p');
+                description.textContent = atividade.descricao;
+                infoDiv.appendChild(description);
+            }
+
+            if (atividade.dataEntrega) {
+                const date = document.createElement('p');
+                date.className = 'data-entrega';
+                
+                const dataObj = new Date(atividade.dataEntrega + 'T00:00:00'); 
+                
+                const formattedDate = dataObj.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' });
+                date.textContent = `Entrega: ${formattedDate}`;
+                infoDiv.appendChild(date);
+            }
+            li.appendChild(infoDiv);
+
+            const btnExcluir = document.createElement('button');
+            btnExcluir.textContent = 'X';
+            btnExcluir.className = 'btn-excluir';
+            btnExcluir.addEventListener('click', function() {
+                if (confirm('Tem certeza que deseja excluir esta atividade?')) {
+                    atividades.splice(index, 1);
+                    salvarAtividades(currentSubjectKey, atividades);
+                    renderizarAtividades();
+                    updatePerformanceMetrics();
+                    renderizarGraficoMateriaAtual();
+                    renderizarGraficoDesempenhoGeral(); // Update overall chart too
+                }
+            });
+            li.appendChild(btnExcluir);
+            lista.appendChild(li);
+        });
+    }
+
+    // --- PERFORMANCE METRICS & CHART (for subject detail view) ---
+
+    function calculatePorcentagemConclusaoChart(atividades) { 
+        const totalAtividades = atividades.length;
+        if (totalAtividades === 0) {
+            return 0;
+        }
+        const atividadesConcluidas = atividades.filter(atividade => atividade.concluida).length;
+        return (atividadesConcluidas / totalAtividades) * 100;
+    }
+
+    function updatePerformanceMetrics() {
+        if (!currentSubjectKey) return;
+
+        const atividades = carregarAtividades(currentSubjectKey);
+        const total = atividades.length;
+        const concluidas = atividades.filter(atividade => atividade.concluida).length;
+        const pendentes = total - concluidas;
+
+        document.getElementById('totalAtividades').textContent = total;
+        document.getElementById('concluidasAtividades').textContent = concluidas;
+        document.getElementById('pendentesAtividades').textContent = pendentes;
+    }
+
+    function renderizarGraficoMateriaAtual() {
+        const ctx = document.getElementById('chartCurrentSubject');
+        if (!ctx) {
+            console.error("Canvas para o gráfico da matéria atual não encontrado.");
+            return;
+        }
+        const canvasContext = ctx.getContext('2d');
+        const atividades = carregarAtividades(currentSubjectKey);
+        const porcentagemConcluida = calculatePorcentagemConclusaoChart(atividades); 
+        const porcentagemPendente = 100 - porcentagemConcluida;
+
+        if (chartCurrentSubjectInstance) {
+            chartCurrentSubjectInstance.destroy();
+        }
+
+        chartCurrentSubjectInstance = new Chart(canvasContext, {
+            type: 'doughnut',
+            data: {
+                labels: ['Concluídas', 'Pendentes'],
+                datasets: [{
+                    data: [porcentagemConcluida, porcentagemPendente],
+                    backgroundColor: ['#5ca3a5', '#f5c542'],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: `Desempenho em ${currentSubjectDisplayName}`,
+                        font: { size: 18 }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.label || '';
+                                if (label) { label += ': '; }
+                                if (context.parsed !== null) { label += context.parsed.toFixed(2) + '%'; }
+                                return label;
+                            }
+                        }
+                    },
+                    legend: {
+                        position: 'bottom',
+                    }
+                }
+            }
+        });
+    }
+    
+    // --- EVENT LISTENERS AND INITIALIZATION ---
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('atividade-form');
+        const tituloInput = document.getElementById('titulo-atividade');
+        const descricaoInput = document.getElementById('descricao-atividade');
+        const dataEntregaInput = document.getElementById('data-entrega');
+        
+        renderSubjectCards(); // Initial render of all subject cards
+        renderizarGraficoDesempenhoGeral(); // Initial render of overall performance chart
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const titulo = tituloInput.value.trim();
+            const descricao = descricaoInput.value.trim();
+            const dataEntrega = dataEntregaInput.value; 
+
+            if (titulo && dataEntrega) {
+                if (!currentSubjectKey) {
+                    alert("Erro: Nenhuma matéria selecionada para adicionar atividade.");
+                    return;
+                }
+                let atividades = carregarAtividades(currentSubjectKey);
+                atividades.push({ titulo: titulo, descricao: descricao, dataEntrega: dataEntrega, concluida: false });
+                salvarAtividades(currentSubjectKey, atividades);
+                renderizarAtividades();
+                updatePerformanceMetrics();
+                renderizarGraficoMateriaAtual();
+                renderizarGraficoDesempenhoGeral(); // Update overall chart too
+                tituloInput.value = '';
+                descricaoInput.value = '';
+                dataEntregaInput.value = '';
+            } else {
+                alert("Por favor, preencha o título e a data de entrega da atividade.");
+            }
+        });
+
+        // Main tabs (Disciplinas, Desempenho)
+        function activateInitialTab() {
+            tabs[0].classList.add('active'); 
+            all_content[0].classList.add('active'); 
+            var line = document.querySelector('.line');
+            line.style.width = tabs[0].offsetWidth + 'px';
+            line.style.left = tabs[0].offsetLeft + 'px';
+        }
+
+        activateInitialTab();
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(tabItem => tabItem.classList.remove('active'));
+                tab.classList.add('active');
+
+                var line = document.querySelector('.line');
+                line.style.width = tab.offsetWidth + 'px';
+                line.style.left = tab.offsetLeft + 'px';
+
+                all_content.forEach(contentItem => contentItem.classList.remove('active'));
+                all_content[index].classList.add('active');
+
+                if (tab.textContent === 'Desempenho') {
+                    renderizarGraficoDesempenhoGeral(); // Re-render when switching to overall performance tab
+                }
+            });
+        });
+
+        // Subject Detail tabs (Atividades, Desempenho within a subject)
+        subjectDetailTabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                subjectDetailTabs.forEach(tabItem => tabItem.classList.remove('active'));
+                tab.classList.add('active');
+
+                var line = document.querySelector('.line-detail');
+                line.style.width = tab.offsetWidth + 'px';
+                line.style.left = tab.offsetLeft + 'px';
+
+                subjectDetailContents.forEach(contentItem => contentItem.classList.remove('active'));
+                subjectDetailContents[index].classList.add('active');
+
+                if (tab.getAttribute('data-tab-content') === 'performance-detail') {
+                    updatePerformanceMetrics();
+                    renderizarGraficoMateriaAtual();
+                }
+            });
+        });
+
+        // "Calcular processual de atividades" button
+        const btnMostrarPorcentagem = document.getElementById('btnMostrarPorcentagem');
+        if (btnMostrarPorcentagem) {
+            btnMostrarPorcentagem.addEventListener('click', function() {
+                if (!currentSubjectKey) {
+                    alert("Selecione uma matéria para calcular o processual.");
+                    return;
+                }
+                const atividades = carregarAtividades(currentSubjectKey);
+                const porcentagem = calculatePorcentagemConclusaoChart(atividades); 
+                alert(`Provável processual de atividades: ${(porcentagem * .025).toFixed(2)}`);
+            });
+        }
     });
   </script>
 </body>
