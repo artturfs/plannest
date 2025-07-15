@@ -91,19 +91,22 @@
 
         <div class="login-part1">
             <p class="title">Crie sua conta na plannest</p>
-            <form id="login-form" class="form">
-                <p class="p-conteudo">Nome de usuário</p>
-                <input type="text" id="login-texto" class="input" placeholder="seuusuario" required>
-                <p class="p-conteudo">Endereço de e-mail</p>
-                <input type="email" id="login-email" class="input" placeholder="seuemail@email.com" required>
-                <p class="p-conteudo">Senha</p>
-                <input type="password" id="login-password" class="input" placeholder="Crie uma senha segura" required>
-                <p></p>
-                <button type="submit" class="form-btn">Cadastrar</button>
-                <p class="link-login">
-                    Já tem uma conta? <a href="login.html" class="sign-up-link"><span>Entre aqui</span></a>
-                </p>
-            </form>
+                <form id="login-form" class="form" method="POST" action="cadastrar.php">
+                    <p class="p-conteudo">Nome de usuário</p>
+                    <input type="text" name="nome_usuario" class="input" required>
+
+                    <p class="p-conteudo">Endereço de e-mail</p>
+                    <input type="email" name="email" class="input" required>
+
+                    <p class="p-conteudo">Senha</p>
+                    <input type="password" name="senha" class="input" required>
+
+                    <p class="p-conteudo">Chave da sala</p>
+                    <input type="text" name="chave" class="input" required>
+
+                    <button type="submit" class="form-btn">Cadastrar</button>
+                </form>
+
         </div>
     
         <div class="login-part2">

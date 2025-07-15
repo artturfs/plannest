@@ -98,17 +98,16 @@
         <div class="login-part2">
             <p class="title">Acesse o planest</p>
             <p class="p-texto2">Entre na comunidade e conecte-se com novos talentos.</p>
-            <form id="login-form" class="form">
+            <form class="form" method="POST" action="login.php">
                 <p class="p-conteudo">Endereço de e-mail</p>
-                <input type="email" id="login-email" class="input" placeholder="seuemail@email.com" required>
+                <input type="email" name="email" class="input" required>
+
                 <p class="p-conteudo">Senha</p>
-                <input type="password" id="login-password" class="input" placeholder="Digite sua senha" required>
-                <p class="link-login"><a href="">Esqueceu sua senha?</a></p>
+                <input type="password" name="senha" class="input" required>
+
                 <button type="submit" class="form-btn">Entrar</button>
-                <p class="link-login">
-                    Ainda não tem uma conta? <a href="cadastro.html" class="sign-up-link">Cadastre-se</a>
-                </p>
             </form>
+
         </div>
     </section>
 

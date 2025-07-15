@@ -1191,3 +1191,189 @@ footer {
     min-width: 120px;
     min-height: 120px;
 }
+
+/* Estilos para a página de Materiais */
+
+/* Formulário de Adição de Material */
+#material-form {
+    background-color: var(--cor8--); /* White background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#material-form div {
+    display: flex;
+    flex-direction: column;
+}
+
+#material-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--cor6--); /* Dark text */
+}
+
+#material-form input[type="text"],
+#material-form input[type="file"],
+#material-form textarea {
+    padding: 10px;
+    border: 1px solid var(--cor10--); /* Light border */
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--cor5--);
+    background-color: var(--cor9--); /* Light gray background */
+}
+
+#material-form input[type="file"] {
+    cursor: pointer;
+    padding: 8px; /* Slightly less padding for file input */
+}
+
+#material-form textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 80px;
+}
+
+#material-form input:focus,
+#material-form textarea:focus {
+    outline: none;
+    border-color: var(--cor2--); /* Highlight on focus */
+    box-shadow: 0 0 0 2px var(--cor10--);
+}
+
+#btn-material {
+    background-color: var(--cor2--); /* Primary button color */
+    color: var(--cor8--); /* White text */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#btn-material:hover {
+    background-color: var(--cor2--); /* Slightly darker on hover */
+}
+
+/* Lista de Materiais */
+#lista-materiais {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.material-item {
+    background-color: var(--cor8--);
+    border: 1px solid var(--cor10--);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start; /* Align items to the top if content varies in height */
+    gap: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    position: relative; /* For positioning the delete button */
+}
+
+.material-item .material-info {
+    flex-grow: 1; /* Allows info section to take available space */
+}
+
+.material-item h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: var(--cor5--);
+    font-size: 1.2rem;
+}
+
+.material-item p {
+    margin: 3px 0;
+    color: var(--cor4--);
+    font-size: 0.95rem;
+}
+
+.material-item .file-name {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--cor6--);
+}
+
+.material-item .upload-date {
+    font-size: 0.85rem;
+    color: var(--cor4--);
+}
+
+.btn-download {
+    display: inline-block;
+    background-color: var(--cor2--); /* Blue color for download */
+    color: var(--cor8--);
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: var(--cor1--); /* Slightly darker blue on hover */
+}
+
+.btn-excluir {
+    background-color: #dc3545; /* Red color for delete */
+    color: var(--cor8--);
+    border: none;
+    border-radius: 50%; /* Make it round */
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    cursor: pointer;
+    position: absolute; /* Position relative to .material-item */
+    top: 10px;
+    right: 10px;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0; /* Prevent it from shrinking */
+}
+
+.btn-excluir:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Responsividade básica para o formulário e lista */
+@media (max-width: 768px) {
+    #material-form,
+    .material-item {
+        padding: 15px;
+    }
+
+    #btn-material {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    .material-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .material-item img {
+        margin-bottom: 10px;
+    }
+
+    .btn-excluir {
+        position: static; /* Stack delete button below content on small screens */
+        margin-top: 10px;
+        align-self: flex-end; /* Align to end of column */
+    }
+}

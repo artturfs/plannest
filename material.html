@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>plannest - Material</title>
+  <link rel="stylesheet" href="atividades.css" />
+  <link rel="stylesheet" href="disciplinas.css" />
+  <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="menu1">
+      <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+      <a class="logo" href="index.html"><img height="30px" src="imagens/plannest.png" alt="Plannest Logo" class="logo"/></a>
+
+      <nav class="links" id="nav-links">
+        <ul class="nav-itens">
+          <li class="li-itens">
+            <img src="imagens/casa.png" alt="" width="20px" />
+            <a href="index.html">Início</a>
+          </li>
+
+          <li class="li-itens">
+            <img src="imagens/agenda.png" alt="" width="20px" />
+            <a href="agenda.html">Agenda</a>
+          </li>
+          <li class="li-itens">
+            <img src="imagens/caderno.png" alt="" width="20px" />
+            <a href="atividades.html">Atividades</a>
+          </li>
+          <li class="li-itens">
+            <img src="imagens/pasta-aberta.png" alt="" width="23px" />
+            <a href="material.html">Material</a>
+          </li>
+          <li class="li-itens">
+            <img src="imagens/cronometro.png" alt="" width="23px" />
+            <a href="agenda.html">Estudos</a>
+          </li>
+          <li class="li-itens">
+            <img src="imagens/flashcards-para-estudar.png" alt="" width="20px" />
+            <a href="flashcards.html">Flashcards</a>
+          </li>
+          <li class="li-itens">
+            <img src="imagens/mapeamento-da-mente.png" alt="" width="20px" />
+            <a href="mapas.html">Mapas Mentais</a>
+          </li>
+          <li style="border-bottom: 1px solid #5e5e5e; margin: 0px 0;"></li>
+
+            <li class="li-itens">
+
+              <a href="suporte.html">Feedback</a>
+            </li>
+            <li class="li-itens">
+
+              <a href="sobre.html">Sobre Nós</a>
+            </li>
+            <li class="li-itens">
+              <a href="faq.html">FAQ</a>
+            </li>
+            <li class="li-itens">
+              <a href="contato.html">Contato</a>
+            </li>
+
+          <li>
+            <button class="login-li">
+              <a class="link-login-li" href="login.html">Login</a>
+            </button>
+          </li>
+          <li>
+            <button class="cadastro-li">
+              <a class="link-cadastro-li" href="cadastro.html" style="color: white">Cadastro</a>
+            </button> <br>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="btn">
+        <button class="login-1" href="login.html">
+          <a class="link-login" href="login.html">Login</a>
+        </button>
+        <button class="cadastro">
+          <a href="cadastro.html" class="link-cadastro">Cadastro</a>
+        </button>
+      </div>
+    </header>
+
+  <br>
+    <div class="content-wrapper">
+      <h1 class="tittle" id="mainTitle">Seus Materiais de Classe</h1>
+
+      <div class="main-activity-view">
+        <div class="container">
+          <div class="tab-box">
+            <button class="tab-btn active">Disciplinas</button>
+            <div class="line"></div>
+          </div>
+          <div class="content-box">
+            <div class="content active">
+              <section class="slide2">
+                <div class="slide2-part2">
+                  <div class="cards" id="subject-cards-container">
+                    <section class="card add-new-subject" id="addNewSubjectCard">
+                      <img src="imagens/plus.png" class="icon" alt="Adicionar Nova Matéria"/>
+                      <h3 class="materia">Adicionar Matéria</h3>
+                    </section>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            </div>
+        </div>
+      </div>
+
+      <div class="subject-detail-view" style="display: none;">
+        <div class="container">
+            <div class="tab-box">
+                <button class="tab-btn-detail active" data-tab-content="material-list">Materiais</button>
+                <div class="line-detail"></div>
+            </div>
+            <div class="content-box">
+                <div class="content-detail active" id="material-list-content">
+                    <section class="slide2">
+                        <h4 class="btn-slide2">
+                            <a href="#" id="backToSubjectsBtn"><span>Disciplinas</span></a> > 
+                            <span style="color: var(--cor6--);" id="currentSubjectNameDetail"></span>
+                        </h4>
+                        <form id="material-form">
+                            <div>
+                                <label for="titulo-material">Título do Material:</label>
+                                <input type="text" id="titulo-material" placeholder="Ex: Slides sobre Modernismo" required>
+                            </div>
+                            <div>
+                                <label for="arquivo-material">Arquivo:</label>
+                                <input type="file" id="arquivo-material" required>
+                            </div>
+                            <div>
+                                <label for="descricao-material">Descrição (Opcional):</label>
+                                <textarea id="descricao-material" placeholder="Detalhes do material..."></textarea>
+                            </div>
+                            <button type="submit" id="btn-material">Adicionar Material</button>
+                        </form>
+                        <ul id="lista-materiais">
+                        </ul>
+                    </section>
+                </div>
+                </div>
+        </div>
+      </div>
+
+  <br><br><br>
+
+  <footer>
+    <section class="newsletter">
+      <h2>Quer organizar melhor sua rotina?</h2>
+      <p>Inscreva-se na nossa newsletter e receba dicas exclusivas de planejamento e produtividade diretamente no seu e-mail:</p>
+      <div class="newsletter-form">
+        <input type="email" placeholder="Digite seu e-mail" />
+        <button>Cadastrar</button>
+      </div>
+    </section>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img height="40px" class="logo-footer" src="imagens/plannest.png" alt="" />
+        <p>Transforme sua rotina com ferramentas de planejamento simples e eficazes.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Links úteis</h4>
+          <ul><li><a href="#">Blog</a></li><li><a href="#">Sobre nós</a></li><li><a href="#">Ferramentas</a></li></ul>
+        </div>
+        <div>
+          <h4>Serviços</h4>
+          <ul><li><a href="#">Planejamento Pessoal</a></li><li><a href="#">Gestão de Tarefas</a></li><li><a href="#">Calendário Online</a></li><li><a href="#">Consultoria</a></li></ul>
+        </div>
+        <div class="footer-links">
+          <h4>Suporte</h4>
+          <ul><li><a href="#">Fale conosco</a></li><li><a href="#">Envie um e-mail</a></li><li><a href="#">Central de ajuda</a></li><li><a href="#">FAQ</a></li></ul>
+        </div>
+        <div class="social">
+          <h4>Siga-nos</h4>
+          <div class="icons">
+            <a href="#"><img src="imagens/instagram.png" alt="Instagram" /></a>
+            <a href="#"><img src="imagens/linkedin.png" alt="LinkedIn" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Plannest 2025 © Todos os direitos reservados</p>
+    </div>
+  </footer>
+    </div>
+
+    <div id="newSubjectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Adicionar Nova Matéria</h2>
+            <form id="newSubjectForm">
+                <label for="subjectName">Nome da Matéria:</label>
+                <input type="text" id="subjectName" required>
+
+                <label for="subjectIcon">Ícone da Matéria (URL da imagem - opcional):</label>
+                <input type="text" id="subjectIcon" placeholder="Ex: imagens/matematica.png">
+                
+                <button type="submit">Criar Matéria</button>
+            </form>
+        </div>
+    </div>
+
+  <script src="menu-toggle.js"></script>
+  <script>
+    const tabs = document.querySelectorAll('.tab-btn');
+    const all_content = document.querySelectorAll('.content');
+    const subjectDetailTabs = document.querySelectorAll('.tab-btn-detail');
+    const subjectDetailContents = document.querySelectorAll('.content-detail');
+    
+    const mainActivityView = document.querySelector('.main-activity-view');
+    const subjectDetailView = document.querySelector('.subject-detail-view');
+    const mainTitle = document.getElementById('mainTitle');
+
+    // Removed charts and chartCurrentSubjectInstance variables
+
+    let currentSubjectKey = null; // Stores the localStorage key for the currently viewed subject
+    let currentSubjectDisplayName = null; // Stores the display name for the currently viewed subject
+
+    // Load existing materias from localStorage or use default
+    let materias = JSON.parse(localStorage.getItem('materiasData')) || {
+      'Artes': 'materiaisArtes', // Changed key prefix to 'materiais'
+      'Biologia': 'materiaisBiologia',
+      'Ed. Física': 'materiaisEdFisica', 
+      'Espanhol': 'materiaisEspanhol',
+      'Filosofia e Sociologia': 'materiaisFilosofiaSociologia',
+      'Física': 'materiaisFisica',
+      'Geografia': 'materiaisGeografia',
+      'História': 'materiaisHistoria',
+      'Inglês': 'materiaisIngles',
+      'Matemática': 'materiaisMatematica',
+      'Português': 'materiaisPortugues',
+      'Química': 'materiaisQuimica'
+    };
+
+    // Define base subjects that cannot be removed
+    const baseSubjects = [
+      'Artes', 'Biologia', 'Ed. Física', 'Espanhol',
+      'Filosofia e Sociologia', 'Física', 'Geografia',
+      'História', 'Inglês', 'Matemática', 'Português', 'Química'
+    ];
+
+    // Store subject icons (assuming default icons are in 'imagens/')
+    let subjectIcons = JSON.parse(localStorage.getItem('subjectIcons')) || {
+        'artes': 'imagens/artes.png',
+        'biologia': 'imagens/biologia.png',
+        'edfisica': 'imagens/edfisica.png',
+        'espanhol': 'imagens/linguas.png',
+        'filosofiaesociologia': 'imagens/lampada.png',
+        'fisica': 'imagens/fisica.png',
+        'geografia': 'imagens/geografia.png',
+        'historia': 'imagens/historia.png',
+        'ingles': 'imagens/linguas.png',
+        'matematica': 'imagens/matematica.png',
+        'portugues': 'imagens/portugues.png',
+        'quimica': 'imagens/quimica.png'
+    };
+
+
+    function saveMateriasData() {
+        localStorage.setItem('materiasData', JSON.stringify(materias));
+        localStorage.setItem('subjectIcons', JSON.stringify(subjectIcons));
+    }
+
+    function normalizeString(str) {
+        return str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]/g, '');
+    }
+
+    // Removed OVERALL PERFORMANCE CHARTS and related functions
+
+    function renderSubjectCards() {
+        const container = document.getElementById('subject-cards-container');
+        const addNewCard = document.getElementById('addNewSubjectCard');
+        
+        // Remove all children except the last one (addNewCard)
+        while (container.firstChild && container.firstChild !== addNewCard) {
+            container.removeChild(container.firstChild);
+        }
+        
+        // Re-add existing subject cards before the "Add New Subject" card
+        for (const displayName in materias) {
+            const materiaKey = materias[displayName];
+            const normalizedName = normalizeString(displayName);
+            const iconPath = subjectIcons[normalizedName] || 'imagens/caderno.png'; // Default icon
+
+            // Special handling for the display of "Filosofia e Sociologia"
+            const displayMateriaName = (displayName === 'Filosofia e Sociologia') ? 'Filosofia e<br>Sociologia' : displayName;
+
+            // Check if the current subject is a base subject
+            const isBaseSubject = baseSubjects.includes(displayName);
+
+            const card = document.createElement('section');
+            card.className = 'card';
+            card.innerHTML = `
+                <a href="#" class="subject-card-link" 
+                   data-subject-key="${materiaKey}" 
+                   data-subject-display-name="${displayName.replace(/"/g, '&quot;')}"
+                   data-subject-icon="${iconPath}">
+                    <img src="${iconPath}" class="icon"/>
+                    <h3 class="materia">${displayMateriaName}</h3>
+                </a>
+                ${!isBaseSubject ? `
+                <button class="remove-subject-btn" 
+                        data-subject-key="${materiaKey}" 
+                        data-subject-display-name="${displayName.replace(/"/g, '&quot;')}"
+                        aria-label="Remover ${displayName}">X</button>
+                ` : ''}
+            `;
+            // Insert before the 'addNewSubjectCard'
+            addNewCard.insertAdjacentElement('beforebegin', card);
+        }
+
+        // Re-attach event listener to the "Add New Subject" card
+        addNewCard.removeEventListener('click', openModal); 
+        addNewCard.addEventListener('click', openModal);
+
+        // Attach event listeners to all subject card links
+        container.querySelectorAll('.subject-card-link').forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent default link navigation
+                const subjectKey = link.getAttribute('data-subject-key');
+                const subjectDisplayName = link.getAttribute('data-subject-display-name');
+                showSubjectDetail(subjectKey, subjectDisplayName);
+            });
+        });
+
+        // Attach event listeners to all remove buttons
+        container.querySelectorAll('.remove-subject-btn').forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.stopPropagation(); // Prevent card link from being clicked
+                const subjectKeyToDelete = button.getAttribute('data-subject-key');
+                const subjectDisplayNameToDelete = button.getAttribute('data-subject-display-name');
+                
+                // Double check if it's a base subject (shouldn't happen if button isn't rendered, but for safety)
+                if (baseSubjects.includes(subjectDisplayNameToDelete)) {
+                    alert('Não é possível remover matérias base.');
+                    return;
+                }
+
+                if (confirm(`Tem certeza que deseja remover a matéria "${subjectDisplayNameToDelete}" e todos os seus materiais? Esta ação não pode ser desfeita.`)) {
+                    // Remove from materias object
+                    for (const displayName in materias) {
+                        if (materias[displayName] === subjectKeyToDelete) {
+                            delete materias[displayName];
+                            break;
+                        }
+                    }
+                    // Remove from subjectIcons object
+                    const normalizedName = normalizeString(subjectDisplayNameToDelete);
+                    if (subjectIcons[normalizedName]) {
+                        delete subjectIcons[normalizedName];
+                    }
+                    // Remove materials data from localStorage
+                    localStorage.removeItem(subjectKeyToDelete);
+                    
+                    saveMateriasData(); // Save updated materias and icons
+                    renderSubjectCards(); // Re-render cards
+                    // Removed renderizarGraficoDesempenhoGeral(); 
+
+                    // If the deleted subject was the one currently being viewed, go back to main view
+                    if (currentSubjectKey === subjectKeyToDelete) {
+                        hideSubjectDetail();
+                    }
+                    alert(`Matéria "${subjectDisplayNameToDelete}" removida com sucesso.`);
+                }
+            });
+        });
+    }
+
+    // --- MODAL FUNCTIONALITY ---
+    const modal = document.getElementById('newSubjectModal');
+    const closeButton = document.querySelector('.close-button');
+    const newSubjectForm = document.getElementById('newSubjectForm');
+
+    function openModal() {
+        modal.style.display = 'flex'; 
+    }
+
+    closeButton.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    newSubjectForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        let subjectName = document.getElementById('subjectName').value.trim();
+        const subjectIconUrl = document.getElementById('subjectIcon').value.trim();
+
+        if (subjectName) {
+            subjectName = subjectName.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ');
+
+            const normalizedSubjectName = normalizeString(subjectName);
+            // Changed key prefix to 'materiais'
+            const materiaKey = `materiais${normalizedSubjectName.charAt(0).toUpperCase() + normalizedSubjectName.slice(1)}`;
+
+            let subjectExists = false;
+            for (const existingDisplayName in materias) {
+                if (normalizeString(existingDisplayName) === normalizedSubjectName) {
+                    subjectExists = true;
+                    break;
+                }
+            }
+
+            if (!subjectExists) {
+                materias[subjectName] = materiaKey;
+                subjectIcons[normalizedSubjectName] = subjectIconUrl || `https://via.placeholder.com/64/5ca3a5/FFFFFF?text=${subjectName.charAt(0).toUpperCase()}`; 
+                localStorage.setItem(materiaKey, JSON.stringify([])); 
+                saveMateriasData(); 
+                renderSubjectCards(); 
+                // Removed renderizarGraficoDesempenhoGeral(); 
+                modal.style.display = 'none';
+                newSubjectForm.reset();
+                alert(`Matéria "${subjectName}" criada com sucesso!`);
+
+            } else {
+                alert('Esta matéria já existe!');
+            }
+        } else {
+            alert('Por favor, insira o nome da matéria.');
+        }
+    });
+
+    // --- SUBJECT DETAIL VIEW FUNCTIONALITY ---
+
+    function showSubjectDetail(materiaKey, displayName) {
+        currentSubjectKey = materiaKey;
+        currentSubjectDisplayName = displayName;
+
+        mainActivityView.style.display = 'none';
+        subjectDetailView.style.display = 'block';
+        mainTitle.textContent = 'Detalhes da Matéria'; // Update main title
+
+        // Set subject names in the detail view
+        document.getElementById('currentSubjectNameDetail').textContent = displayName;
+        
+        // Render materials for the selected subject
+        renderizarMateriais();
+        
+        // Activate the first tab in subject detail view (Materiais)
+        subjectDetailTabs[0].click(); // Simulate click to activate first tab and line
+    }
+
+    function hideSubjectDetail() {
+        mainActivityView.style.display = 'block';
+        subjectDetailView.style.display = 'none';
+        mainTitle.textContent = 'Seus Materiais de Classe'; // Reset main title
+        currentSubjectKey = null;
+        currentSubjectDisplayName = null;
+        // Removed renderizarGraficoDesempenhoGeral(); 
+    }
+
+    // Back buttons
+    document.getElementById('backToSubjectsBtn').addEventListener('click', (e) => {
+        e.preventDefault();
+        hideSubjectDetail();
+    });
+
+    // Removed backToSubjectsBtn2 as performance detail tab is gone
+
+    // --- MATERIAL MANAGEMENT FUNCTIONS (for subject detail view) ---
+
+    function carregarMateriais(materiaKey) {
+        return JSON.parse(localStorage.getItem(materiaKey)) || [];
+    }
+
+    function salvarMateriais(materiaKey, materiais) {
+        localStorage.setItem(materiaKey, JSON.stringify(materiais));
+    }
+
+    function getFileIcon(fileType) {
+        if (fileType.includes('image')) return 'imagens/image-icon.png';
+        if (fileType.includes('pdf')) return 'imagens/pdf-icon.png';
+        if (fileType.includes('text')) return 'imagens/text-icon.png';
+        if (fileType.includes('audio')) return 'imagens/audio-icon.png';
+        if (fileType.includes('video')) return 'imagens/video-icon.png';
+        if (fileType.includes('zip') || fileType.includes('rar')) return 'imagens/zip-icon.png';
+        // Add more specific icons if needed for doc, xls, ppt
+        if (fileType.includes('wordprocessingml.document') || fileType.includes('msword')) return 'imagens/doc-icon.png';
+        if (fileType.includes('spreadsheetml.sheet') || fileType.includes('msexcel')) return 'imagens/xls-icon.png';
+        if (fileType.includes('presentationml.presentation') || fileType.includes('mspowerpoint')) return 'imagens/ppt-icon.png';
+        return 'imagens/file-icon.png'; // Default file icon
+    }
+
+    function renderizarMateriais() {
+        const lista = document.getElementById('lista-materiais');
+        lista.innerHTML = '';
+        if (!currentSubjectKey) {
+            lista.innerHTML = '<p>Nenhuma matéria selecionada para carregar materiais.</p>';
+            return;
+        }
+
+        let materiais = carregarMateriais(currentSubjectKey);
+
+        materiais.forEach((material, index) => {
+            const li = document.createElement('li');
+            li.className = 'material-item'; // You can add classes for styling
+
+            const fileIcon = document.createElement('img');
+            fileIcon.src = getFileIcon(material.fileType);
+            fileIcon.alt = 'Ícone de arquivo';
+            fileIcon.width = 24; // Adjust size as needed
+            fileIcon.height = 24;
+            fileIcon.style.marginRight = '10px';
+            li.appendChild(fileIcon);
+
+            const infoDiv = document.createElement('div');
+            infoDiv.className = 'material-info';
+
+            const title = document.createElement('h3');
+            title.textContent = material.titulo;
+            infoDiv.appendChild(title);
+
+            if (material.descricao) {
+                const description = document.createElement('p');
+                description.textContent = material.descricao;
+                infoDiv.appendChild(description);
+            }
+            
+            const fileName = document.createElement('p');
+            fileName.textContent = `Arquivo: ${material.fileName}`;
+            fileName.className = 'file-name';
+            infoDiv.appendChild(fileName);
+
+            const uploadDate = document.createElement('p');
+            const dateObj = new Date(material.uploadDate);
+            uploadDate.textContent = `Upload: ${dateObj.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' })}`;
+            uploadDate.className = 'upload-date';
+            infoDiv.appendChild(uploadDate);
+
+            // Download Link/Button
+            const downloadLink = document.createElement('a');
+            downloadLink.textContent = 'Baixar';
+            downloadLink.href = material.fileContent; // Base64 content as href
+            downloadLink.download = material.fileName; // Suggest original file name
+            downloadLink.className = 'btn-download';
+            infoDiv.appendChild(downloadLink);
+
+            li.appendChild(infoDiv);
+
+            const btnExcluir = document.createElement('button');
+            btnExcluir.textContent = 'X';
+            btnExcluir.className = 'btn-excluir';
+            btnExcluir.addEventListener('click', function() {
+                if (confirm('Tem certeza que deseja excluir este material?')) {
+                    materiais.splice(index, 1);
+                    salvarMateriais(currentSubjectKey, materiais);
+                    renderizarMateriais();
+                }
+            });
+            li.appendChild(btnExcluir);
+            lista.appendChild(li);
+        });
+    }
+
+    // Removed PERFORMANCE METRICS & CHART functions
+
+    // --- EVENT LISTENERS AND INITIALIZATION ---
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('material-form');
+        const tituloInput = document.getElementById('titulo-material');
+        const arquivoInput = document.getElementById('arquivo-material');
+        const descricaoInput = document.getElementById('descricao-material');
+        
+        renderSubjectCards(); // Initial render of all subject cards
+        // Removed initial render of overall performance chart
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const titulo = tituloInput.value.trim();
+            const file = arquivoInput.files[0];
+            const descricao = descricaoInput.value.trim();
+
+            if (titulo && file) {
+                if (!currentSubjectKey) {
+                    alert("Erro: Nenhuma matéria selecionada para adicionar material.");
+                    return;
+                }
+
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    let materiais = carregarMateriais(currentSubjectKey);
+                    const newMaterial = { 
+                        id: Date.now(), // Simple unique ID
+                        titulo: titulo, 
+                        descricao: descricao, 
+                        fileName: file.name,
+                        fileType: file.type,
+                        fileContent: event.target.result, // Base64 string
+                        uploadDate: new Date().toISOString()
+                    };
+                    materiais.push(newMaterial);
+                    salvarMateriais(currentSubjectKey, materiais);
+                    renderizarMateriais();
+                    tituloInput.value = '';
+                    descricaoInput.value = '';
+                    arquivoInput.value = ''; // Clear file input
+                };
+                reader.readAsDataURL(file); // Read file as Base64 data URL
+            } else {
+                alert("Por favor, preencha o título e selecione um arquivo para o material.");
+            }
+        });
+
+        // Main tabs (Disciplinas only now)
+        function activateInitialTab() {
+            tabs[0].classList.add('active'); 
+            all_content[0].classList.add('active'); 
+            var line = document.querySelector('.line');
+            line.style.width = tabs[0].offsetWidth + 'px';
+            line.style.left = tabs[0].offsetLeft + 'px';
+        }
+
+        activateInitialTab();
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(tabItem => tabItem.classList.remove('active'));
+                tab.classList.add('active');
+
+                var line = document.querySelector('.line');
+                line.style.width = tab.offsetWidth + 'px';
+                line.style.left = tab.offsetLeft + 'px';
+
+                all_content.forEach(contentItem => contentItem.classList.remove('active'));
+                all_content[index].classList.add('active');
+
+                // No performance related re-rendering here anymore
+            });
+        });
+
+        // Subject Detail tabs (Materiais only now)
+        subjectDetailTabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                subjectDetailTabs.forEach(tabItem => tabItem.classList.remove('active'));
+                tab.classList.add('active');
+
+                var line = document.querySelector('.line-detail');
+                line.style.width = tab.offsetWidth + 'px';
+                line.style.left = tab.offsetLeft + 'px';
+
+                subjectDetailContents.forEach(contentItem => contentItem.classList.remove('active'));
+                subjectDetailContents[index].classList.add('active');
+
+                // No performance related re-rendering here anymore
+            });
+        });
+
+        // Removed "Calcular processual de atividades" button and its listener
+    });
+  </script>
+</body>
+</html>
