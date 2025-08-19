@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Compartilhar Texto</title>
+  <style>
+    button {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      background: linear-gradient(45deg, #6a8dff, #ff88c2);
+      color: white;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <button id="shareBtn">Compartilhar</button>
+
+  <script>
+    const texto = "Esse é o texto que eu quero compartilhar 🎉";
+
+    document.getElementById("shareBtn").addEventListener("click", async () => {
+      if (navigator.share) {
+        try {
+          await navigator.share({ text: texto });
+          console.log("Compartilhado com sucesso!");
+        } catch (err) {
+          console.error("Erro ao compartilhar:", err);
+        }
+      } else {
+        alert("Compartilhamento não suportado neste navegador.");
+      }
+    });
+  </script>
+</body>
+</html>

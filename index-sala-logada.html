@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>plannest - Início</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style-logado.css" />
     <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon" />
     <link
       rel="stylesheet"
@@ -94,32 +94,19 @@
     </header>
     
     <div class="content-wrapper">
-      <section class="hero">
-        <div class="hero-text">
-          <h1>
-            <span>Plannest</span><br />
-            <span class="cor-de-texto">Cria</span>
-            <span class="texto-destaque">Soluções</span><br />
-            <span class="cor-de-texto">Para seus estudos</span>
-          </h1>
-          <p class="p-slide1">
-            A plannest é uma plataforma inovadora que conecta estudantes ao
-            planejamento inteligente, facilitando o aprendizado e aprimorando o
-            conhecimento
-          </p>
-          <a href="#" class="subscribe-btn">
-            <span class="icon-coracao">&hearts;</span> Saiba mais!
-          </a>
+      <main class="hero">
+        <div class="hero-content">
+          <h1 class="hero-title">Bem-vindo, Artur</h1>
+          <p class="hero-subtitle">Sala acessada: Infomatica1</p>
         </div>
-        <div class="hero-img">
-          <img
-            class="img"
-            src="imagens/IMG_2529.PNG"
-            alt="Website Illustration"
-          />
-        </div>
-      </section>
 
+          <div class="button-container">
+            <button class="btn btn-access">Informações</button>
+            <a href="index-logado.html"><button class="btn btn-create">Sair da Sala</button></a>
+          </div>
+        </div>
+      </main>
+    </div>
 
     <span id="paginas"></span>
     <section class="slide2">
@@ -177,7 +164,8 @@
           </section>
         </div>
       </div>
-    </section> <br><br>
+    </section>
+    <br><br>
 
     <!-- <section class="slide3">
       <div class="box-slide3">
@@ -200,123 +188,123 @@
       <div class="slide4-part2">
         <h1 class="h1-slide2">Fique atento às <span>notificações</span></h1>
 
-<div class="container swiper">
-  <div class="card-wrapper">
-    <ul class="card-list swiper-wrapper">
-      <li class="card-item swiper-slide">
-        <a href="agenda.html" class="card-link">
-          <div class="card-image-wrapper">
-            <img src="imagens/agenda.png" alt="" class="card-image" />
-            <div class="image-inform">
-              <h3 class="image-tittle">Nova Atualização na Agenda</h3>
-              <h4 class="image-text">Reunião de grupo marcada para 15h.</h4>
-              <span class="symbol">NOVA NOTIFICAÇÃO</span>
-            </div>
-          </div>
-          <p class="badge">Agenda</p>
-          <h2 class="card-tittle">
-            Sua agenda foi atualizada para hoje.
-          </h2>
-          <button class="card-button material-symbols-rounded">➔</button>
-        </a>
-      </li>
+          <div class="container swiper">
+            <div class="card-wrapper">
+              <ul class="card-list swiper-wrapper">
+                <li class="card-item swiper-slide">
+                  <a href="agenda.html" class="card-link">
+                    <div class="card-image-wrapper">
+                      <img src="imagens/agenda.png" alt="" class="card-image" />
+                      <div class="image-inform">
+                        <h3 class="image-tittle">Nova Atualização na Agenda</h3>
+                        <h4 class="image-text">Reunião de grupo marcada para 15h.</h4>
+                        <span class="symbol">NOVA NOTIFICAÇÃO</span>
+                      </div>
+                    </div>
+                    <p class="badge">Agenda</p>
+                    <h2 class="card-tittle">
+                      Sua agenda foi atualizada para hoje.
+                    </h2>
+                    <button class="card-button material-symbols-rounded">➔</button>
+                  </a>
+                </li>
 
-      <li class="card-item swiper-slide">
-        <a href="atividades.html" class="card-link">
-          <div class="card-image-wrapper">
-            <img src="imagens/caderno.png" alt="" class="card-image" />
-            <div class="image-inform">
-              <h3 class="image-tittle">Entrega de Atividade</h3>
-              <h4 class="image-text">Não se esqueça do Projeto de Biologia.</h4>
-              <span class="symbol">NOVA NOTIFICAÇÃO</span>
-            </div>
-          </div>
-          <p class="badge">Atividades</p>
-          <h2 class="card-tittle">
-            Lembretes importantes sobre suas tarefas.
-          </h2>
-          <button class="card-button material-symbols-rounded">➔</button>
-        </a>
-      </li>
+                <li class="card-item swiper-slide">
+                  <a href="atividades.html" class="card-link">
+                    <div class="card-image-wrapper">
+                      <img src="imagens/caderno.png" alt="" class="card-image" />
+                      <div class="image-inform">
+                        <h3 class="image-tittle">Entrega de Atividade</h3>
+                        <h4 class="image-text">Não se esqueça do Projeto de Biologia.</h4>
+                        <span class="symbol">NOVA NOTIFICAÇÃO</span>
+                      </div>
+                    </div>
+                    <p class="badge">Atividades</p>
+                    <h2 class="card-tittle">
+                      Lembretes importantes sobre suas tarefas.
+                    </h2>
+                    <button class="card-button material-symbols-rounded">➔</button>
+                  </a>
+                </li>
 
-      <li class="card-item swiper-slide">
-        <a href="material.html" class="card-link">
-          <div class="card-image-wrapper">
-            <img src="imagens/pasta-aberta.png" alt="" class="card-image" />
-            <div class="image-inform">
-              <h3 class="image-tittle">Novo Material Disponível</h3>
-              <h4 class="image-text">Slides da aula de Matemática.</h4>
-              <span class="symbol">NOVA NOTIFICAÇÃO</span>
-            </div>
-          </div>
-          <p class="badge">Material</p>
-          <h2 class="card-tittle">
-            Um professor ou colega publicou algo novo.
-          </h2>
-          <button class="card-button material-symbols-rounded">➔</button>
-        </a>
-      </li>
-      
-      <li class="card-item swiper-slide">
-        <a href="agenda.html" class="card-link">
-          <div class="card-image-wrapper">
-            <img src="imagens/agenda.png" alt="" class="card-image" />
-            <div class="image-inform">
-              <h3 class="image-tittle">Nova Atualização na Agenda</h3>
-              <h4 class="image-text">Reunião de grupo marcada para 15h.</h4>
-              <span class="symbol">NOVA NOTIFICAÇÃO</span>
-            </div>
-          </div>
-          <p class="badge">Agenda</p>
-          <h2 class="card-tittle">
-            Sua agenda foi atualizada para hoje.
-          </h2>
-          <button class="card-button material-symbols-rounded">➔</button>
-        </a>
-      </li>
+                <li class="card-item swiper-slide">
+                  <a href="material.html" class="card-link">
+                    <div class="card-image-wrapper">
+                      <img src="imagens/pasta-aberta.png" alt="" class="card-image" />
+                      <div class="image-inform">
+                        <h3 class="image-tittle">Novo Material Disponível</h3>
+                        <h4 class="image-text">Slides da aula de Matemática.</h4>
+                        <span class="symbol">NOVA NOTIFICAÇÃO</span>
+                      </div>
+                    </div>
+                    <p class="badge">Material</p>
+                    <h2 class="card-tittle">
+                      Um professor ou colega publicou algo novo.
+                    </h2>
+                    <button class="card-button material-symbols-rounded">➔</button>
+                  </a>
+                </li>
+                
+                <li class="card-item swiper-slide">
+                  <a href="agenda.html" class="card-link">
+                    <div class="card-image-wrapper">
+                      <img src="imagens/agenda.png" alt="" class="card-image" />
+                      <div class="image-inform">
+                        <h3 class="image-tittle">Nova Atualização na Agenda</h3>
+                        <h4 class="image-text">Reunião de grupo marcada para 15h.</h4>
+                        <span class="symbol">NOVA NOTIFICAÇÃO</span>
+                      </div>
+                    </div>
+                    <p class="badge">Agenda</p>
+                    <h2 class="card-tittle">
+                      Sua agenda foi atualizada para hoje.
+                    </h2>
+                    <button class="card-button material-symbols-rounded">➔</button>
+                  </a>
+                </li>
 
-      <li class="card-item swiper-slide">
-        <a href="atividades.html" class="card-link">
-          <div class="card-image-wrapper">
-            <img src="imagens/caderno.png" alt="" class="card-image" />
-            <div class="image-inform">
-              <h3 class="image-tittle">Entrega de Atividade</h3>
-              <h4 class="image-text">Não se esqueça do Projeto de Biologia.</h4>
-              <span class="symbol">NOVA NOTIFICAÇÃO</span>
+                <li class="card-item swiper-slide">
+                  <a href="atividades.html" class="card-link">
+                    <div class="card-image-wrapper">
+                      <img src="imagens/caderno.png" alt="" class="card-image" />
+                      <div class="image-inform">
+                        <h3 class="image-tittle">Entrega de Atividade</h3>
+                        <h4 class="image-text">Não se esqueça do Projeto de Biologia.</h4>
+                        <span class="symbol">NOVA NOTIFICAÇÃO</span>
+                      </div>
+                    </div>
+                    <p class="badge">Atividades</p>
+                    <h2 class="card-tittle">
+                      Lembretes importantes sobre suas tarefas.
+                    </h2>
+                    <button class="card-button material-symbols-rounded">➔</button>
+                  </a>
+                </li>
+
+                <li class="card-item swiper-slide">
+                  <a href="material.html" class="card-link">
+                    <div class="card-image-wrapper">
+                      <img src="imagens/pasta-aberta.png" alt="" class="card-image" />
+                      <div class="image-inform">
+                        <h3 class="image-tittle">Novo Material Disponível</h3>
+                        <h4 class="image-text">Slides da aula de Matemática.</h4>
+                        <span class="symbol">NOVA NOTIFICAÇÃO</span>
+                      </div>
+                    </div>
+                    <p class="badge">Material</p>
+                    <h2 class="card-tittle">
+                      Um professor ou colega publicou algo novo.
+                    </h2>
+                    <button class="card-button material-symbols-rounded">➔</button>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
             </div>
           </div>
-          <p class="badge">Atividades</p>
-          <h2 class="card-tittle">
-            Lembretes importantes sobre suas tarefas.
-          </h2>
-          <button class="card-button material-symbols-rounded">➔</button>
-        </a>
-      </li>
-
-      <li class="card-item swiper-slide">
-        <a href="material.html" class="card-link">
-          <div class="card-image-wrapper">
-            <img src="imagens/pasta-aberta.png" alt="" class="card-image" />
-            <div class="image-inform">
-              <h3 class="image-tittle">Novo Material Disponível</h3>
-              <h4 class="image-text">Slides da aula de Matemática.</h4>
-              <span class="symbol">NOVA NOTIFICAÇÃO</span>
-            </div>
-          </div>
-          <p class="badge">Material</p>
-          <h2 class="card-tittle">
-            Um professor ou colega publicou algo novo.
-          </h2>
-          <button class="card-button material-symbols-rounded">➔</button>
-        </a>
-      </li>
-    </ul>
-
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-  </div>
-</div>
       </div>
     </section>
 

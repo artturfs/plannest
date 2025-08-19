@@ -736,7 +736,7 @@ li a {
     max-width: 300px;
 }
 
-.btn-processual:hover {
+.btn-processual:hover .share-btn:hover{
     background: var(--cor1--);
 }
 
@@ -981,6 +981,22 @@ footer {
 
 .modal-content button[type="submit"]:hover {
     background-color: var(--cor1--);
+}
+
+.share-btn{
+    margin: 10px 20px 0px 20px;
+    background: var(--cor2--);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.2s;
+    width: 100%;
+    max-width: 300px;
 }
 
 
