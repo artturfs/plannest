@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>plannest - Pomodoro</title>
+    <link rel="stylesheet" href="pomodoro.css" />
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon" />
+
+</head>
+<body>
+    <header class="menu1">
+      <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+      <a class="logo" href="index.html"><img height="30px" src="imagens/plannest.png" alt="Plannest Logo" class="logo"/></a>
+
+      <nav class="links" id="nav-links">
+        <ul class="nav-itens">
+          <!-- Seção principal -->
+          <li class="li-itens">
+            <img src="imagens/casa.png" alt="" width="20px" />
+            <a href="index.html">Início</a>
+          </li>
+
+          <li class="li-itens">
+            <img src="imagens/agenda.png" alt="" width="20px" />
+            <a href="agenda.html">Agenda</a>
+          </li>
+          <li class="li-itens">
+            <img src="imagens/caderno.png" alt="" width="20px" />
+            <a href="atividades.html">Atividades</a>
+          </li>
+          <li class="li-itens">
+            <img src="imagens/pasta-aberta.png" alt="" width="23px" />
+            <a href="material.html">Material</a>
+          </li>
+          <!-- Seção de estudos -->
+          <li class="li-itens">
+            <img src="imagens/cronometro.png" alt="" width="23px" />
+            <a href="agenda.html">Estudos</a>
+          </li>
+          <li class="li-itens">
+            <img src="imagens/flashcards-para-estudar.png" alt="" width="20px" />
+            <a href="flashcards.html">Flashcards</a>
+          </li>
+          <li class="li-itens">
+            <img src="imagens/mapeamento-da-mente.png" alt="" width="20px" />
+            <a href="mapas.html">Mapas Mentais</a>
+          </li>
+          <li style="border-bottom: 1px solid #5e5e5e; margin: 0px 0;"></li>
+
+            <li class="li-itens">
+
+              <a href="suporte.html">Feedback</a>
+            </li>
+            <li class="li-itens">
+
+              <a href="sobre.html">Sobre Nós</a>
+            </li>
+            <li class="li-itens">
+              <a href="faq.html">FAQ</a>
+            </li>
+            <li class="li-itens">
+              <a href="contato.html">Contato</a>
+            </li>
+
+          <!-- Login/Cadastro -->
+          <li>
+            <button class="login-li">
+              <a class="link-login-li" href="login.html">Login</a>
+            </button>
+          </li>
+          <li>
+            <button class="cadastro-li">
+              <a class="link-cadastro-li" href="cadastro.html" style="color: white">Cadastro</a>
+            </button> <br>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="btn">
+        <button class="login-1" href="login.html">
+          <a class="link-login" href="login.html">Login</a>
+        </button>
+        <button class="cadastro">
+          <a href="cadastro.html" class="link-cadastro">Cadastro</a>
+        </button>
+      </div>
+    </header>
+    <br><br><br>
+
+    <main>
+      <div class="container">
+        <h1 class="tittle">Pomodoro Timer</h1>
+        <br><br>
+        <div class="main-container">
+            <div class="controls">
+              <button id="" onclick="pausaCurta()">Pausa curta</button>
+              <button id="" onclick="pausaLonga()">Pausa longa</button>
+            </div>
+
+            <div class="container">
+                <div id="cronometro" class="timer">25:00</div>
+            </div>
+
+            <div class="controls">
+              <button id="botaoIniciarParar" onclick="iniciarParar()">Iniciar</button>
+              <button id="botaoResetar" onclick="resetar()">Resetar</button>
+            </div>
+            <form id="atividade-form">
+                <div>
+                <label for="titulo-atividade">Título da Atividade:</label>
+                  <input type="text" id="titulo-atividade" placeholder="Ex: Pesquisa sobre Modernismo" required>
+                </div>
+              <button type="submit" id="btn-atividade">Adicionar Atividade</button>
+            </form>
+            <ul id="atividades-lista"></ul>
+
+          </div>
+      </div>
+      <script src="pomodoro.js"></script>
+    </main> <br><br>
+    
+    <script src="menu-toggle.js"></script>
+    </script>
+</body>
+</html>

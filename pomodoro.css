@@ -1,0 +1,628 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    transition: all 0.3s; /* Keep this for general smooth transitions, but be aware of potential overrides */
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--cor9--);
+    transition: all 0.3s;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+    --cor1--: #539690;
+    --cor2--: #5ca3a5;
+    --cor3--: #4999DB;
+    --cor4--: #4C555C;
+    --cor5--: #292E33;
+    --cor6--: #202B33;
+    --cor7--: #85c8ff;
+    --cor8--: white;
+    --cor9--: rgb(247, 247, 247);
+    --cor10--: #5ca3a527;
+    --cor11--: #292e3369;
+}
+
+a {
+  text-decoration: none;
+}
+
+span {
+  color: var(--cor2);
+}
+
+/* Menu */
+.menu1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  background-color: var(--cor9--);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: none; /* No desktop, o menu1 não se move */
+}
+
+.menu-toggle {
+  font-size: large;
+  font-weight: 700;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--cor6);
+  position: absolute;
+  left: 15px;
+  z-index: 1000;
+  margin: 0;
+  display: block;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--cor9--);
+  padding-top: 40px;
+  justify-content: flex-start;
+  z-index: 999;
+  height: 100vh;
+  width: 20%; /* Largura fixa do menu */
+  min-width: 250px;
+  transform: translateX(-100%); /* Esconde o menu para a esquerda */
+  transition: transform 0.3s ease-in-out; /* Transição para o movimento */
+}
+
+.links.active {
+  transform: translateX(0); /* Mostra o menu */
+  box-shadow: 0 1px 108px rgba(0, 0, 0, 0.418);
+}
+
+.logo {
+  font-weight: 200;
+  margin: 10px auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-itens {
+  list-style: none;
+  display: flex;
+  margin: 10px 0 0 -30px;
+  text-align: start;
+  padding-right: 30px;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  background-color: var(--cor9--);
+  opacity: 0.97;
+  height: 100%;
+  overflow-y: auto;
+  max-height: 90vh;
+  scrollbar-width: thin;
+  scrollbar-color: var(--cor4----) var(--cor5--);
+}
+
+.li-itens {
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.li-itens:hover{
+    text-decoration: underline;
+    background-color: rgba(0, 0, 0, 0.082);
+}
+
+.li-itens img {
+  display: block;
+}
+
+.li-itens a {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+li a {
+  color: var(--cor6);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 5px 10px;
+}
+
+.nav-itens a:hover {
+  text-decoration: underline;
+}
+
+.link-login-li {
+  color: var(--cor6);
+}
+
+/* Botões de Login e Cadastro */
+.cadastro,
+.login-1 {
+  display: none;
+}
+
+.login-li,
+.cadastro-li {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  box-shadow: 1px 6px 10px rgba(0, 0, 0, 0.274);
+  border: none;
+}
+
+.login-li {
+  background-color: var(--cor8);
+  color: var(--cor6);
+}
+
+.cadastro-li {
+  background-color: var(--cor2--);
+  color: white;
+}
+
+.cadastro-li a,
+.login-li a {
+  width: 100%;
+  text-align: center;
+  border: none;
+}
+
+/* FIM MENU */
+
+.tittle {
+    font-size: 1.5rem;
+    color: var(--cor4--);
+    font-weight: 500;
+    margin: 20px auto 40px auto;
+    text-align: start;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--cor4--);
+    max-width: 90%;
+    line-height: 50px;
+
+}
+
+/* Footer */
+
+footer {
+    margin-top: 80px;
+    background-color: var(--cor2--);
+    color: white;
+    padding: 40px 20px;
+    font-family: sans-serif;
+}
+
+.newsletter {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.newsletter h2 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.newsletter-form {
+    margin-top: 15px;
+}
+
+.newsletter-form input {
+    padding: 10px;
+    width: 250px;
+    border: none;
+    border-radius: 3px;
+}
+
+.newsletter-form button {
+    padding: 10px 15px;
+    background-color: var(--cor8--);
+    color: var(--cor2--);
+    font-weight: bold;
+    border: none;
+    margin-left: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    margin-top: 30px;
+}
+
+.footer-logo {
+    max-width: 250px;
+    margin-bottom: 30px;
+}
+
+.logo-icon {
+    color: var(--cor8--);
+    font-weight: bold;
+}
+
+.code {
+    color: #ccc;
+}
+
+.footer-links {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-links h4 {
+    color: var(--cor8--);
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 5px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.social .icons a img {
+    width: 24px;
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+/* Pomodoro */ 
+
+main .container {
+    margin: 0 auto;
+}
+
+.main-container {
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 15px;
+    max-width: 900px;
+    background-color: var(--cor8--);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.timer {
+    font-size: 9rem;
+    color: var(--cor5--);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.controls button{
+    gap: 20px;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 0 10px;
+    background-color: var(--cor9--);
+    border-radius: 5px
+}
+
+#atividade-form {
+    background-color: var(--cor9--);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    width: 90%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+#atividade-form div {
+    margin-bottom: 15px;
+}
+
+#atividade-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--cor4--);
+}
+
+#atividade-form input[type="text"],
+#atividade-form textarea,
+#atividade-form input[type="date"] {
+    width: calc(100% - 20px); /* Ajuste para padding */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Inclui padding na largura total */
+}
+
+#atividade-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+#btn-atividade {
+    background-color: var(--cor2--);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+#btn-atividade:hover {
+    background-color: var(--cor1--);
+}
+
+/* Lista de Atividades */
+/* --- Estilização da Lista de Atividades --- */
+
+#atividades-lista {
+    list-style: none; /* Remove os marcadores de lista */
+    padding: 0;
+    margin: 20px 0;
+    width: 90%; /* Garante que a lista se alinhe com o formulário */
+}
+
+.atividade-item {
+    background-color: var(--cor9--); /* Fundo claro, já está no seu código */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    position: relative;
+    /* Adicionando um toque sutil ao passar o mouse */
+    cursor: pointer; 
+}
+
+/* Checkbox (A checkbox padrão é difícil de estilizar, mas vamos ajustar o necessário) */
+.atividade-checkbox {
+    /* Você pode ajustar o tamanho e a aparência aqui */
+    min-width: 20px;
+    height: 20px;
+    cursor: pointer;
+    /* Estilização para o checkbox */
+    accent-color: var(--cor2--); /* Usa a sua cor de destaque para o checkbox */
+}
+
+/* Texto da atividade */
+.atividade-texto {
+    flex-grow: 1; /* Permite que o texto ocupe o espaço restante */
+    color: var(--cor5--);
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+/* Estado de Concluído: Riscado e Opacidade Reduzida */
+.atividade-item.concluida {
+    opacity: 0.6; /* Deixa um pouco transparente para indicar que foi feita */
+    background-color: var(--cor10--); /* Fundo sutilmente diferente */
+}
+
+.atividade-item.concluida .atividade-texto {
+    text-decoration: line-through; /* Risca o texto */
+    color: var(--cor4--);
+}
+
+/* --- Estilização da Lista de Atividades (continuação) --- */
+
+/* Contêiner do item da lista para posicionar o botão de exclusão */
+.atividade-item {
+    /* ... (Mantenha o código anterior) ... */
+    position: relative; /* Essencial para posicionar o botão dentro */
+    padding-right: 50px; /* Adiciona espaço para o botão */
+}
+
+/* Estilo do botão de exclusão */
+.botao-excluir {
+    position: absolute; /* Posição absoluta dentro do .atividade-item */
+    right: 15px; /* Posição à direita */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%);
+    
+    background: none; /* Sem fundo */
+    border: none;
+    color: var(--cor4--); /* Cor do texto (cinza) */
+    font-size: 1.5em; /* Tamanho maior para o X */
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s, color 0.2s;
+    line-height: 1; /* Garante que o X fique bem alinhado */
+    padding: 5px; /* Área de clique maior */
+}
+
+.botao-excluir:hover {
+    opacity: 1;
+    color: #cc0000; /* Cor vermelha ao passar o mouse para indicar exclusão */
+}
+@media (max-width: 769px) {
+    body {
+        width: 100%;
+        overflow-x: hidden;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu1 {
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.10); /* sombra adicionada */
+    }
+
+    .menu-toggle {
+        position: absolute;
+        left: 10px;
+        display: block;
+        font-size: x-large;
+        font-weight: 700;
+        z-index: 500;
+        margin: 0;
+    }
+
+    .home {
+        display: block;
+        margin-left: 0px;
+    }
+
+    .links {
+        display: none;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: var(--cor9--);
+        padding: 40px 0px 100% 0;
+        justify-content: start;
+        box-shadow: 0 1px 108px rgba(0, 0, 0, 0.418); /* sombra adicionada */
+        position: fixed;
+    }
+
+    .logo {
+        font-weight: 200;
+        margin: 10px auto;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .links.active {
+        display: block;
+    }
+
+    .nav-itens {
+        margin-top: 10px;
+        margin-left: -30px;
+        list-style: none;
+        text-align: start;
+        display: flex;
+        padding-right: 30px;
+        flex-direction: column;
+        gap: 10px;
+        background-color: var(--cor9--);
+        position: fixed;
+        height: 100vh;
+        box-shadow: 0 104px 108px rgba(0, 0, 0, 0.418); /* sombra adicionada */
+    }
+
+    .cadastro {
+        display: none;
+    }
+
+    .login-1 {
+        display: none;
+    }
+
+    .login-li,
+    .cadastro-li {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: 15px;
+        margin-top: 10px;
+        cursor: pointer;
+        box-shadow: 1px 6px 10px rgba(0, 0, 0, 0.274);
+    }
+
+    .login-li {
+        background-color: var(--cor8--);
+        color: var(--cor6--);
+        border: none;
+    }
+
+    .cadastro-li {
+        background-color: var(--cor2--);
+        color: white;
+        border: none;
+
+    }
+
+    .cadastro-lo li {
+        color: var(--cor8--);
+
+    }
+
+    .cadastro-li a,
+    .login-li a {
+        width: 100%;
+        text-align: center;
+        border: none;
+    }
+
+    /* FIM MENU */
+
+        .sugestao-form {
+        padding: 20px; /* Reduz o padding do formulário em telas menores */
+        margin: 20px auto 0 auto; /* Ajusta a margem superior */
+    }
+
+    .sugestao-form h2 {
+        font-size: 1.6rem; /* Reduz o tamanho do título */
+    }
+
+    .sugestao-form button {
+        padding: 10px 20px; /* Reduz o padding do botão */
+        font-size: 1rem; /* Reduz o tamanho da fonte do botão */
+    }
+
+    .sugestoes-list {
+        margin-top: 20px; /* Ajusta a margem superior da lista */
+    }
+
+    .sugestao-card {
+        padding: 15px; /* Reduz o padding dos cartões */
+        margin-bottom: 15px; /* Reduz a margem inferior dos cartões */
+    }
+}

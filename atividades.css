@@ -262,26 +262,21 @@ li a {
 
 /* Estilo para o botão de remover matéria */
 .remove-subject-btn {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    background-color: #e74c3c; /* Vermelho */
-    color: white;
+    position: absolute; /* Posição absoluta dentro do .atividade-item */
+    right: 15px; /* Posição à direita */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%);
+    
+    background: none; /* Sem fundo */
     border: none;
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
-    font-size: 0.8em;
+    color: var(--cor4--); /* Cor do texto (cinza) */
+    font-size: 1.5em; /* Tamanho maior para o X */
     font-weight: bold;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 1; /* Garante alinhamento vertical do 'X' */
-    transition: background-color 0.2s ease;
-    z-index: 10; /* Garante que o botão fique acima da âncora */
-    opacity: 0; /* Oculta por padrão */
-    pointer-events: none; /* Desabilita interações quando oculto */
+    opacity: 0.7;
+    transition: opacity 0.2s, color 0.2s;
+    line-height: 1; /* Garante que o X fique bem alinhado */
+    padding: 5px; /* Área de clique maior */
 }
 
 .card:hover .remove-subject-btn {
@@ -656,23 +651,25 @@ li a {
 }
 
 .btn-excluir {
-    background-color: #e74c3c;
-    color: white;
+    position: absolute; /* Posição absoluta dentro do .atividade-item */
+    right: 15px; /* Posição à direita */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%);
+    
+    background: none; /* Sem fundo */
     border: none;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    font-size: 0.9em;
+    color: var(--cor4--); /* Cor do texto (cinza) */
+    font-size: 1.5em; /* Tamanho maior para o X */
+    font-weight: bold;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    transition: background-color 0.3s ease;
+    opacity: 0.7;
+    transition: opacity 0.2s, color 0.2s;
+    line-height: 1; /* Garante que o X fique bem alinhado */
+    padding: 5px; /* Área de clique maior */
 }
 
 .btn-excluir:hover {
-    background-color: #c0392b;
+    color: #c0392b;
 }
 
 /* Desempenho da Matéria Individual */
@@ -1341,29 +1338,6 @@ footer {
 
 .btn-download:hover {
     background-color: var(--cor1--); /* Slightly darker blue on hover */
-}
-
-.btn-excluir {
-    background-color: #dc3545; /* Red color for delete */
-    color: var(--cor8--);
-    border: none;
-    border-radius: 50%; /* Make it round */
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem;
-    cursor: pointer;
-    position: absolute; /* Position relative to .material-item */
-    top: 10px;
-    right: 10px;
-    transition: background-color 0.3s ease;
-    flex-shrink: 0; /* Prevent it from shrinking */
-}
-
-.btn-excluir:hover {
-    background-color: #c82333; /* Darker red on hover */
 }
 
 /* Responsividade básica para o formulário e lista */

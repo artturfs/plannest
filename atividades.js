@@ -136,7 +136,7 @@ function renderizarAtividades() {
         li.appendChild(infoDiv);
  
         const btnExcluir = document.createElement('button');
-        btnExcluir.textContent = 'X';
+        btnExcluir.textContent = '×';
         btnExcluir.className = 'btn-excluir';
         btnExcluir.addEventListener('click', function() {
             if (confirm('Tem certeza que deseja excluir esta atividade?')) {
