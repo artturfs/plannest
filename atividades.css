@@ -262,21 +262,23 @@ li a {
 
 /* Estilo para o botão de remover matéria */
 .remove-subject-btn {
-    position: absolute; /* Posição absoluta dentro do .atividade-item */
-    right: 15px; /* Posição à direita */
-    top: 50%; /* Centraliza verticalmente */
-    transform: translateY(-50%);
-    
-    background: none; /* Sem fundo */
-    border: none;
-    color: var(--cor4--); /* Cor do texto (cinza) */
-    font-size: 1.5em; /* Tamanho maior para o X */
-    font-weight: bold;
-    cursor: pointer;
-    opacity: 0.7;
-    transition: opacity 0.2s, color 0.2s;
-    line-height: 1; /* Garante que o X fique bem alinhado */
-    padding: 5px; /* Área de clique maior */
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #e74c3c; /* Vermelho */
+    color: white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    font-size: 0.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1; /* Garante alinhamento vertical do 'X' */
+    transition: background-color 0.2s ease;
+    z-index: 10; /* Garante que o botão fique acima da âncora */
+    opacity: 0; /* Oculta por padrão */
+    pointer-events: none; /* Desabilita interações quando oculto */
 }
 
 .card:hover .remove-subject-btn {
@@ -651,21 +653,17 @@ li a {
 }
 
 .btn-excluir {
-    position: absolute; /* Posição absoluta dentro do .atividade-item */
-    right: 15px; /* Posição à direita */
-    top: 50%; /* Centraliza verticalmente */
-    transform: translateY(-50%);
-    
-    background: none; /* Sem fundo */
-    border: none;
-    color: var(--cor4--); /* Cor do texto (cinza) */
-    font-size: 1.5em; /* Tamanho maior para o X */
-    font-weight: bold;
-    cursor: pointer;
-    opacity: 0.7;
-    transition: opacity 0.2s, color 0.2s;
-    line-height: 1; /* Garante que o X fique bem alinhado */
-    padding: 5px; /* Área de clique maior */
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease;
 }
 
 .btn-excluir:hover {
@@ -767,6 +765,138 @@ li a {
     .desempenho-overview {
         width: 100%;
         max-width: none; /* Remove max-width for full width */
+    }
+}
+
+@media (max-width: 769px) {
+    /* ... (mantenha o código de menu e outras regras existentes) ... */
+    
+    /* Regras para o Conteúdo Principal e Pomodoro */
+
+    .tittle {
+        font-size: 1.2rem; /* Título um pouco menor */
+        line-height: 40px;
+        margin-top: 20px;
+    }
+
+    .main-container {
+        padding: 15px; /* Reduz o padding interno do container */
+        margin: 0 10px; /* Adiciona margem lateral para evitar que toque nas bordas */
+        width: auto; /* Permite que o container se ajuste à largura da tela */
+    }
+
+    /* Ajuste para o Timer */
+    .timer {
+        font-size: 6rem; /* Reduz o tamanho da fonte do timer em telas menores */
+        margin-bottom: 15px;
+    }
+
+    /* Ajuste para os Controles (Botões) */
+    .controls {
+        display: flex; /* Garante que os botões se alinhem se houver mais de 2 */
+        flex-wrap: wrap; /* Permite que os botões quebrem a linha se não couberem */
+        justify-content: center;
+        gap: 10px; /* Espaçamento entre os botões */
+    }
+
+    .controls button{
+        flex-grow: 1; /* Permite que os botões cresçam para preencher o espaço */
+        min-width: 120px; /* Garante um tamanho mínimo para o clique */
+        padding: 10px 15px;
+        font-size: 1rem; /* Fonte um pouco menor */
+        margin: 0; /* Remove a margem horizontal extra */
+    }
+
+    /* Ajuste para o Formulário e a Lista de Atividades */
+    #atividade-form,
+    #atividades-lista {
+        width: 100%; /* Ocupa a largura total do main-container */
+        padding: 10px; /* Reduz o padding do formulário */
+    }
+
+    #atividade-form input[type="text"] {
+        padding: 15px; /* Reduz um pouco o padding interno dos campos */
+    }
+
+    #btn-atividade {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+
+    /* Ajuste para os Itens da Lista de Atividades */
+    .atividade-item {
+        padding: 12px 45px 12px 12px; /* Ajusta o padding do item para deixar espaço para o botão 'X' */
+        gap: 10px;
+    }
+
+    .atividade-texto {
+        font-size: 1em; /* Fonte do texto da atividade um pouco menor */
+    }
+
+    /* Ajuste para o botão de exclusão */
+    .botao-excluir {
+        right: 10px; /* Posição um pouco mais para a esquerda */
+        font-size: 1.3em; /* Tamanho do 'X' um pouco menor */
+        padding: 3px;
+    }
+
+    /* Ajuste para o Footer em Telas Pequenas */
+    footer {
+        padding: 20px 10px;
+    }
+
+    .newsletter h2 {
+        font-size: 1.8rem;
+    }
+
+    .newsletter-form input {
+        width: calc(100% - 100px); /* Ajuste para melhor encaixe */
+        max-width: 200px;
+        margin-bottom: 10px;
+    }
+
+    .newsletter-form button {
+        margin-left: 0;
+        width: 90px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo,
+    .footer-links {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .footer-links {
+        gap: 20px;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+/* Adicionando uma regra extra para telas muito pequenas, como celulares estreitos */
+@media (max-width: 400px) {
+    .timer {
+        font-size: 5rem;
+    }
+
+    .controls button{
+        width: 100%; /* Faz com que cada botão ocupe sua própria linha */
+        min-width: 100%;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .newsletter-form button {
+        width: 100%;
     }
 }
 
